@@ -12,6 +12,21 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -70,17 +85,35 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="PanelAgregarPaquete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelAgregarPaquete.Designer.cs">
+      <DependentUpon>PanelAgregarPaquete.cs</DependentUpon>
+    </Compile>
     <Compile Include="PanelInicionSesion.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PanelInicionSesion.Designer.cs">
       <DependentUpon>PanelInicionSesion.cs</DependentUpon>
     </Compile>
+    <Compile Include="PanelModificarProducto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelModificarProducto.Designer.cs">
+      <DependentUpon>PanelModificarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="PanelOpciones.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PanelOpciones.Designer.cs">
       <DependentUpon>PanelOpciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelVenta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelVenta.Designer.cs">
+      <DependentUpon>PanelVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="PantallaGastos.cs">
       <SubType>UserControl</SubType>
@@ -123,11 +156,20 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PanelAgregarPaquete.resx">
+      <DependentUpon>PanelAgregarPaquete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PanelInicionSesion.resx">
       <DependentUpon>PanelInicionSesion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PanelModificarProducto.resx">
+      <DependentUpon>PanelModificarProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PanelOpciones.resx">
       <DependentUpon>PanelOpciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelVenta.resx">
+      <DependentUpon>PanelVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaGastos.resx">
       <DependentUpon>PantallaGastos.cs</DependentUpon>
@@ -205,6 +247,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\puntos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\añadirnegro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

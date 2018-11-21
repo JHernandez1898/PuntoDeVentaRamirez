@@ -33,12 +33,18 @@
             this.bnfFltbtnGastos = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnlPantallas = new System.Windows.Forms.Panel();
             this.bnfFltbtnReportes = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bnfbtnMinimizar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bnfBtnCerrar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lnklblLogout = new System.Windows.Forms.LinkLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.bnfbtnMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bnfBtnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // bnfFltBtnPuntoDeVenta
             // 
             this.bnfFltBtnPuntoDeVenta.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(169)))), ((int)(((byte)(168)))));
-            this.bnfFltBtnPuntoDeVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(121)))), ((int)(((byte)(119)))));
+            this.bnfFltBtnPuntoDeVenta.BackColor = System.Drawing.Color.Goldenrod;
             this.bnfFltBtnPuntoDeVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bnfFltBtnPuntoDeVenta.BorderRadius = 0;
             this.bnfFltBtnPuntoDeVenta.ButtonText = "Punto de venta";
@@ -59,11 +65,11 @@
             this.bnfFltBtnPuntoDeVenta.Location = new System.Drawing.Point(0, 0);
             this.bnfFltBtnPuntoDeVenta.Margin = new System.Windows.Forms.Padding(6);
             this.bnfFltBtnPuntoDeVenta.Name = "bnfFltBtnPuntoDeVenta";
-            this.bnfFltBtnPuntoDeVenta.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(121)))), ((int)(((byte)(119)))));
-            this.bnfFltBtnPuntoDeVenta.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(133)))), ((int)(((byte)(131)))));
+            this.bnfFltBtnPuntoDeVenta.Normalcolor = System.Drawing.Color.Goldenrod;
+            this.bnfFltBtnPuntoDeVenta.OnHovercolor = System.Drawing.Color.DarkGoldenrod;
             this.bnfFltBtnPuntoDeVenta.OnHoverTextColor = System.Drawing.Color.White;
             this.bnfFltBtnPuntoDeVenta.selected = false;
-            this.bnfFltBtnPuntoDeVenta.Size = new System.Drawing.Size(337, 31);
+            this.bnfFltBtnPuntoDeVenta.Size = new System.Drawing.Size(275, 31);
             this.bnfFltBtnPuntoDeVenta.TabIndex = 3;
             this.bnfFltBtnPuntoDeVenta.Text = "Punto de venta";
             this.bnfFltBtnPuntoDeVenta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -74,7 +80,7 @@
             // bnfFltbtnInventario
             // 
             this.bnfFltbtnInventario.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(169)))), ((int)(((byte)(168)))));
-            this.bnfFltbtnInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(121)))), ((int)(((byte)(119)))));
+            this.bnfFltbtnInventario.BackColor = System.Drawing.Color.Goldenrod;
             this.bnfFltbtnInventario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bnfFltbtnInventario.BorderRadius = 0;
             this.bnfFltbtnInventario.ButtonText = "Inventario";
@@ -92,14 +98,14 @@
             this.bnfFltbtnInventario.IconVisible = true;
             this.bnfFltbtnInventario.IconZoom = 90D;
             this.bnfFltbtnInventario.IsTab = false;
-            this.bnfFltbtnInventario.Location = new System.Drawing.Point(336, 0);
+            this.bnfFltbtnInventario.Location = new System.Drawing.Point(287, 0);
             this.bnfFltbtnInventario.Margin = new System.Windows.Forms.Padding(6);
             this.bnfFltbtnInventario.Name = "bnfFltbtnInventario";
-            this.bnfFltbtnInventario.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(121)))), ((int)(((byte)(119)))));
-            this.bnfFltbtnInventario.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(133)))), ((int)(((byte)(131)))));
+            this.bnfFltbtnInventario.Normalcolor = System.Drawing.Color.Goldenrod;
+            this.bnfFltbtnInventario.OnHovercolor = System.Drawing.Color.DarkGoldenrod;
             this.bnfFltbtnInventario.OnHoverTextColor = System.Drawing.Color.White;
             this.bnfFltbtnInventario.selected = false;
-            this.bnfFltbtnInventario.Size = new System.Drawing.Size(337, 31);
+            this.bnfFltbtnInventario.Size = new System.Drawing.Size(263, 31);
             this.bnfFltbtnInventario.TabIndex = 6;
             this.bnfFltbtnInventario.Text = "Inventario";
             this.bnfFltbtnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -110,7 +116,7 @@
             // bnfFltbtnGastos
             // 
             this.bnfFltbtnGastos.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(169)))), ((int)(((byte)(168)))));
-            this.bnfFltbtnGastos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(121)))), ((int)(((byte)(119)))));
+            this.bnfFltbtnGastos.BackColor = System.Drawing.Color.Goldenrod;
             this.bnfFltbtnGastos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bnfFltbtnGastos.BorderRadius = 0;
             this.bnfFltbtnGastos.ButtonText = "Gastos";
@@ -128,14 +134,14 @@
             this.bnfFltbtnGastos.IconVisible = true;
             this.bnfFltbtnGastos.IconZoom = 90D;
             this.bnfFltbtnGastos.IsTab = false;
-            this.bnfFltbtnGastos.Location = new System.Drawing.Point(672, 0);
+            this.bnfFltbtnGastos.Location = new System.Drawing.Point(562, 0);
             this.bnfFltbtnGastos.Margin = new System.Windows.Forms.Padding(6);
             this.bnfFltbtnGastos.Name = "bnfFltbtnGastos";
-            this.bnfFltbtnGastos.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(121)))), ((int)(((byte)(119)))));
-            this.bnfFltbtnGastos.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(133)))), ((int)(((byte)(131)))));
+            this.bnfFltbtnGastos.Normalcolor = System.Drawing.Color.Goldenrod;
+            this.bnfFltbtnGastos.OnHovercolor = System.Drawing.Color.DarkGoldenrod;
             this.bnfFltbtnGastos.OnHoverTextColor = System.Drawing.Color.White;
             this.bnfFltbtnGastos.selected = false;
-            this.bnfFltbtnGastos.Size = new System.Drawing.Size(337, 31);
+            this.bnfFltbtnGastos.Size = new System.Drawing.Size(293, 31);
             this.bnfFltbtnGastos.TabIndex = 7;
             this.bnfFltbtnGastos.Text = "Gastos";
             this.bnfFltbtnGastos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -148,14 +154,14 @@
             this.pnlPantallas.BackColor = System.Drawing.Color.White;
             this.pnlPantallas.Location = new System.Drawing.Point(0, 30);
             this.pnlPantallas.Name = "pnlPantallas";
-            this.pnlPantallas.Size = new System.Drawing.Size(1396, 738);
+            this.pnlPantallas.Size = new System.Drawing.Size(1365, 738);
             this.pnlPantallas.TabIndex = 8;
             this.pnlPantallas.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlPantallas_Paint);
             // 
             // bnfFltbtnReportes
             // 
             this.bnfFltbtnReportes.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(169)))), ((int)(((byte)(168)))));
-            this.bnfFltbtnReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(121)))), ((int)(((byte)(119)))));
+            this.bnfFltbtnReportes.BackColor = System.Drawing.Color.Goldenrod;
             this.bnfFltbtnReportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bnfFltbtnReportes.BorderRadius = 0;
             this.bnfFltbtnReportes.ButtonText = "Reportes";
@@ -173,14 +179,14 @@
             this.bnfFltbtnReportes.IconVisible = true;
             this.bnfFltbtnReportes.IconZoom = 90D;
             this.bnfFltbtnReportes.IsTab = false;
-            this.bnfFltbtnReportes.Location = new System.Drawing.Point(1012, 0);
+            this.bnfFltbtnReportes.Location = new System.Drawing.Point(867, 0);
             this.bnfFltbtnReportes.Margin = new System.Windows.Forms.Padding(6);
             this.bnfFltbtnReportes.Name = "bnfFltbtnReportes";
-            this.bnfFltbtnReportes.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(121)))), ((int)(((byte)(119)))));
-            this.bnfFltbtnReportes.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(133)))), ((int)(((byte)(131)))));
+            this.bnfFltbtnReportes.Normalcolor = System.Drawing.Color.Goldenrod;
+            this.bnfFltbtnReportes.OnHovercolor = System.Drawing.Color.DarkGoldenrod;
             this.bnfFltbtnReportes.OnHoverTextColor = System.Drawing.Color.White;
             this.bnfFltbtnReportes.selected = false;
-            this.bnfFltbtnReportes.Size = new System.Drawing.Size(384, 31);
+            this.bnfFltbtnReportes.Size = new System.Drawing.Size(294, 31);
             this.bnfFltbtnReportes.TabIndex = 9;
             this.bnfFltbtnReportes.Text = "Reportes";
             this.bnfFltbtnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -188,20 +194,77 @@
             this.bnfFltbtnReportes.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnfFltbtnReportes.Click += new System.EventHandler(this.bnfFltbtnReportes_Click);
             // 
+            // bnfbtnMinimizar
+            // 
+            this.bnfbtnMinimizar.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.bnfbtnMinimizar.Image = global::PuntoDeVentaRamirez.Properties.Resources.minimizar;
+            this.bnfbtnMinimizar.ImageActive = null;
+            this.bnfbtnMinimizar.Location = new System.Drawing.Point(1322, 9);
+            this.bnfbtnMinimizar.Name = "bnfbtnMinimizar";
+            this.bnfbtnMinimizar.Size = new System.Drawing.Size(16, 15);
+            this.bnfbtnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bnfbtnMinimizar.TabIndex = 6;
+            this.bnfbtnMinimizar.TabStop = false;
+            this.bnfbtnMinimizar.Zoom = 10;
+            this.bnfbtnMinimizar.Click += new System.EventHandler(this.bnfbtnMinimizar_Click);
+            // 
+            // bnfBtnCerrar
+            // 
+            this.bnfBtnCerrar.BackColor = System.Drawing.Color.Red;
+            this.bnfBtnCerrar.Image = global::PuntoDeVentaRamirez.Properties.Resources.cerrar;
+            this.bnfBtnCerrar.ImageActive = null;
+            this.bnfBtnCerrar.Location = new System.Drawing.Point(1344, 9);
+            this.bnfBtnCerrar.Name = "bnfBtnCerrar";
+            this.bnfBtnCerrar.Size = new System.Drawing.Size(16, 15);
+            this.bnfBtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bnfBtnCerrar.TabIndex = 5;
+            this.bnfBtnCerrar.TabStop = false;
+            this.bnfBtnCerrar.Zoom = 10;
+            this.bnfBtnCerrar.Click += new System.EventHandler(this.bnfBtnCerrar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(1193, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Usuario";
+            // 
+            // lnklblLogout
+            // 
+            this.lnklblLogout.AutoSize = true;
+            this.lnklblLogout.Location = new System.Drawing.Point(1263, 14);
+            this.lnklblLogout.Name = "lnklblLogout";
+            this.lnklblLogout.Size = new System.Drawing.Size(36, 13);
+            this.lnklblLogout.TabIndex = 10;
+            this.lnklblLogout.TabStop = true;
+            this.lnklblLogout.Text = "logout";
+            this.lnklblLogout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblLogout_LinkClicked);
+            // 
             // PanelOpciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(121)))), ((int)(((byte)(119)))));
+            this.BackColor = System.Drawing.Color.Goldenrod;
+            this.Controls.Add(this.lnklblLogout);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.bnfbtnMinimizar);
             this.Controls.Add(this.bnfFltbtnReportes);
+            this.Controls.Add(this.bnfBtnCerrar);
             this.Controls.Add(this.pnlPantallas);
             this.Controls.Add(this.bnfFltbtnGastos);
             this.Controls.Add(this.bnfFltbtnInventario);
             this.Controls.Add(this.bnfFltBtnPuntoDeVenta);
             this.Name = "PanelOpciones";
-            this.Size = new System.Drawing.Size(1396, 768);
+            this.Size = new System.Drawing.Size(1366, 768);
             this.Load += new System.EventHandler(this.PanelOpciones_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bnfbtnMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bnfBtnCerrar)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -211,5 +274,9 @@
         private Bunifu.Framework.UI.BunifuFlatButton bnfFltbtnGastos;
         private System.Windows.Forms.Panel pnlPantallas;
         private Bunifu.Framework.UI.BunifuFlatButton bnfFltbtnReportes;
+        private Bunifu.Framework.UI.BunifuImageButton bnfbtnMinimizar;
+        private Bunifu.Framework.UI.BunifuImageButton bnfBtnCerrar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel lnklblLogout;
     }
 }

@@ -23,7 +23,7 @@ namespace PuntoDeVentaRamirez
             PantallaPuntoDeVenta pVenta = new PantallaPuntoDeVenta();
             pnlPantallas.Controls.Add(pVenta);
             pVenta.Location = new Point(0, 0);
-            bnfFltBtnPuntoDeVenta.Normalcolor = Color.FromArgb(162, 169, 168);
+            bnfFltBtnPuntoDeVenta.Normalcolor = Color.Goldenrod;
 
 
         }
@@ -32,21 +32,14 @@ namespace PuntoDeVentaRamirez
         {
             pnlPantallas.Controls.Clear();
             pnlPantallas.Controls.Add(new PantallaPuntoDeVenta());
-            bnfFltBtnPuntoDeVenta.Normalcolor = Color.FromArgb(162, 169, 168);
-            bnfFltbtnInventario.Normalcolor = Color.FromArgb(15, 121, 119);
-            bnfFltbtnGastos.Normalcolor = Color.FromArgb(15, 121, 119);
-            bnfFltbtnReportes.Normalcolor = Color.FromArgb(15, 121, 119);
+    
         }
 
         private void bnfFltbtnInventario_Click(object sender, EventArgs e)
         {
             pnlPantallas.Controls.Clear();
             pnlPantallas.Controls.Add(new PantallaInventario());
-            bnfFltBtnPuntoDeVenta.Normalcolor = Color.FromArgb(15, 121, 119);
-            bnfFltbtnInventario.Normalcolor = Color.FromArgb(162, 169, 168);
-            bnfFltbtnGastos.Normalcolor = Color.FromArgb(15, 121, 119);
-            bnfFltbtnReportes.Normalcolor = Color.FromArgb(15, 121, 119);
-
+          
 
         }
 
@@ -54,10 +47,7 @@ namespace PuntoDeVentaRamirez
         {
             pnlPantallas.Controls.Clear();
             pnlPantallas.Controls.Add(new PantallaGastos());
-            bnfFltBtnPuntoDeVenta.Normalcolor = Color.FromArgb(15, 121, 119);
-            bnfFltbtnInventario.Normalcolor = Color.FromArgb(15, 121, 119);
-            bnfFltbtnGastos.Normalcolor = Color.FromArgb(162, 169, 168);
-            bnfFltbtnReportes.Normalcolor = Color.FromArgb(15, 121, 119);
+      
         }
 
         private void pnlPantallas_Paint(object sender, PaintEventArgs e)
@@ -69,10 +59,22 @@ namespace PuntoDeVentaRamirez
         {
             pnlPantallas.Controls.Clear();
             pnlPantallas.Controls.Add(new PantallaReportes());
-            bnfFltBtnPuntoDeVenta.Normalcolor = Color.FromArgb(15, 121, 119);
-            bnfFltbtnInventario.Normalcolor = Color.FromArgb(15, 121, 119);
-            bnfFltbtnGastos.Normalcolor = Color.FromArgb(15, 121, 119);
-            bnfFltbtnReportes.Normalcolor = Color.FromArgb(162, 169, 168);
+            
+        }
+
+        private void bnfbtnMinimizar_Click(object sender, EventArgs e)
+        {
+            Form1.ActiveForm.WindowState = FormWindowState.Minimized;
+        }
+
+        private void bnfBtnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void lnklblLogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Application.Restart();
         }
     }
 }

@@ -54,14 +54,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaReportes));
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.bunifuDatepicker2 = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.bnfFechaVentasInferior = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.bnfFechaVentasSuperior = new Bunifu.Framework.UI.BunifuDatepicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.bnfbtnGenerarVentas = new Bunifu.Framework.UI.BunifuThinButton2();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.bunifuDatepicker3 = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.bunifuDatepicker4 = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bnfbtnGenerarGastos = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bnfFechaGastosSuperior = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.bnfFechaGastosInferior = new Bunifu.Framework.UI.BunifuDatepicker();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -122,37 +122,37 @@
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart2";
             // 
-            // bunifuDatepicker1
+            // bnfFechaVentasInferior
             // 
-            this.bunifuDatepicker1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            this.bunifuDatepicker1.BorderRadius = 0;
-            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(18, 36);
-            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(231, 36);
-            this.bunifuDatepicker1.TabIndex = 5;
-            this.bunifuDatepicker1.Value = new System.DateTime(2018, 11, 12, 22, 7, 37, 565);
+            this.bnfFechaVentasInferior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.bnfFechaVentasInferior.BorderRadius = 0;
+            this.bnfFechaVentasInferior.ForeColor = System.Drawing.Color.White;
+            this.bnfFechaVentasInferior.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.bnfFechaVentasInferior.FormatCustom = null;
+            this.bnfFechaVentasInferior.Location = new System.Drawing.Point(18, 36);
+            this.bnfFechaVentasInferior.Name = "bnfFechaVentasInferior";
+            this.bnfFechaVentasInferior.Size = new System.Drawing.Size(231, 36);
+            this.bnfFechaVentasInferior.TabIndex = 5;
+            this.bnfFechaVentasInferior.Value = new System.DateTime(2018, 11, 12, 22, 7, 37, 565);
             // 
-            // bunifuDatepicker2
+            // bnfFechaVentasSuperior
             // 
-            this.bunifuDatepicker2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            this.bunifuDatepicker2.BorderRadius = 0;
-            this.bunifuDatepicker2.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker2.FormatCustom = null;
-            this.bunifuDatepicker2.Location = new System.Drawing.Point(283, 36);
-            this.bunifuDatepicker2.Name = "bunifuDatepicker2";
-            this.bunifuDatepicker2.Size = new System.Drawing.Size(231, 36);
-            this.bunifuDatepicker2.TabIndex = 6;
-            this.bunifuDatepicker2.Value = new System.DateTime(2018, 11, 12, 22, 7, 37, 565);
+            this.bnfFechaVentasSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.bnfFechaVentasSuperior.BorderRadius = 0;
+            this.bnfFechaVentasSuperior.ForeColor = System.Drawing.Color.White;
+            this.bnfFechaVentasSuperior.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.bnfFechaVentasSuperior.FormatCustom = null;
+            this.bnfFechaVentasSuperior.Location = new System.Drawing.Point(283, 36);
+            this.bnfFechaVentasSuperior.Name = "bnfFechaVentasSuperior";
+            this.bnfFechaVentasSuperior.Size = new System.Drawing.Size(231, 36);
+            this.bnfFechaVentasSuperior.TabIndex = 6;
+            this.bnfFechaVentasSuperior.Value = new System.DateTime(2018, 11, 12, 22, 7, 37, 565);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.bunifuThinButton21);
-            this.groupBox1.Controls.Add(this.bunifuDatepicker2);
-            this.groupBox1.Controls.Add(this.bunifuDatepicker1);
+            this.groupBox1.Controls.Add(this.bnfbtnGenerarVentas);
+            this.groupBox1.Controls.Add(this.bnfFechaVentasSuperior);
+            this.groupBox1.Controls.Add(this.bnfFechaVentasInferior);
             this.groupBox1.Location = new System.Drawing.Point(67, 419);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(556, 141);
@@ -160,11 +160,36 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Reportes de ventas";
             // 
+            // bnfbtnGenerarVentas
+            // 
+            this.bnfbtnGenerarVentas.ActiveBorderThickness = 1;
+            this.bnfbtnGenerarVentas.ActiveCornerRadius = 20;
+            this.bnfbtnGenerarVentas.ActiveFillColor = System.Drawing.Color.DarkGray;
+            this.bnfbtnGenerarVentas.ActiveForecolor = System.Drawing.Color.White;
+            this.bnfbtnGenerarVentas.ActiveLineColor = System.Drawing.Color.DarkGray;
+            this.bnfbtnGenerarVentas.BackColor = System.Drawing.SystemColors.Control;
+            this.bnfbtnGenerarVentas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bnfbtnGenerarVentas.BackgroundImage")));
+            this.bnfbtnGenerarVentas.ButtonText = "Generar";
+            this.bnfbtnGenerarVentas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bnfbtnGenerarVentas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnfbtnGenerarVentas.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bnfbtnGenerarVentas.IdleBorderThickness = 1;
+            this.bnfbtnGenerarVentas.IdleCornerRadius = 20;
+            this.bnfbtnGenerarVentas.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.bnfbtnGenerarVentas.IdleForecolor = System.Drawing.Color.Honeydew;
+            this.bnfbtnGenerarVentas.IdleLineColor = System.Drawing.Color.Transparent;
+            this.bnfbtnGenerarVentas.Location = new System.Drawing.Point(177, 80);
+            this.bnfbtnGenerarVentas.Margin = new System.Windows.Forms.Padding(5);
+            this.bnfbtnGenerarVentas.Name = "bnfbtnGenerarVentas";
+            this.bnfbtnGenerarVentas.Size = new System.Drawing.Size(181, 41);
+            this.bnfbtnGenerarVentas.TabIndex = 9;
+            this.bnfbtnGenerarVentas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.bunifuThinButton22);
-            this.groupBox2.Controls.Add(this.bunifuDatepicker3);
-            this.groupBox2.Controls.Add(this.bunifuDatepicker4);
+            this.groupBox2.Controls.Add(this.bnfbtnGenerarGastos);
+            this.groupBox2.Controls.Add(this.bnfFechaGastosSuperior);
+            this.groupBox2.Controls.Add(this.bnfFechaGastosInferior);
             this.groupBox2.Location = new System.Drawing.Point(730, 419);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(556, 141);
@@ -172,81 +197,56 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Reportes de gastos";
             // 
-            // bunifuDatepicker3
+            // bnfbtnGenerarGastos
             // 
-            this.bunifuDatepicker3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            this.bunifuDatepicker3.BorderRadius = 0;
-            this.bunifuDatepicker3.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker3.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker3.FormatCustom = null;
-            this.bunifuDatepicker3.Location = new System.Drawing.Point(297, 36);
-            this.bunifuDatepicker3.Name = "bunifuDatepicker3";
-            this.bunifuDatepicker3.Size = new System.Drawing.Size(231, 36);
-            this.bunifuDatepicker3.TabIndex = 10;
-            this.bunifuDatepicker3.Value = new System.DateTime(2018, 11, 12, 22, 7, 37, 565);
+            this.bnfbtnGenerarGastos.ActiveBorderThickness = 1;
+            this.bnfbtnGenerarGastos.ActiveCornerRadius = 20;
+            this.bnfbtnGenerarGastos.ActiveFillColor = System.Drawing.Color.DarkGray;
+            this.bnfbtnGenerarGastos.ActiveForecolor = System.Drawing.Color.White;
+            this.bnfbtnGenerarGastos.ActiveLineColor = System.Drawing.Color.DarkGray;
+            this.bnfbtnGenerarGastos.BackColor = System.Drawing.SystemColors.Control;
+            this.bnfbtnGenerarGastos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bnfbtnGenerarGastos.BackgroundImage")));
+            this.bnfbtnGenerarGastos.ButtonText = "Generar";
+            this.bnfbtnGenerarGastos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bnfbtnGenerarGastos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnfbtnGenerarGastos.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bnfbtnGenerarGastos.IdleBorderThickness = 1;
+            this.bnfbtnGenerarGastos.IdleCornerRadius = 20;
+            this.bnfbtnGenerarGastos.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.bnfbtnGenerarGastos.IdleForecolor = System.Drawing.Color.Honeydew;
+            this.bnfbtnGenerarGastos.IdleLineColor = System.Drawing.Color.Transparent;
+            this.bnfbtnGenerarGastos.Location = new System.Drawing.Point(188, 80);
+            this.bnfbtnGenerarGastos.Margin = new System.Windows.Forms.Padding(5);
+            this.bnfbtnGenerarGastos.Name = "bnfbtnGenerarGastos";
+            this.bnfbtnGenerarGastos.Size = new System.Drawing.Size(181, 41);
+            this.bnfbtnGenerarGastos.TabIndex = 11;
+            this.bnfbtnGenerarGastos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuDatepicker4
+            // bnfFechaGastosSuperior
             // 
-            this.bunifuDatepicker4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            this.bunifuDatepicker4.BorderRadius = 0;
-            this.bunifuDatepicker4.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker4.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker4.FormatCustom = null;
-            this.bunifuDatepicker4.Location = new System.Drawing.Point(32, 36);
-            this.bunifuDatepicker4.Name = "bunifuDatepicker4";
-            this.bunifuDatepicker4.Size = new System.Drawing.Size(231, 36);
-            this.bunifuDatepicker4.TabIndex = 9;
-            this.bunifuDatepicker4.Value = new System.DateTime(2018, 11, 12, 22, 7, 37, 565);
+            this.bnfFechaGastosSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.bnfFechaGastosSuperior.BorderRadius = 0;
+            this.bnfFechaGastosSuperior.ForeColor = System.Drawing.Color.White;
+            this.bnfFechaGastosSuperior.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.bnfFechaGastosSuperior.FormatCustom = null;
+            this.bnfFechaGastosSuperior.Location = new System.Drawing.Point(297, 36);
+            this.bnfFechaGastosSuperior.Name = "bnfFechaGastosSuperior";
+            this.bnfFechaGastosSuperior.Size = new System.Drawing.Size(231, 36);
+            this.bnfFechaGastosSuperior.TabIndex = 10;
+            this.bnfFechaGastosSuperior.Value = new System.DateTime(2018, 11, 12, 22, 7, 37, 565);
             // 
-            // bunifuThinButton21
+            // bnfFechaGastosInferior
             // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.DarkGray;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.DarkGray;
-            this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Generar";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Honeydew;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(177, 80);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(181, 41);
-            this.bunifuThinButton21.TabIndex = 9;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuThinButton22
-            // 
-            this.bunifuThinButton22.ActiveBorderThickness = 1;
-            this.bunifuThinButton22.ActiveCornerRadius = 20;
-            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.DarkGray;
-            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.DarkGray;
-            this.bunifuThinButton22.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
-            this.bunifuThinButton22.ButtonText = "Generar";
-            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton22.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton22.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.IdleBorderThickness = 1;
-            this.bunifuThinButton22.IdleCornerRadius = 20;
-            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.Honeydew;
-            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton22.Location = new System.Drawing.Point(188, 80);
-            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton22.Name = "bunifuThinButton22";
-            this.bunifuThinButton22.Size = new System.Drawing.Size(181, 41);
-            this.bunifuThinButton22.TabIndex = 11;
-            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bnfFechaGastosInferior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.bnfFechaGastosInferior.BorderRadius = 0;
+            this.bnfFechaGastosInferior.ForeColor = System.Drawing.Color.White;
+            this.bnfFechaGastosInferior.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.bnfFechaGastosInferior.FormatCustom = null;
+            this.bnfFechaGastosInferior.Location = new System.Drawing.Point(32, 36);
+            this.bnfFechaGastosInferior.Name = "bnfFechaGastosInferior";
+            this.bnfFechaGastosInferior.Size = new System.Drawing.Size(231, 36);
+            this.bnfFechaGastosInferior.TabIndex = 9;
+            this.bnfFechaGastosInferior.Value = new System.DateTime(2018, 11, 12, 22, 7, 37, 565);
             // 
             // PantallaReportes
             // 
@@ -271,13 +271,13 @@
 
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker2;
+        private Bunifu.Framework.UI.BunifuDatepicker bnfFechaVentasInferior;
+        private Bunifu.Framework.UI.BunifuDatepicker bnfFechaVentasSuperior;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker3;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker4;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
+        private Bunifu.Framework.UI.BunifuThinButton2 bnfbtnGenerarVentas;
+        private Bunifu.Framework.UI.BunifuDatepicker bnfFechaGastosSuperior;
+        private Bunifu.Framework.UI.BunifuDatepicker bnfFechaGastosInferior;
+        private Bunifu.Framework.UI.BunifuThinButton2 bnfbtnGenerarGastos;
     }
 }

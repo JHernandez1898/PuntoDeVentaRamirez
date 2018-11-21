@@ -29,23 +29,43 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            bnfGrPanelPrincipal = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bnfbtnMinimizar = new Bunifu.Framework.UI.BunifuImageButton();
             this.bnfBtnCerrar = new Bunifu.Framework.UI.BunifuImageButton();
-            bnfGrPanelPrincipal = new Bunifu.Framework.UI.BunifuGradientPanel();
+            bnfGrPanelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bnfbtnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bnfBtnCerrar)).BeginInit();
             this.SuspendLayout();
+            // 
+            // bnfGrPanelPrincipal
+            // 
+            bnfGrPanelPrincipal.BackColor = System.Drawing.SystemColors.Control;
+            bnfGrPanelPrincipal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bnfGrPanelPrincipal.BackgroundImage")));
+            bnfGrPanelPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            bnfGrPanelPrincipal.Controls.Add(this.bnfbtnMinimizar);
+            bnfGrPanelPrincipal.Controls.Add(this.bnfBtnCerrar);
+            bnfGrPanelPrincipal.GradientBottomLeft = System.Drawing.Color.MediumPurple;
+            bnfGrPanelPrincipal.GradientBottomRight = System.Drawing.Color.MediumPurple;
+            bnfGrPanelPrincipal.GradientTopLeft = System.Drawing.Color.MediumPurple;
+            bnfGrPanelPrincipal.GradientTopRight = System.Drawing.Color.White;
+            bnfGrPanelPrincipal.Location = new System.Drawing.Point(0, 0);
+            bnfGrPanelPrincipal.Name = "bnfGrPanelPrincipal";
+            bnfGrPanelPrincipal.Margin = new System.Windows.Forms.Padding(0);
+            bnfGrPanelPrincipal.Quality = 10;
+            bnfGrPanelPrincipal.Size = new System.Drawing.Size(1366, 768);
+            bnfGrPanelPrincipal.TabIndex = 0;
+         
             // 
             // bnfbtnMinimizar
             // 
             this.bnfbtnMinimizar.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.bnfbtnMinimizar.Image = global::PuntoDeVentaRamirez.Properties.Resources.minimizar;
             this.bnfbtnMinimizar.ImageActive = null;
-            this.bnfbtnMinimizar.Location = new System.Drawing.Point(1319, 4);
+            this.bnfbtnMinimizar.Location = new System.Drawing.Point(1304, 13);
             this.bnfbtnMinimizar.Name = "bnfbtnMinimizar";
             this.bnfbtnMinimizar.Size = new System.Drawing.Size(16, 15);
             this.bnfbtnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bnfbtnMinimizar.TabIndex = 2;
+            this.bnfbtnMinimizar.TabIndex = 4;
             this.bnfbtnMinimizar.TabStop = false;
             this.bnfbtnMinimizar.Zoom = 10;
             this.bnfbtnMinimizar.Click += new System.EventHandler(this.bnfbtnMinimizar_Click);
@@ -55,29 +75,14 @@
             this.bnfBtnCerrar.BackColor = System.Drawing.Color.Red;
             this.bnfBtnCerrar.Image = global::PuntoDeVentaRamirez.Properties.Resources.cerrar;
             this.bnfBtnCerrar.ImageActive = null;
-            this.bnfBtnCerrar.Location = new System.Drawing.Point(1341, 4);
+            this.bnfBtnCerrar.Location = new System.Drawing.Point(1326, 13);
             this.bnfBtnCerrar.Name = "bnfBtnCerrar";
             this.bnfBtnCerrar.Size = new System.Drawing.Size(16, 15);
             this.bnfBtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bnfBtnCerrar.TabIndex = 1;
+            this.bnfBtnCerrar.TabIndex = 3;
             this.bnfBtnCerrar.TabStop = false;
             this.bnfBtnCerrar.Zoom = 10;
             this.bnfBtnCerrar.Click += new System.EventHandler(this.bnfBtnCerrar_Click);
-            // 
-            // bnfGrPanelPrincipal
-            // 
-            bnfGrPanelPrincipal.BackColor = System.Drawing.SystemColors.Control;
-            bnfGrPanelPrincipal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bnfGrPanelPrincipal.BackgroundImage")));
-            bnfGrPanelPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            bnfGrPanelPrincipal.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(121)))), ((int)(((byte)(119)))));
-            bnfGrPanelPrincipal.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(121)))), ((int)(((byte)(119)))));
-            bnfGrPanelPrincipal.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(121)))), ((int)(((byte)(119)))));
-            bnfGrPanelPrincipal.GradientTopRight = System.Drawing.Color.White;
-            bnfGrPanelPrincipal.Location = new System.Drawing.Point(0, 25);
-            bnfGrPanelPrincipal.Name = "bnfGrPanelPrincipal";
-            bnfGrPanelPrincipal.Quality = 10;
-            bnfGrPanelPrincipal.Size = new System.Drawing.Size(1396, 750);
-            bnfGrPanelPrincipal.TabIndex = 0;
             // 
             // Form1
             // 
@@ -85,8 +90,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(169)))), ((int)(((byte)(168)))));
             this.ClientSize = new System.Drawing.Size(1350, 768);
-            this.Controls.Add(this.bnfbtnMinimizar);
-            this.Controls.Add(this.bnfBtnCerrar);
             this.Controls.Add(bnfGrPanelPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -95,6 +98,7 @@
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
+            bnfGrPanelPrincipal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bnfbtnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bnfBtnCerrar)).EndInit();
             this.ResumeLayout(false);
@@ -102,8 +106,8 @@
         }
 
         #endregion
-        private Bunifu.Framework.UI.BunifuImageButton bnfBtnCerrar;
         private Bunifu.Framework.UI.BunifuImageButton bnfbtnMinimizar;
+        private Bunifu.Framework.UI.BunifuImageButton bnfBtnCerrar;
         private static Bunifu.Framework.UI.BunifuGradientPanel bnfGrPanelPrincipal;
     }
 }
