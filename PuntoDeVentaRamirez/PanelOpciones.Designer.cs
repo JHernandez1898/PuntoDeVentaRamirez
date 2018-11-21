@@ -227,7 +227,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(1193, 7);
+            this.label1.Location = new System.Drawing.Point(1219, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 20);
             this.label1.TabIndex = 0;
@@ -236,12 +236,13 @@
             // lnklblLogout
             // 
             this.lnklblLogout.AutoSize = true;
-            this.lnklblLogout.Location = new System.Drawing.Point(1263, 14);
+            this.lnklblLogout.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lnklblLogout.Location = new System.Drawing.Point(1289, 12);
             this.lnklblLogout.Name = "lnklblLogout";
-            this.lnklblLogout.Size = new System.Drawing.Size(36, 13);
+            this.lnklblLogout.Size = new System.Drawing.Size(27, 13);
             this.lnklblLogout.TabIndex = 10;
             this.lnklblLogout.TabStop = true;
-            this.lnklblLogout.Text = "logout";
+            this.lnklblLogout.Text = "Salir";
             this.lnklblLogout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblLogout_LinkClicked);
             // 
             // PanelOpciones
