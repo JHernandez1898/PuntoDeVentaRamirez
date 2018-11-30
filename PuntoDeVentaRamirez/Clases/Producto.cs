@@ -46,5 +46,10 @@ namespace PuntoDeVentaRamirez
             get { return _intUnidadesDisponibles; }
             set { _intUnidadesDisponibles = value; }
         }
+
+        public override string ToString()
+        {
+            return ("Datos del producto\n" + Descripcion +"\n" +PrecioUnitario+ "\n" + UnidadesDisponibles );
+        }
     }
 }

@@ -57,6 +57,7 @@
             this.bnfMtltxtDescripcion.TabIndex = 1;
             this.bnfMtltxtDescripcion.Text = "Descripción";
             this.bnfMtltxtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bnfMtltxtDescripcion.MouseEnter += new System.EventHandler(this.bnfMtltxtDescripcion_MouseEnter);
             // 
             // bnfDrpdCategoria
             // 
@@ -92,6 +93,7 @@
             this.bnfMtltxtPrecio.TabIndex = 3;
             this.bnfMtltxtPrecio.Text = "Precio";
             this.bnfMtltxtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bnfMtltxtPrecio.MouseEnter += new System.EventHandler(this.bnfMtltxtPrecio_MouseEnter);
             // 
             // bnfFLbtnAgregar
             // 
@@ -162,6 +164,7 @@
             this.bnftxtUnidadesDisponibles.TabIndex = 6;
             this.bnftxtUnidadesDisponibles.Text = "Unidades disponibles";
             this.bnftxtUnidadesDisponibles.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bnftxtUnidadesDisponibles.MouseEnter += new System.EventHandler(this.bnftxtUnidadesDisponibles_MouseEnter);
             // 
             // AñadirNuevoProducto
             // 
