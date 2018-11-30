@@ -82,7 +82,7 @@ namespace PuntoDeVentaRamirez
 
         private void bnfGrPanelPrincipal_Paint(object sender, PaintEventArgs e)
         {
-
+          
         }
     }
 }

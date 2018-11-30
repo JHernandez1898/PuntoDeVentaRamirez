@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PuntoDeVentaRamirez
 {
-    class Producto
+    public class Producto
     {
         private int _intIdProducto;
 
@@ -46,8 +46,5 @@ namespace PuntoDeVentaRamirez
             get { return _intUnidadesDisponibles; }
             set { _intUnidadesDisponibles = value; }
         }
-
-
-
     }
 }
