@@ -49,12 +49,12 @@
             bnfGrPanelPrincipal.GradientTopLeft = System.Drawing.Color.MediumPurple;
             bnfGrPanelPrincipal.GradientTopRight = System.Drawing.Color.White;
             bnfGrPanelPrincipal.Location = new System.Drawing.Point(0, 0);
-            bnfGrPanelPrincipal.Name = "bnfGrPanelPrincipal";
             bnfGrPanelPrincipal.Margin = new System.Windows.Forms.Padding(0);
+            bnfGrPanelPrincipal.Name = "bnfGrPanelPrincipal";
             bnfGrPanelPrincipal.Quality = 10;
             bnfGrPanelPrincipal.Size = new System.Drawing.Size(1366, 768);
             bnfGrPanelPrincipal.TabIndex = 0;
-         
+            bnfGrPanelPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.bnfGrPanelPrincipal_Paint);
             // 
             // bnfbtnMinimizar
             // 

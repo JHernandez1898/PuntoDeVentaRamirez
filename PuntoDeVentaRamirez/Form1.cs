@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace PuntoDeVentaRamirez
 {
@@ -16,9 +17,25 @@ namespace PuntoDeVentaRamirez
         {
             InitializeComponent();
             CrearPanelInicio();
+           
         }
-        
-
+       
+        //public void CargarConexion()
+        //{
+        //    try
+        //    {
+        //        SqlConnection con = ConexionBD.ObtenerConexion();
+        //        if (con.State == ConnectionState.Open)
+        //        {
+        //            MessageBox.Show("Bienvenido");
+        //        }
+        //    }catch(SqlException e)
+        //    {
+        //        MessageBox.Show(e.Message);
+        //    }
+        //}
+       
+       
         private void bnfbtnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -31,10 +48,11 @@ namespace PuntoDeVentaRamirez
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+        
         }
         public void CrearPanelInicio()
         {
+            
             PanelInicionSesion pInicio = new PanelInicionSesion();
             bnfGrPanelPrincipal.Controls.Add(pInicio);
             pInicio.Location =  new Point(483, 150);
@@ -42,6 +60,7 @@ namespace PuntoDeVentaRamirez
 
         public static void CrearPanelOpciones()
         {
+           
             PanelOpciones pOpciones = new PanelOpciones();
             bnfGrPanelPrincipal.Controls.Add(pOpciones);
             pOpciones.Location = new Point(0, 0);
@@ -53,6 +72,11 @@ namespace PuntoDeVentaRamirez
         public static void LimpiarPanel()
         {
             bnfGrPanelPrincipal.Controls.Clear();
+        }
+
+        private void bnfGrPanelPrincipal_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

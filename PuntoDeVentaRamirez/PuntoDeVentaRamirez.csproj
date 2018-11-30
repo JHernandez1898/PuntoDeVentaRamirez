@@ -67,6 +67,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClasesBD\ConexionBD.cs" />
+    <Compile Include="ClasesBD\ConexionesAVentas.cs" />
     <Compile Include="Punto de venta\AñadirNuevoProducto.cs">
       <SubType>UserControl</SubType>
     </Compile>
