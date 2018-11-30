@@ -12,6 +12,7 @@ namespace PuntoDeVentaRamirez
 {
     public partial class PantallaReportes : UserControl
     {
+        Reportes.visorReportes visorReporte;
         public PantallaReportes()
         {
             InitializeComponent();
@@ -20,6 +21,13 @@ namespace PuntoDeVentaRamirez
         private void PantallaReportes_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void bnfbtnGenerarVentas_Click(object sender, EventArgs e)
+        {
+            visorReporte = new Reportes.visorReportes();
+            visorReporte.AsignarReporteVentas(bnfFechaVentasInferior.Value, bnfFechaVentasSuperior.Value);
+            visorReporte.Show();
         }
     }
 }

@@ -184,6 +184,7 @@
             this.bnfbtnGenerarVentas.Size = new System.Drawing.Size(181, 41);
             this.bnfbtnGenerarVentas.TabIndex = 9;
             this.bnfbtnGenerarVentas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bnfbtnGenerarVentas.Click += new System.EventHandler(this.bnfbtnGenerarVentas_Click);
             // 
             // groupBox2
             // 
