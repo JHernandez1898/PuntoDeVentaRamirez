@@ -29,33 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.bnfMtltxtCodigo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bnfMtltxtDescripcion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bnfDrpdCategoria = new Bunifu.Framework.UI.BunifuDropdown();
             this.bnfMtltxtPrecio = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bnfFLbtnAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // bnfMtltxtCodigo
-            // 
-            this.bnfMtltxtCodigo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bnfMtltxtCodigo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bnfMtltxtCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bnfMtltxtCodigo.HintForeColor = System.Drawing.Color.Empty;
-            this.bnfMtltxtCodigo.HintText = "";
-            this.bnfMtltxtCodigo.isPassword = false;
-            this.bnfMtltxtCodigo.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bnfMtltxtCodigo.LineIdleColor = System.Drawing.Color.Gray;
-            this.bnfMtltxtCodigo.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bnfMtltxtCodigo.LineThickness = 3;
-            this.bnfMtltxtCodigo.Location = new System.Drawing.Point(25, 51);
-            this.bnfMtltxtCodigo.Margin = new System.Windows.Forms.Padding(4);
-            this.bnfMtltxtCodigo.Name = "bnfMtltxtCodigo";
-            this.bnfMtltxtCodigo.Size = new System.Drawing.Size(379, 33);
-            this.bnfMtltxtCodigo.TabIndex = 0;
-            this.bnfMtltxtCodigo.Text = "Código";
-            this.bnfMtltxtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bnfMtltxtDescripcion
             // 
@@ -69,7 +49,7 @@
             this.bnfMtltxtDescripcion.LineIdleColor = System.Drawing.Color.Gray;
             this.bnfMtltxtDescripcion.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.bnfMtltxtDescripcion.LineThickness = 3;
-            this.bnfMtltxtDescripcion.Location = new System.Drawing.Point(25, 117);
+            this.bnfMtltxtDescripcion.Location = new System.Drawing.Point(25, 46);
             this.bnfMtltxtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.bnfMtltxtDescripcion.Name = "bnfMtltxtDescripcion";
             this.bnfMtltxtDescripcion.Size = new System.Drawing.Size(530, 33);
@@ -84,7 +64,7 @@
             this.bnfDrpdCategoria.DisabledColor = System.Drawing.Color.Gray;
             this.bnfDrpdCategoria.ForeColor = System.Drawing.Color.White;
             this.bnfDrpdCategoria.Items = new string[0];
-            this.bnfDrpdCategoria.Location = new System.Drawing.Point(25, 184);
+            this.bnfDrpdCategoria.Location = new System.Drawing.Point(107, 168);
             this.bnfDrpdCategoria.Name = "bnfDrpdCategoria";
             this.bnfDrpdCategoria.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
             this.bnfDrpdCategoria.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(90)))));
@@ -104,10 +84,10 @@
             this.bnfMtltxtPrecio.LineIdleColor = System.Drawing.Color.Gray;
             this.bnfMtltxtPrecio.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.bnfMtltxtPrecio.LineThickness = 3;
-            this.bnfMtltxtPrecio.Location = new System.Drawing.Point(412, 51);
+            this.bnfMtltxtPrecio.Location = new System.Drawing.Point(25, 111);
             this.bnfMtltxtPrecio.Margin = new System.Windows.Forms.Padding(4);
             this.bnfMtltxtPrecio.Name = "bnfMtltxtPrecio";
-            this.bnfMtltxtPrecio.Size = new System.Drawing.Size(143, 33);
+            this.bnfMtltxtPrecio.Size = new System.Drawing.Size(530, 33);
             this.bnfMtltxtPrecio.TabIndex = 3;
             this.bnfMtltxtPrecio.Text = "Precio";
             this.bnfMtltxtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -133,7 +113,7 @@
             this.bnfFLbtnAgregar.IconVisible = true;
             this.bnfFLbtnAgregar.IconZoom = 90D;
             this.bnfFLbtnAgregar.IsTab = false;
-            this.bnfFLbtnAgregar.Location = new System.Drawing.Point(449, 184);
+            this.bnfFLbtnAgregar.Location = new System.Drawing.Point(449, 168);
             this.bnfFLbtnAgregar.Name = "bnfFLbtnAgregar";
             this.bnfFLbtnAgregar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
             this.bnfFLbtnAgregar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(90)))));
@@ -151,28 +131,38 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this.bnfFLbtnAgregar;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(22, 168);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 17);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Categoria:";
+            // 
             // AñadirNuevoProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.bnfFLbtnAgregar);
             this.Controls.Add(this.bnfMtltxtPrecio);
             this.Controls.Add(this.bnfDrpdCategoria);
             this.Controls.Add(this.bnfMtltxtDescripcion);
-            this.Controls.Add(this.bnfMtltxtCodigo);
             this.Name = "AñadirNuevoProducto";
             this.Size = new System.Drawing.Size(580, 280);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bnfMtltxtCodigo;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bnfMtltxtDescripcion;
         private Bunifu.Framework.UI.BunifuDropdown bnfDrpdCategoria;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bnfMtltxtPrecio;
         private Bunifu.Framework.UI.BunifuFlatButton bnfFLbtnAgregar;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.Label label1;
     }
 }

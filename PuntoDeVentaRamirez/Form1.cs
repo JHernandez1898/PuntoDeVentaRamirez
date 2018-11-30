@@ -17,25 +17,31 @@ namespace PuntoDeVentaRamirez
         {
             InitializeComponent();
             CrearPanelInicio();
-           
+            //CargarConexion();
         }
-       
+
         //public void CargarConexion()
         //{
+        //    SqlConnection con = ConexionBD.ObtenerConexion();
         //    try
         //    {
-        //        SqlConnection con = ConexionBD.ObtenerConexion();
+
         //        if (con.State == ConnectionState.Open)
         //        {
         //            MessageBox.Show("Bienvenido");
         //        }
-        //    }catch(SqlException e)
+        //    }
+        //    catch (SqlException e)
         //    {
         //        MessageBox.Show(e.Message);
         //    }
+        //    finally
+        //    {
+        //        con.Close();
+        //    }
         //}
-       
-       
+
+
         private void bnfbtnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
