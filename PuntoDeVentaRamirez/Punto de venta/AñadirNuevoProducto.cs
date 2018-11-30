@@ -16,5 +16,10 @@ namespace PuntoDeVentaRamirez
         {
             InitializeComponent();
         }
+
+        private void bnfFLbtnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

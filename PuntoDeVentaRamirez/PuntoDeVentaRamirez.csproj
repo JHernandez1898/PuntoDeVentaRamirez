@@ -69,12 +69,19 @@
   <ItemGroup>
     <Compile Include="ClasesBD\ConexionBD.cs" />
     <Compile Include="ClasesBD\ConexionesAVentas.cs" />
+    <Compile Include="Clases\Gasto.cs" />
+    <Compile Include="Clases\Paquete.cs" />
+    <Compile Include="Clases\Pedido.cs" />
+    <Compile Include="Clases\ProductoVendido.cs" />
+    <Compile Include="Clases\Vendedor.cs" />
+    <Compile Include="Clases\Venta.cs" />
     <Compile Include="Punto de venta\AñadirNuevoProducto.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Punto de venta\AñadirNuevoProducto.Designer.cs">
       <DependentUpon>AñadirNuevoProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clases\Producto.cs" />
     <Compile Include="Punto de venta\CrearPaquete.cs">
       <SubType>UserControl</SubType>
     </Compile>
