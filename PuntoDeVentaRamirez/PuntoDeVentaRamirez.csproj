@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClasesBD\ConexionBD.cs" />
+    <Compile Include="ClasesBD\ConexionesAReportes.cs" />
     <Compile Include="ClasesBD\ConexionesAVentas.cs" />
     <Compile Include="Clases\Gasto.cs" />
     <Compile Include="Clases\Paquete.cs" />
@@ -156,6 +157,11 @@
     <Compile Include="General\SubVentana.Designer.cs">
       <DependentUpon>SubVentana.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\DatosVentas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosVentas.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Punto de venta\AñadirNuevoProducto.resx">
       <DependentUpon>AñadirNuevoProducto.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +220,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Reportes\DatosVentas.xsc">
+      <DependentUpon>DatosVentas.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DatosVentas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosVentas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DatosVentas.xss">
+      <DependentUpon>DatosVentas.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
