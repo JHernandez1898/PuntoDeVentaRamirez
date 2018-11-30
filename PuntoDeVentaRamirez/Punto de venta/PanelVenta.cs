@@ -24,7 +24,7 @@ namespace PuntoDeVentaRamirez
 
         private void bnftxtCodigo_MouseEnter(object sender, EventArgs e)
         {
-            bnftxtCodigo.text = " ";
+            bnftxtDescripcion.text = " ";
         }
     }
 }

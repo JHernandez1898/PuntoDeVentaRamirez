@@ -1,0 +1,9 @@
+Fecha de llegada
+Numero de factura
+Fecha de factura
+Provedor
+Subtotal
+Iva ----- 16% (variable)
+Total
+Numero de cheque
+Fecha de pago deposito

@@ -67,16 +67,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AñadirNuevoProducto.cs">
+    <Compile Include="Punto de venta\AñadirNuevoProducto.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AñadirNuevoProducto.Designer.cs">
+    <Compile Include="Punto de venta\AñadirNuevoProducto.Designer.cs">
       <DependentUpon>AñadirNuevoProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="CrearPaquete.cs">
+    <Compile Include="Punto de venta\CrearPaquete.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CrearPaquete.Designer.cs">
+    <Compile Include="Punto de venta\CrearPaquete.Designer.cs">
       <DependentUpon>CrearPaquete.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
@@ -85,102 +85,102 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="PanelAgregarPaquete.cs">
+    <Compile Include="Punto de venta\PanelAgregarPaquete.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PanelAgregarPaquete.Designer.cs">
+    <Compile Include="Punto de venta\PanelAgregarPaquete.Designer.cs">
       <DependentUpon>PanelAgregarPaquete.cs</DependentUpon>
     </Compile>
-    <Compile Include="PanelInicionSesion.cs">
+    <Compile Include="General\PanelInicionSesion.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PanelInicionSesion.Designer.cs">
+    <Compile Include="General\PanelInicionSesion.Designer.cs">
       <DependentUpon>PanelInicionSesion.cs</DependentUpon>
     </Compile>
-    <Compile Include="PanelModificarProducto.cs">
+    <Compile Include="Inventario\PanelModificarProducto.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PanelModificarProducto.Designer.cs">
+    <Compile Include="Inventario\PanelModificarProducto.Designer.cs">
       <DependentUpon>PanelModificarProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="PanelOpciones.cs">
+    <Compile Include="General\PanelOpciones.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PanelOpciones.Designer.cs">
+    <Compile Include="General\PanelOpciones.Designer.cs">
       <DependentUpon>PanelOpciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="PanelVenta.cs">
+    <Compile Include="Punto de venta\PanelVenta.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PanelVenta.Designer.cs">
+    <Compile Include="Punto de venta\PanelVenta.Designer.cs">
       <DependentUpon>PanelVenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallaGastos.cs">
+    <Compile Include="Gastos\PantallaGastos.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PantallaGastos.Designer.cs">
+    <Compile Include="Gastos\PantallaGastos.Designer.cs">
       <DependentUpon>PantallaGastos.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallaInventario.cs">
+    <Compile Include="Inventario\PantallaInventario.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PantallaInventario.Designer.cs">
+    <Compile Include="Inventario\PantallaInventario.Designer.cs">
       <DependentUpon>PantallaInventario.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallaPuntoDeVenta.cs">
+    <Compile Include="Punto de venta\PantallaPuntoDeVenta.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PantallaPuntoDeVenta.Designer.cs">
+    <Compile Include="Punto de venta\PantallaPuntoDeVenta.Designer.cs">
       <DependentUpon>PantallaPuntoDeVenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallaReportes.cs">
+    <Compile Include="Reportes\PantallaReportes.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PantallaReportes.Designer.cs">
+    <Compile Include="Reportes\PantallaReportes.Designer.cs">
       <DependentUpon>PantallaReportes.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SubVentana.cs">
+    <Compile Include="General\SubVentana.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SubVentana.Designer.cs">
+    <Compile Include="General\SubVentana.Designer.cs">
       <DependentUpon>SubVentana.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AñadirNuevoProducto.resx">
+    <EmbeddedResource Include="Punto de venta\AñadirNuevoProducto.resx">
       <DependentUpon>AñadirNuevoProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrearPaquete.resx">
+    <EmbeddedResource Include="Punto de venta\CrearPaquete.resx">
       <DependentUpon>CrearPaquete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PanelAgregarPaquete.resx">
+    <EmbeddedResource Include="Punto de venta\PanelAgregarPaquete.resx">
       <DependentUpon>PanelAgregarPaquete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PanelInicionSesion.resx">
+    <EmbeddedResource Include="General\PanelInicionSesion.resx">
       <DependentUpon>PanelInicionSesion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PanelModificarProducto.resx">
+    <EmbeddedResource Include="Inventario\PanelModificarProducto.resx">
       <DependentUpon>PanelModificarProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PanelOpciones.resx">
+    <EmbeddedResource Include="General\PanelOpciones.resx">
       <DependentUpon>PanelOpciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PanelVenta.resx">
+    <EmbeddedResource Include="Punto de venta\PanelVenta.resx">
       <DependentUpon>PanelVenta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallaGastos.resx">
+    <EmbeddedResource Include="Gastos\PantallaGastos.resx">
       <DependentUpon>PantallaGastos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallaInventario.resx">
+    <EmbeddedResource Include="Inventario\PantallaInventario.resx">
       <DependentUpon>PantallaInventario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallaPuntoDeVenta.resx">
+    <EmbeddedResource Include="Punto de venta\PantallaPuntoDeVenta.resx">
       <DependentUpon>PantallaPuntoDeVenta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallaReportes.resx">
+    <EmbeddedResource Include="Reportes\PantallaReportes.resx">
       <DependentUpon>PantallaReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -193,7 +193,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SubVentana.resx">
+    <EmbeddedResource Include="General\SubVentana.resx">
       <DependentUpon>SubVentana.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

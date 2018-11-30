@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PanelVenta));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PanelVenta));
             this.grpDetalles = new System.Windows.Forms.GroupBox();
             this.bnfFltbtnCobrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bnflblCambio = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -41,7 +41,7 @@
             this.grpVenta = new System.Windows.Forms.GroupBox();
             this.bnfImgbtnBorrar = new Bunifu.Framework.UI.BunifuImageButton();
             this.bnfImgbtnCarrito = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bnftxtCodigo = new Bunifu.Framework.UI.BunifuTextbox();
+            this.bnftxtDescripcion = new Bunifu.Framework.UI.BunifuTextbox();
             this.bnfDtgCuenta = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +52,7 @@
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bnftxtCodigo = new Bunifu.Framework.UI.BunifuTextbox();
             this.grpDetalles.SuspendLayout();
             this.grpVenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bnfImgbtnBorrar)).BeginInit();
@@ -150,12 +151,13 @@
             // grpVenta
             // 
             this.grpVenta.BackColor = System.Drawing.Color.White;
+            this.grpVenta.Controls.Add(this.bnftxtCodigo);
             this.grpVenta.Controls.Add(this.bnfImgbtnBorrar);
             this.grpVenta.Controls.Add(this.bnfImgbtnCarrito);
-            this.grpVenta.Controls.Add(this.bnftxtCodigo);
-            this.grpVenta.Location = new System.Drawing.Point(71, 47);
+            this.grpVenta.Controls.Add(this.bnftxtDescripcion);
+            this.grpVenta.Location = new System.Drawing.Point(71, 3);
             this.grpVenta.Name = "grpVenta";
-            this.grpVenta.Size = new System.Drawing.Size(1102, 59);
+            this.grpVenta.Size = new System.Drawing.Size(1102, 103);
             this.grpVenta.TabIndex = 6;
             this.grpVenta.TabStop = false;
             this.grpVenta.Text = "Venta de Productos";
@@ -188,20 +190,20 @@
             this.bnfImgbtnCarrito.Tag = "Agregar al carrito";
             this.bnfImgbtnCarrito.Zoom = 10;
             // 
-            // bnftxtCodigo
+            // bnftxtDescripcion
             // 
-            this.bnftxtCodigo.BackColor = System.Drawing.Color.White;
-            this.bnftxtCodigo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bnftxtCodigo.BackgroundImage")));
-            this.bnftxtCodigo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bnftxtCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            this.bnftxtCodigo.Icon = ((System.Drawing.Image)(resources.GetObject("bnftxtCodigo.Icon")));
-            this.bnftxtCodigo.Location = new System.Drawing.Point(15, 19);
-            this.bnftxtCodigo.Name = "bnftxtCodigo";
-            this.bnftxtCodigo.Size = new System.Drawing.Size(688, 29);
-            this.bnftxtCodigo.TabIndex = 0;
-            this.bnftxtCodigo.text = "Código del Producto";
-            this.bnftxtCodigo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.bnftxtCodigo_MouseClick);
-            this.bnftxtCodigo.MouseEnter += new System.EventHandler(this.bnftxtCodigo_MouseEnter);
+            this.bnftxtDescripcion.BackColor = System.Drawing.Color.White;
+            this.bnftxtDescripcion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bnftxtDescripcion.BackgroundImage")));
+            this.bnftxtDescripcion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bnftxtDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.bnftxtDescripcion.Icon = ((System.Drawing.Image)(resources.GetObject("bnftxtDescripcion.Icon")));
+            this.bnftxtDescripcion.Location = new System.Drawing.Point(15, 19);
+            this.bnftxtDescripcion.Name = "bnftxtDescripcion";
+            this.bnftxtDescripcion.Size = new System.Drawing.Size(688, 29);
+            this.bnftxtDescripcion.TabIndex = 0;
+            this.bnftxtDescripcion.text = "Descripción del producto";
+            this.bnftxtDescripcion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.bnftxtCodigo_MouseClick);
+            this.bnftxtDescripcion.MouseEnter += new System.EventHandler(this.bnftxtCodigo_MouseEnter);
             // 
             // bnfDtgCuenta
             // 
@@ -295,6 +297,19 @@
             this.bunifuElipse4.ElipseRadius = 5;
             this.bunifuElipse4.TargetControl = this.bnfFltbtnCobrar;
             // 
+            // bnftxtCodigo
+            // 
+            this.bnftxtCodigo.BackColor = System.Drawing.Color.White;
+            this.bnftxtCodigo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bnftxtCodigo.BackgroundImage")));
+            this.bnftxtCodigo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bnftxtCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.bnftxtCodigo.Icon = ((System.Drawing.Image)(resources.GetObject("bnftxtCodigo.Icon")));
+            this.bnftxtCodigo.Location = new System.Drawing.Point(15, 54);
+            this.bnftxtCodigo.Name = "bnftxtCodigo";
+            this.bnftxtCodigo.Size = new System.Drawing.Size(212, 29);
+            this.bnftxtCodigo.TabIndex = 3;
+            this.bnftxtCodigo.text = "Código del Producto";
+            // 
             // PanelVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -325,7 +340,7 @@
         private System.Windows.Forms.GroupBox grpVenta;
         private Bunifu.Framework.UI.BunifuImageButton bnfImgbtnBorrar;
         private Bunifu.Framework.UI.BunifuImageButton bnfImgbtnCarrito;
-        private Bunifu.Framework.UI.BunifuTextbox bnftxtCodigo;
+        private Bunifu.Framework.UI.BunifuTextbox bnftxtDescripcion;
         private Bunifu.Framework.UI.BunifuCustomDataGrid bnfDtgCuenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
@@ -336,5 +351,6 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
+        private Bunifu.Framework.UI.BunifuTextbox bnftxtCodigo;
     }
 }
