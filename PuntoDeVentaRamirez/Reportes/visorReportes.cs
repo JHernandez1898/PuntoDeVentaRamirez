@@ -26,8 +26,7 @@ namespace PuntoDeVentaRamirez.Reportes
             }
             catch (System.Data.SqlClient.SqlException ex)
             {
-                MessageBox.Show(ex.Message, "Fallo en la creación del reporte.",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Fallo en la creación del reporte.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             crvVisorReportes.ReportSource = nuevoReporte;
         }

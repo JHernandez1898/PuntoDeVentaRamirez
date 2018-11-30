@@ -16,17 +16,10 @@ namespace PuntoDeVentaRamirez.ClasesBD
             DatosVentas datosVentas = new DatosVentas();
             using (SqlConnection con = ConexionBD.ObtenerConexion())
             {
-                try
-                {
-                    SqlCommand comando = new SqlCommand(@"exec Reporte_Ventas '"+fechaInicial.ToString("yy-mm-dd")+@"','"+fechaFinal.ToString("yy-mm-dd") + @"'", con);
-                    SqlDataAdapter adaptador = new SqlDataAdapter();
-                    adaptador.SelectCommand = comando;
-                    adaptador.Fill(datosVentas);                    
-                }
-                catch (SqlException e)
-                {
-                    throw new Exception(e.Message);
-                }
+                SqlCommand comando = new SqlCommand(@"exec Reporte_Ventas '"+fechaInicial.ToString("yy-mm-dd")+@"','"+fechaFinal.ToString("yy-mm-dd") + @"'", con);
+                SqlDataAdapter adaptador = new SqlDataAdapter();
+                adaptador.SelectCommand = comando;
+                adaptador.Fill(datosVentas);                                    
             }
             return datosVentas.Tables[0];
         }
