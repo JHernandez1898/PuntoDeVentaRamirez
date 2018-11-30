@@ -42,6 +42,7 @@ namespace PuntoDeVentaRamirez
         }
         void CargarCategorias()
         {
+            bnfDrpdCategoria.Clear();
             try
             {
                 List<string> lstCategorias = new List<string>();
@@ -71,6 +72,18 @@ namespace PuntoDeVentaRamirez
         private void bnftxtUnidadesDisponibles_MouseEnter(object sender, EventArgs e)
         {
             bnftxtUnidadesDisponibles.Focus();
+        }
+
+        private void lklblAgregarCategoria_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SubVentana nCategoria = new SubVentana(new AgregarCategoria(),"Agregar categoria");  
+            nCategoria.Show();
+
+        }
+
+        private void bnfDrpdCategoria_MouseEnter(object sender, EventArgs e)
+        {
+            CargarCategorias();
         }
     }
 }

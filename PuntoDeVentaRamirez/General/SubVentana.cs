@@ -12,6 +12,7 @@ namespace PuntoDeVentaRamirez
 {
     public partial class SubVentana : Form
     {
+
         public SubVentana(UserControl ventanita, string titulo)
         {
             InitializeComponent();
