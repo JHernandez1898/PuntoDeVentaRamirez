@@ -25,9 +25,20 @@ namespace PuntoDeVentaRamirez
 
         private void bnfbtnGenerarVentas_Click(object sender, EventArgs e)
         {
-            visorReporte = new Reportes.visorReportes();
-            visorReporte.AsignarReporteVentas(bnfFechaVentasInferior.Value, bnfFechaVentasSuperior.Value);
-            visorReporte.Show();
+            try
+            {
+                visorReporte = new Reportes.visorReportes();
+                visorReporte.AsignarReporteVentas(bnfFechaVentasInferior.Value, bnfFechaVentasSuperior.Value);
+                visorReporte.Show();
+            }
+            catch (System.Data.SqlClient.SqlException ex)
+            {
+                MessageBox.Show(ex.Message, "Fallo en la creación del reporte.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error no esperado.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

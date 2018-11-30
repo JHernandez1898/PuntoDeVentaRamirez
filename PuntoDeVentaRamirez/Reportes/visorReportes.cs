@@ -20,16 +20,8 @@ namespace PuntoDeVentaRamirez.Reportes
         public void AsignarReporteVentas(DateTime fechaInicial, DateTime fechaFinal)
         {            
             ReporteVentas nuevoReporte = new ReporteVentas();
-            try
-            {
-                nuevoReporte.SetDataSource(ClasesBD.ConexionesAReportes.ConsultarVentasPorFechas(fechaInicial,fechaFinal));
-            }
-            catch (System.Data.SqlClient.SqlException ex)
-            {
-                MessageBox.Show(ex.Message, "Fallo en la creación del reporte.",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            crvVisorReportes.ReportSource = nuevoReporte;
+            nuevoReporte.SetDataSource(ClasesBD.ConexionesAReportes.ConsultarVentasPorFechas(fechaInicial, fechaFinal));
+            crvVisorReportes.ReportSource = nuevoReporte;            
         }
     }
 }
