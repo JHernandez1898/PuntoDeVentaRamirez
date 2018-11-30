@@ -15,7 +15,7 @@ namespace PuntoDeVentaRamirez
             {
                 try
                 {
-                    SqlCommand comando = new SqlCommand(string.Format("exec sp_agregar_producto '{0}','{1}','{2}','{3}'",),con);
+                    //SqlCommand comando = new SqlCommand(string.Format("exec sp_agregar_producto '{0}','{1}','{2}','{3}'",),con);
                 }catch
                 {
 
