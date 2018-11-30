@@ -39,21 +39,21 @@
             System.Windows.Forms.DataVisualization.Charting.LegendItem legendItem1 = new System.Windows.Forms.DataVisualization.Charting.LegendItem();
             System.Windows.Forms.DataVisualization.Charting.LegendCell legendCell1 = new System.Windows.Forms.DataVisualization.Charting.LegendCell();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 10D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(10D, 20D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(20D, 5D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(30D, 30D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint8 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(40D, 15D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint9 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(50D, 13D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint10 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(60D, 23D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint11 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(70D, 52D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint12 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(80D, 26D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint13 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(90D, 10D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint14 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(100D, 23D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint15 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(110D, 12D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint8 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint9 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint10 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(7D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint11 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(8D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint12 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(9D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint13 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(10D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint14 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(11D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint15 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(12D, 0D);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaReportes));
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chtVentas = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.bnfFechaVentasInferior = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bnfFechaVentasSuperior = new Bunifu.Framework.UI.BunifuDatepicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -62,8 +62,9 @@
             this.bnfbtnGenerarGastos = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bnfFechaGastosSuperior = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bnfFechaGastosInferior = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.lblVentas = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chtVentas)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -88,21 +89,21 @@
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
-            // chart2
+            // chtVentas
             // 
             chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
+            this.chtVentas.ChartAreas.Add(chartArea2);
             legendCell1.Name = "Enero";
             legendItem1.Cells.Add(legendCell1);
             legend2.CustomItems.Add(legendItem1);
             legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(43, 68);
-            this.chart2.Name = "chart2";
-            this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
+            this.chtVentas.Legends.Add(legend2);
+            this.chtVentas.Location = new System.Drawing.Point(43, 80);
+            this.chtVentas.Name = "chtVentas";
+            this.chtVentas.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
-            series2.Name = "Series1";
+            series2.Name = "Ventas mensuales";
             series2.Points.Add(dataPoint4);
             series2.Points.Add(dataPoint5);
             series2.Points.Add(dataPoint6);
@@ -117,10 +118,10 @@
             series2.Points.Add(dataPoint15);
             series2.XValueMember = "Enero";
             series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
-            this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(590, 300);
-            this.chart2.TabIndex = 1;
-            this.chart2.Text = "chart2";
+            this.chtVentas.Series.Add(series2);
+            this.chtVentas.Size = new System.Drawing.Size(590, 300);
+            this.chtVentas.TabIndex = 1;
+            this.chtVentas.Text = "Ventas mensuales";
             // 
             // bnfFechaVentasInferior
             // 
@@ -249,29 +250,41 @@
             this.bnfFechaGastosInferior.TabIndex = 9;
             this.bnfFechaGastosInferior.Value = new System.DateTime(2018, 11, 12, 22, 7, 37, 565);
             // 
+            // lblVentas
+            // 
+            this.lblVentas.AutoSize = true;
+            this.lblVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVentas.Location = new System.Drawing.Point(222, 48);
+            this.lblVentas.Name = "lblVentas";
+            this.lblVentas.Size = new System.Drawing.Size(257, 20);
+            this.lblVentas.TabIndex = 4;
+            this.lblVentas.Text = "Ventas mensuales de este año";
+            // 
             // PantallaReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblVentas);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.chart2);
+            this.Controls.Add(this.chtVentas);
             this.Controls.Add(this.chart1);
             this.Name = "PantallaReportes";
             this.Size = new System.Drawing.Size(1350, 689);
             this.Load += new System.EventHandler(this.PantallaReportes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chtVentas)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chtVentas;
         private Bunifu.Framework.UI.BunifuDatepicker bnfFechaVentasInferior;
         private Bunifu.Framework.UI.BunifuDatepicker bnfFechaVentasSuperior;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -280,5 +293,6 @@
         private Bunifu.Framework.UI.BunifuDatepicker bnfFechaGastosSuperior;
         private Bunifu.Framework.UI.BunifuDatepicker bnfFechaGastosInferior;
         private Bunifu.Framework.UI.BunifuThinButton2 bnfbtnGenerarGastos;
+        private System.Windows.Forms.Label lblVentas;
     }
 }

@@ -20,7 +20,7 @@ namespace PuntoDeVentaRamirez
 
         private void PantallaReportes_Load(object sender, EventArgs e)
         {
-
+            CargarVentasMensualesDelAño();
         }
 
         private void bnfbtnGenerarVentas_Click(object sender, EventArgs e)
@@ -39,6 +39,11 @@ namespace PuntoDeVentaRamirez
             {
                 MessageBox.Show(ex.Message, "Error no esperado.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void CargarVentasMensualesDelAño()
+        {
+
         }
     }
 }
