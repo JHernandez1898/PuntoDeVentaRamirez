@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClasesBD\ConexionBD.cs" />
+    <Compile Include="ClasesBD\ConexionesAInventario.cs" />
     <Compile Include="ClasesBD\ConexionesAReportes.cs" />
     <Compile Include="ClasesBD\ConexionesAVentas.cs" />
     <Compile Include="Clases\Gasto.cs" />

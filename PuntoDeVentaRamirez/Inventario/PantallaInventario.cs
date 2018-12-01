@@ -15,9 +15,24 @@ namespace PuntoDeVentaRamirez
         public PantallaInventario()
         {
             InitializeComponent();
+            CargarProductos();
         }
 
-      
+        public void CargarProductos()
+        {
+           /* try
+            {*/
+                bnfCstgrInventario.Rows.Clear();
+                foreach (Producto nProduct in ClasesBD.ConexionesAInventario.MostrarProductos())
+                {
+                    bnfCstgrInventario.Rows.Add(nProduct.IdProducto.ToString(), nProduct.Descripcion, nProduct.Categoria, nProduct.PrecioUnitario.ToString("C"), nProduct.UnidadesDisponibles.ToString());
+                }
+            /*}
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }*/
+        }
 
         private void btnMtlAgregarProducto_Click(object sender, EventArgs e)
         {
