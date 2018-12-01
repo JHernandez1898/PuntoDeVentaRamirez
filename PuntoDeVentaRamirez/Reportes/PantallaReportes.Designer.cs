@@ -254,11 +254,11 @@
             // 
             this.lblVentas.AutoSize = true;
             this.lblVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVentas.Location = new System.Drawing.Point(222, 48);
+            this.lblVentas.Location = new System.Drawing.Point(189, 45);
             this.lblVentas.Name = "lblVentas";
-            this.lblVentas.Size = new System.Drawing.Size(257, 20);
+            this.lblVentas.Size = new System.Drawing.Size(294, 20);
             this.lblVentas.TabIndex = 4;
-            this.lblVentas.Text = "Ventas mensuales de este año";
+            this.lblVentas.Text = "Ventas mensuales dentro del rango";
             // 
             // PantallaReportes
             // 

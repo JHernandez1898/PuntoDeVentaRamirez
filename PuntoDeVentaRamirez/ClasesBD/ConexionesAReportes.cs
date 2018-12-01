@@ -24,9 +24,6 @@ namespace PuntoDeVentaRamirez.ClasesBD
             return datosVentas.Tables[0];
         }
 
-        public static DataTable ContarVentasMensualesDelAño()
-        {
-            
-        }
+        
     }
 }
