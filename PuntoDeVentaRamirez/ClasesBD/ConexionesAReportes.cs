@@ -16,7 +16,7 @@ namespace PuntoDeVentaRamirez.ClasesBD
             DatosVentas datosVentas = new DatosVentas();
             using (SqlConnection con = ConexionBD.ObtenerConexion())
             {
-                SqlCommand comando = new SqlCommand(@"exec Reporte_Ventas '"+fechaInicial.ToString("yy-mm-dd")+@"','"+fechaFinal.ToString("yy-mm-dd") + @"'", con);
+                SqlCommand comando = new SqlCommand(string.Format("exec Reporte_Ventas '{0}','{1}'", fechaInicial.ToString("yyyy-MM-dd"), fechaFinal.ToString("yyyy-MM-dd")), con);
                 SqlDataAdapter adaptador = new SqlDataAdapter();
                 adaptador.SelectCommand = comando;
                 adaptador.Fill(datosVentas);                    
