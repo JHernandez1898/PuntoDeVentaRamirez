@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PuntoDeVentaRamirez
 {
-    class Pedido
+    public class Pedido
     {
         private int _intIDPedido;
 
@@ -22,6 +22,14 @@ namespace PuntoDeVentaRamirez
             get { return _dtmFechaDeLlegada; }
             set { _dtmFechaDeLlegada = value; }
         }
+        private int _intNumeroFactura;
+
+        public int NumeroFactura
+        {
+            get { return _intNumeroFactura; }
+            set { _intNumeroFactura = value; }
+        }
+
         private string _strProveedor;
 
         public string Proveedor
@@ -44,6 +52,21 @@ namespace PuntoDeVentaRamirez
             set { _intIva = value; }
         }
         private int _intNumeroCheque;
+        private double _dblTotal;
+
+        public double Total
+        {
+            get { return _dblTotal; }
+            set { _dblTotal = value; }
+        }
+        private DateTime _dtmFechaLimite;
+
+        public DateTime FechaLimite
+        {
+            get { return _dtmFechaLimite; }
+            set { _dtmFechaLimite = value; }
+        }
+
 
         public int NumeroCheque
         {

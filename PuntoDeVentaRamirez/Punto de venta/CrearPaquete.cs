@@ -99,10 +99,26 @@ namespace PuntoDeVentaRamirez
                     MessageBox.Show("Seleccione un renglón del dataGridView");
                 else
                 {
-                    nProducto.IdProducto = int.Parse(RenglonSeleccionado.Cells[0].Value.ToString());
-                    lstPaquete.Remove(nProducto);
+                    nProducto.Descripcion = RenglonSeleccionado.Cells[0].Value.ToString();
+                    nProducto = ConexionesAVentas.MostrarProducto(nProducto.Descripcion);
+                    if (lstPaquete.Exists(x => x.Descripcion == nProducto.Descripcion))
+                    {
+                        nProducto = lstPaquete.Find((x => x.Descripcion == nProducto.Descripcion));
+                        if(nProducto.UnidadesDisponibles == 1)
+                        {
+                            lstPaquete.Remove(nProducto);
+                        }else
+                        {
+                            lstPaquete.Remove(nProducto);
+                            nProducto.UnidadesDisponibles -= 1;
+                            lstPaquete.Add(nProducto);
+                        }
+                        
+                    }
+                   
                     CargarArticulosPaquete(lstPaquete);
                 }
+            
 
             }
             catch (Exception ex)

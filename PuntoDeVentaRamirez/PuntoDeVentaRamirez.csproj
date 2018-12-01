@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClasesBD\ConexionBD.cs" />
+    <Compile Include="ClasesBD\ConexionesAGastos.cs" />
     <Compile Include="ClasesBD\ConexionesAVentas.cs" />
     <Compile Include="Clases\Gasto.cs" />
     <Compile Include="Clases\Paquete.cs" />
@@ -75,6 +76,18 @@
     <Compile Include="Clases\ProductoVendido.cs" />
     <Compile Include="Clases\Vendedor.cs" />
     <Compile Include="Clases\Venta.cs" />
+    <Compile Include="Gastos\RegistrarPagoPedido.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gastos\RegistrarPagoPedido.Designer.cs">
+      <DependentUpon>RegistrarPagoPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gastos\TarjetaNoficacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gastos\TarjetaNoficacion.Designer.cs">
+      <DependentUpon>TarjetaNoficacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Punto de venta\AgregarCategoria.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -168,6 +181,12 @@
     <Compile Include="General\SubVentana.Designer.cs">
       <DependentUpon>SubVentana.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Gastos\RegistrarPagoPedido.resx">
+      <DependentUpon>RegistrarPagoPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gastos\TarjetaNoficacion.resx">
+      <DependentUpon>TarjetaNoficacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Punto de venta\AgregarCategoria.resx">
       <DependentUpon>AgregarCategoria.cs</DependentUpon>
     </EmbeddedResource>
