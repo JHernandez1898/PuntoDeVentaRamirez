@@ -43,10 +43,15 @@ namespace PuntoDeVentaRamirez
                 cmbDescripcion.Items.Add(c);
             }
         }
-       
+
+        private void cmbDescripcion_Click(object sender, EventArgs e)
+        {
+            CargarItems();
+        }
+
         private void bnfImgbtnCarrito_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
                 Producto nProducto = ConexionesAVentas.MostrarProducto(cmbDescripcion.Text);
@@ -57,15 +62,19 @@ namespace PuntoDeVentaRamirez
                     CargarProductos();
                     ActualizarTotales();
                     cmbDescripcion.Text = "";
-                    bnfCantidad.Text = "cantidad";
+                    bnfCantidad.Text = "Cantidad";
                 }
                 else
                 {
-                    MessageBox.Show("No se cuenta con los productos suficientes");
+                    MessageBox.Show("No se cuenta con los productos suficientes.");
                 }
-               
-       
-            }catch(Exception ex)
+
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Especifique una cantidad de productos a agregar.");
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -128,7 +137,7 @@ namespace PuntoDeVentaRamirez
                 Producto nProducto = new Producto();
                 DataGridViewRow RenglonSeleccionado = bnfDtgCuenta.CurrentRow;
                 if (RenglonSeleccionado == null)
-                    MessageBox.Show("Seleccione un renglón del dataGridView");
+                    MessageBox.Show("Seleccione un renglón de la tabla.");
                 else
                 {
                     nProducto.IdProducto = int.Parse(RenglonSeleccionado.Cells[0].Value.ToString());
