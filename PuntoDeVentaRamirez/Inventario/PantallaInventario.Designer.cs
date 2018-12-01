@@ -29,9 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlOpciones = new System.Windows.Forms.Panel();
+            this.btnMtlModificarProducto = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btnMtlEliminarProducto = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btnMtlAgregarProducto = new Bunifu.Framework.UI.BunifuTileButton();
             this.bnfCstgrInventario = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,9 +47,10 @@
             this.bnftxtDescripcion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bnftxtCodigo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.btnMtlModificarProducto = new Bunifu.Framework.UI.BunifuTileButton();
-            this.btnMtlEliminarProducto = new Bunifu.Framework.UI.BunifuTileButton();
-            this.btnMtlAgregarProducto = new Bunifu.Framework.UI.BunifuTileButton();
+            this.chkCodigoProducto = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.chkDescripcion = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.chkCategoria = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.chkUnidades = new Bunifu.Framework.UI.BunifuCheckbox();
             this.pnlOpciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bnfCstgrInventario)).BeginInit();
             this.grpBusqueda.SuspendLayout();
@@ -62,175 +66,6 @@
             this.pnlOpciones.Name = "pnlOpciones";
             this.pnlOpciones.Size = new System.Drawing.Size(127, 750);
             this.pnlOpciones.TabIndex = 3;
-            // 
-            // bnfCstgrInventario
-            // 
-            this.bnfCstgrInventario.AllowUserToAddRows = false;
-            this.bnfCstgrInventario.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bnfCstgrInventario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bnfCstgrInventario.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.bnfCstgrInventario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bnfCstgrInventario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bnfCstgrInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bnfCstgrInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bnfCstgrInventario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigo,
-            this.categoria,
-            this.descripcion,
-            this.precio,
-            this.unidades});
-            this.bnfCstgrInventario.DoubleBuffered = true;
-            this.bnfCstgrInventario.EnableHeadersVisualStyles = false;
-            this.bnfCstgrInventario.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            this.bnfCstgrInventario.HeaderForeColor = System.Drawing.Color.Honeydew;
-            this.bnfCstgrInventario.Location = new System.Drawing.Point(191, 155);
-            this.bnfCstgrInventario.Name = "bnfCstgrInventario";
-            this.bnfCstgrInventario.ReadOnly = true;
-            this.bnfCstgrInventario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bnfCstgrInventario.RowHeadersVisible = false;
-            this.bnfCstgrInventario.Size = new System.Drawing.Size(1100, 497);
-            this.bnfCstgrInventario.TabIndex = 4;
-            // 
-            // codigo
-            // 
-            this.codigo.HeaderText = "Código de Producto";
-            this.codigo.Name = "codigo";
-            this.codigo.ReadOnly = true;
-            this.codigo.Width = 150;
-            // 
-            // categoria
-            // 
-            this.categoria.HeaderText = "Categoría";
-            this.categoria.Name = "categoria";
-            this.categoria.ReadOnly = true;
-            this.categoria.Width = 150;
-            // 
-            // descripcion
-            // 
-            this.descripcion.HeaderText = "Descripción";
-            this.descripcion.Name = "descripcion";
-            this.descripcion.ReadOnly = true;
-            this.descripcion.Width = 499;
-            // 
-            // precio
-            // 
-            this.precio.HeaderText = "Precio unitario";
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
-            this.precio.Width = 150;
-            // 
-            // unidades
-            // 
-            this.unidades.HeaderText = "Unidades disponibles";
-            this.unidades.Name = "unidades";
-            this.unidades.ReadOnly = true;
-            this.unidades.Width = 150;
-            // 
-            // grpBusqueda
-            // 
-            this.grpBusqueda.Controls.Add(this.bnftxtUnidadesDisponibles);
-            this.grpBusqueda.Controls.Add(this.bnftxtCategoria);
-            this.grpBusqueda.Controls.Add(this.bnftxtDescripcion);
-            this.grpBusqueda.Controls.Add(this.bnftxtCodigo);
-            this.grpBusqueda.Location = new System.Drawing.Point(191, 29);
-            this.grpBusqueda.Name = "grpBusqueda";
-            this.grpBusqueda.Size = new System.Drawing.Size(1100, 100);
-            this.grpBusqueda.TabIndex = 5;
-            this.grpBusqueda.TabStop = false;
-            this.grpBusqueda.Text = "Criterios de búsqueda";
-            // 
-            // bnftxtUnidadesDisponibles
-            // 
-            this.bnftxtUnidadesDisponibles.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bnftxtUnidadesDisponibles.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bnftxtUnidadesDisponibles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bnftxtUnidadesDisponibles.HintForeColor = System.Drawing.Color.Empty;
-            this.bnftxtUnidadesDisponibles.HintText = "";
-            this.bnftxtUnidadesDisponibles.isPassword = false;
-            this.bnftxtUnidadesDisponibles.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            this.bnftxtUnidadesDisponibles.LineIdleColor = System.Drawing.Color.Gray;
-            this.bnftxtUnidadesDisponibles.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            this.bnftxtUnidadesDisponibles.LineThickness = 3;
-            this.bnftxtUnidadesDisponibles.Location = new System.Drawing.Point(20, 60);
-            this.bnftxtUnidadesDisponibles.Margin = new System.Windows.Forms.Padding(4);
-            this.bnftxtUnidadesDisponibles.Name = "bnftxtUnidadesDisponibles";
-            this.bnftxtUnidadesDisponibles.Size = new System.Drawing.Size(166, 33);
-            this.bnftxtUnidadesDisponibles.TabIndex = 3;
-            this.bnftxtUnidadesDisponibles.Text = "Unidades disponibles";
-            this.bnftxtUnidadesDisponibles.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // bnftxtCategoria
-            // 
-            this.bnftxtCategoria.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bnftxtCategoria.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bnftxtCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bnftxtCategoria.HintForeColor = System.Drawing.Color.Empty;
-            this.bnftxtCategoria.HintText = "";
-            this.bnftxtCategoria.isPassword = false;
-            this.bnftxtCategoria.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            this.bnftxtCategoria.LineIdleColor = System.Drawing.Color.Gray;
-            this.bnftxtCategoria.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            this.bnftxtCategoria.LineThickness = 3;
-            this.bnftxtCategoria.Location = new System.Drawing.Point(822, 20);
-            this.bnftxtCategoria.Margin = new System.Windows.Forms.Padding(4);
-            this.bnftxtCategoria.Name = "bnftxtCategoria";
-            this.bnftxtCategoria.Size = new System.Drawing.Size(257, 33);
-            this.bnftxtCategoria.TabIndex = 2;
-            this.bnftxtCategoria.Text = "Categoría";
-            this.bnftxtCategoria.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // bnftxtDescripcion
-            // 
-            this.bnftxtDescripcion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bnftxtDescripcion.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bnftxtDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bnftxtDescripcion.HintForeColor = System.Drawing.Color.Empty;
-            this.bnftxtDescripcion.HintText = "";
-            this.bnftxtDescripcion.isPassword = false;
-            this.bnftxtDescripcion.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            this.bnftxtDescripcion.LineIdleColor = System.Drawing.Color.Gray;
-            this.bnftxtDescripcion.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            this.bnftxtDescripcion.LineThickness = 3;
-            this.bnftxtDescripcion.Location = new System.Drawing.Point(407, 20);
-            this.bnftxtDescripcion.Margin = new System.Windows.Forms.Padding(4);
-            this.bnftxtDescripcion.Name = "bnftxtDescripcion";
-            this.bnftxtDescripcion.Size = new System.Drawing.Size(379, 33);
-            this.bnftxtDescripcion.TabIndex = 1;
-            this.bnftxtDescripcion.Text = "Descripción";
-            this.bnftxtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // bnftxtCodigo
-            // 
-            this.bnftxtCodigo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bnftxtCodigo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bnftxtCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bnftxtCodigo.HintForeColor = System.Drawing.Color.Empty;
-            this.bnftxtCodigo.HintText = "";
-            this.bnftxtCodigo.isPassword = false;
-            this.bnftxtCodigo.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            this.bnftxtCodigo.LineIdleColor = System.Drawing.Color.Gray;
-            this.bnftxtCodigo.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            this.bnftxtCodigo.LineThickness = 3;
-            this.bnftxtCodigo.Location = new System.Drawing.Point(20, 20);
-            this.bnftxtCodigo.Margin = new System.Windows.Forms.Padding(4);
-            this.bnftxtCodigo.Name = "bnftxtCodigo";
-            this.bnftxtCodigo.Size = new System.Drawing.Size(379, 33);
-            this.bnftxtCodigo.TabIndex = 0;
-            this.bnftxtCodigo.Text = "Código de producto";
-            this.bnftxtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this.bnfCstgrInventario;
             // 
             // btnMtlModificarProducto
             // 
@@ -291,6 +126,231 @@
             this.btnMtlAgregarProducto.TabIndex = 0;
             this.btnMtlAgregarProducto.Click += new System.EventHandler(this.btnMtlAgregarProducto_Click);
             // 
+            // bnfCstgrInventario
+            // 
+            this.bnfCstgrInventario.AllowUserToAddRows = false;
+            this.bnfCstgrInventario.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bnfCstgrInventario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            this.bnfCstgrInventario.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.bnfCstgrInventario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bnfCstgrInventario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bnfCstgrInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.bnfCstgrInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bnfCstgrInventario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codigo,
+            this.categoria,
+            this.descripcion,
+            this.precio,
+            this.unidades});
+            this.bnfCstgrInventario.DoubleBuffered = true;
+            this.bnfCstgrInventario.EnableHeadersVisualStyles = false;
+            this.bnfCstgrInventario.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.bnfCstgrInventario.HeaderForeColor = System.Drawing.Color.Honeydew;
+            this.bnfCstgrInventario.Location = new System.Drawing.Point(191, 155);
+            this.bnfCstgrInventario.Name = "bnfCstgrInventario";
+            this.bnfCstgrInventario.ReadOnly = true;
+            this.bnfCstgrInventario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.bnfCstgrInventario.RowHeadersVisible = false;
+            this.bnfCstgrInventario.Size = new System.Drawing.Size(1100, 497);
+            this.bnfCstgrInventario.TabIndex = 4;
+            // 
+            // codigo
+            // 
+            this.codigo.HeaderText = "Código de Producto";
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
+            this.codigo.Width = 150;
+            // 
+            // categoria
+            // 
+            this.categoria.HeaderText = "Categoría";
+            this.categoria.Name = "categoria";
+            this.categoria.ReadOnly = true;
+            this.categoria.Width = 150;
+            // 
+            // descripcion
+            // 
+            this.descripcion.HeaderText = "Descripción";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
+            this.descripcion.Width = 499;
+            // 
+            // precio
+            // 
+            this.precio.HeaderText = "Precio unitario";
+            this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
+            this.precio.Width = 150;
+            // 
+            // unidades
+            // 
+            this.unidades.HeaderText = "Unidades disponibles";
+            this.unidades.Name = "unidades";
+            this.unidades.ReadOnly = true;
+            this.unidades.Width = 150;
+            // 
+            // grpBusqueda
+            // 
+            this.grpBusqueda.Controls.Add(this.chkUnidades);
+            this.grpBusqueda.Controls.Add(this.chkCategoria);
+            this.grpBusqueda.Controls.Add(this.chkDescripcion);
+            this.grpBusqueda.Controls.Add(this.chkCodigoProducto);
+            this.grpBusqueda.Controls.Add(this.bnftxtUnidadesDisponibles);
+            this.grpBusqueda.Controls.Add(this.bnftxtCategoria);
+            this.grpBusqueda.Controls.Add(this.bnftxtDescripcion);
+            this.grpBusqueda.Controls.Add(this.bnftxtCodigo);
+            this.grpBusqueda.Location = new System.Drawing.Point(191, 29);
+            this.grpBusqueda.Name = "grpBusqueda";
+            this.grpBusqueda.Size = new System.Drawing.Size(1100, 100);
+            this.grpBusqueda.TabIndex = 5;
+            this.grpBusqueda.TabStop = false;
+            this.grpBusqueda.Text = "Criterios de búsqueda";
+            // 
+            // bnftxtUnidadesDisponibles
+            // 
+            this.bnftxtUnidadesDisponibles.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bnftxtUnidadesDisponibles.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bnftxtUnidadesDisponibles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bnftxtUnidadesDisponibles.HintForeColor = System.Drawing.Color.Empty;
+            this.bnftxtUnidadesDisponibles.HintText = "";
+            this.bnftxtUnidadesDisponibles.isPassword = false;
+            this.bnftxtUnidadesDisponibles.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.bnftxtUnidadesDisponibles.LineIdleColor = System.Drawing.Color.Gray;
+            this.bnftxtUnidadesDisponibles.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.bnftxtUnidadesDisponibles.LineThickness = 3;
+            this.bnftxtUnidadesDisponibles.Location = new System.Drawing.Point(20, 62);
+            this.bnftxtUnidadesDisponibles.Margin = new System.Windows.Forms.Padding(4);
+            this.bnftxtUnidadesDisponibles.Name = "bnftxtUnidadesDisponibles";
+            this.bnftxtUnidadesDisponibles.Size = new System.Drawing.Size(166, 33);
+            this.bnftxtUnidadesDisponibles.TabIndex = 3;
+            this.bnftxtUnidadesDisponibles.Text = "Unidades disponibles";
+            this.bnftxtUnidadesDisponibles.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // bnftxtCategoria
+            // 
+            this.bnftxtCategoria.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bnftxtCategoria.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bnftxtCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bnftxtCategoria.HintForeColor = System.Drawing.Color.Empty;
+            this.bnftxtCategoria.HintText = "";
+            this.bnftxtCategoria.isPassword = false;
+            this.bnftxtCategoria.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.bnftxtCategoria.LineIdleColor = System.Drawing.Color.Gray;
+            this.bnftxtCategoria.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.bnftxtCategoria.LineThickness = 3;
+            this.bnftxtCategoria.Location = new System.Drawing.Point(788, 21);
+            this.bnftxtCategoria.Margin = new System.Windows.Forms.Padding(4);
+            this.bnftxtCategoria.Name = "bnftxtCategoria";
+            this.bnftxtCategoria.Size = new System.Drawing.Size(257, 33);
+            this.bnftxtCategoria.TabIndex = 2;
+            this.bnftxtCategoria.Text = "Categoría";
+            this.bnftxtCategoria.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // bnftxtDescripcion
+            // 
+            this.bnftxtDescripcion.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bnftxtDescripcion.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bnftxtDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bnftxtDescripcion.HintForeColor = System.Drawing.Color.Empty;
+            this.bnftxtDescripcion.HintText = "";
+            this.bnftxtDescripcion.isPassword = false;
+            this.bnftxtDescripcion.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.bnftxtDescripcion.LineIdleColor = System.Drawing.Color.Gray;
+            this.bnftxtDescripcion.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.bnftxtDescripcion.LineThickness = 3;
+            this.bnftxtDescripcion.Location = new System.Drawing.Point(346, 21);
+            this.bnftxtDescripcion.Margin = new System.Windows.Forms.Padding(4);
+            this.bnftxtDescripcion.Name = "bnftxtDescripcion";
+            this.bnftxtDescripcion.Size = new System.Drawing.Size(379, 33);
+            this.bnftxtDescripcion.TabIndex = 1;
+            this.bnftxtDescripcion.Text = "Descripción";
+            this.bnftxtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // bnftxtCodigo
+            // 
+            this.bnftxtCodigo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bnftxtCodigo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bnftxtCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bnftxtCodigo.HintForeColor = System.Drawing.Color.Empty;
+            this.bnftxtCodigo.HintText = "";
+            this.bnftxtCodigo.isPassword = false;
+            this.bnftxtCodigo.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.bnftxtCodigo.LineIdleColor = System.Drawing.Color.Gray;
+            this.bnftxtCodigo.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.bnftxtCodigo.LineThickness = 3;
+            this.bnftxtCodigo.Location = new System.Drawing.Point(20, 21);
+            this.bnftxtCodigo.Margin = new System.Windows.Forms.Padding(4);
+            this.bnftxtCodigo.Name = "bnftxtCodigo";
+            this.bnftxtCodigo.Size = new System.Drawing.Size(289, 33);
+            this.bnftxtCodigo.TabIndex = 0;
+            this.bnftxtCodigo.Text = "Código de producto";
+            this.bnftxtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this.bnfCstgrInventario;
+            // 
+            // chkCodigoProducto
+            // 
+            this.chkCodigoProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chkCodigoProducto.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chkCodigoProducto.Checked = false;
+            this.chkCodigoProducto.CheckedOnColor = System.Drawing.Color.MediumPurple;
+            this.chkCodigoProducto.ForeColor = System.Drawing.Color.White;
+            this.chkCodigoProducto.Location = new System.Drawing.Point(313, 28);
+            this.chkCodigoProducto.Name = "chkCodigoProducto";
+            this.chkCodigoProducto.Size = new System.Drawing.Size(20, 20);
+            this.chkCodigoProducto.TabIndex = 4;
+            this.chkCodigoProducto.OnChange += new System.EventHandler(this.chkCodigoProducto_OnChange);
+            // 
+            // chkDescripcion
+            // 
+            this.chkDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chkDescripcion.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chkDescripcion.Checked = false;
+            this.chkDescripcion.CheckedOnColor = System.Drawing.Color.MediumPurple;
+            this.chkDescripcion.ForeColor = System.Drawing.Color.White;
+            this.chkDescripcion.Location = new System.Drawing.Point(732, 28);
+            this.chkDescripcion.Name = "chkDescripcion";
+            this.chkDescripcion.Size = new System.Drawing.Size(20, 20);
+            this.chkDescripcion.TabIndex = 5;
+            this.chkDescripcion.OnChange += new System.EventHandler(this.chkDescripcion_OnChange);
+            // 
+            // chkCategoria
+            // 
+            this.chkCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chkCategoria.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chkCategoria.Checked = false;
+            this.chkCategoria.CheckedOnColor = System.Drawing.Color.MediumPurple;
+            this.chkCategoria.ForeColor = System.Drawing.Color.White;
+            this.chkCategoria.Location = new System.Drawing.Point(1053, 28);
+            this.chkCategoria.Name = "chkCategoria";
+            this.chkCategoria.Size = new System.Drawing.Size(20, 20);
+            this.chkCategoria.TabIndex = 6;
+            this.chkCategoria.OnChange += new System.EventHandler(this.chkCategoria_OnChange);
+            // 
+            // chkUnidades
+            // 
+            this.chkUnidades.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chkUnidades.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chkUnidades.Checked = false;
+            this.chkUnidades.CheckedOnColor = System.Drawing.Color.MediumPurple;
+            this.chkUnidades.ForeColor = System.Drawing.Color.White;
+            this.chkUnidades.Location = new System.Drawing.Point(190, 70);
+            this.chkUnidades.Name = "chkUnidades";
+            this.chkUnidades.Size = new System.Drawing.Size(20, 20);
+            this.chkUnidades.TabIndex = 7;
+            this.chkUnidades.OnChange += new System.EventHandler(this.chkUnidades_OnChange);
+            // 
             // PantallaInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -325,5 +385,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn unidades;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuCheckbox chkUnidades;
+        private Bunifu.Framework.UI.BunifuCheckbox chkCategoria;
+        private Bunifu.Framework.UI.BunifuCheckbox chkDescripcion;
+        private Bunifu.Framework.UI.BunifuCheckbox chkCodigoProducto;
     }
 }
