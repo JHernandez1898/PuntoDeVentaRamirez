@@ -9,9 +9,9 @@ namespace PuntoDeVentaRamirez.ClasesBD
 {
     public class ConexionesAInventario
     {
-        public static List<Producto> MostrarProductos()
+        public static List<Producto> FiltrarProductos(string strWhere)
         {
-            string strConsulta = "SELECT * FROM PRODUCTO";
+            string strConsulta = "SELECT CodigoProducto, CATEGORIA.Descripcion, PRODUCTO.Descripcion, PrecioUnitario, UnidadesDisponibles  FROM PRODUCTO JOIN CATEGORIA ON (PRODUCTO.CategoriaID = CATEGORIA.CategoriaID)" + strWhere;
             List<Producto> lstProductos = new List<Producto>();
             using (SqlConnection con = ConexionBD.ObtenerConexion())
             {
@@ -23,7 +23,7 @@ namespace PuntoDeVentaRamirez.ClasesBD
                     {
                         Producto nProducto = new Producto();
                         nProducto.IdProducto = drMostrar.GetInt32(0);
-                        nProducto.Categoria = drMostrar.GetInt16(1).ToString();
+                        nProducto.Categoria = drMostrar.GetString(1);
                         nProducto.Descripcion = drMostrar.GetString(2);
                         nProducto.PrecioUnitario = (double)drMostrar.GetDecimal(3);
                         nProducto.UnidadesDisponibles = drMostrar.GetInt16(4);
