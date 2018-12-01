@@ -11,29 +11,26 @@ using System.Windows.Forms;
 namespace PuntoDeVentaRamirez
 {
     public partial class PantallaReportes : UserControl
-    {
-        Reportes.visorReportes visorReporte;
+    {        
         public PantallaReportes()
         {
             InitializeComponent();
         }
 
         private void PantallaReportes_Load(object sender, EventArgs e)
-        {
-            CargarVentasMensualesDelAño();
-            bnfFechaVentasInferior.Value = DateTime.Now;
-            bnfFechaVentasSuperior.Value = DateTime.Now;
-            bnfFechaGastosInferior.Value = DateTime.Now;
-            bnfFechaGastosSuperior.Value = DateTime.Now;
+        {            
+            bnfFechaInferior.Value = DateTime.Now;
+            bnfFechaSuperior.Value = DateTime.Now;
+            AsignarReporteVentas(bnfFechaInferior.Value, bnfFechaSuperior.Value);
         }
 
         private void bnfbtnGenerarVentas_Click(object sender, EventArgs e)
         {
             try
-            {
-                visorReporte = new Reportes.visorReportes();
-                visorReporte.AsignarReporteVentas(bnfFechaVentasInferior.Value, bnfFechaVentasSuperior.Value);
-                visorReporte.Show();
+            {                
+                crvVisorReportes.Hide();                                
+                AsignarReporteVentas(bnfFechaInferior.Value, bnfFechaSuperior.Value);
+                crvVisorReportes.Show();
             }
             catch (System.Data.SqlClient.SqlException ex)
             {
@@ -45,9 +42,13 @@ namespace PuntoDeVentaRamirez
             }
         }
 
-        private void CargarVentasMensualesDelAño()
+        public void AsignarReporteVentas(DateTime fechaInicial, DateTime fechaFinal)
         {
-
+            Reportes.ReporteVentas nuevoReporte = new Reportes.ReporteVentas();
+            nuevoReporte.SetDataSource(ClasesBD.ConexionesAReportes.ConsultarVentasPorFechas(fechaInicial, fechaFinal));
+            nuevoReporte.SetParameterValue("Fecha Inicial", fechaInicial);
+            nuevoReporte.SetParameterValue("Fecha Final", fechaFinal);
+            crvVisorReportes.ReportSource = nuevoReporte;
         }
     }
 }
