@@ -54,7 +54,7 @@ namespace PuntoDeVentaRamirez
             {
                 try
                 {
-                    SqlCommand comando = new SqlCommand("SELECT Descripcion FROM PRODUCTO", con);
+                    SqlCommand comando = new SqlCommand("SELECT Descripcion FROM PRODUCTO ORDER BY Descripcion", con);
                     SqlDataReader drMostrar = comando.ExecuteReader();
                     while (drMostrar.Read())
                     {
