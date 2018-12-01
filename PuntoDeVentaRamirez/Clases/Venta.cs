@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PuntoDeVentaRamirez.Clases
+namespace PuntoDeVentaRamirez
 {
-    class Venta
+    public class Venta
     {
         private int _intVentaID;
 
@@ -30,14 +30,14 @@ namespace PuntoDeVentaRamirez.Clases
             set { _dtmFechaRegistro = value; }
         }
 
-        private List<ProductoVendido> lstListaProductos = new List<ProductoVendido>();
+        private List<Producto> lstListaProductos = new List<Producto>();
 
-        public void LlenarLista(List<ProductoVendido> lstListaLlena)
+        public void LlenarLista(List<Producto> lstListaLlena)
         {
             lstListaProductos = lstListaLlena; 
         }
 
-        public IEnumerator<ProductoVendido> GetEnumerator()
+        public IEnumerator<Producto> GetEnumerator()
         {
             return lstListaProductos.GetEnumerator();
 

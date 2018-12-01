@@ -36,6 +36,7 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.bnftxtUnidadesDisponibles = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.lklblAgregarCategoria = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // bnfMtltxtDescripcion
@@ -57,6 +58,7 @@
             this.bnfMtltxtDescripcion.TabIndex = 1;
             this.bnfMtltxtDescripcion.Text = "Descripción";
             this.bnfMtltxtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bnfMtltxtDescripcion.MouseEnter += new System.EventHandler(this.bnfMtltxtDescripcion_MouseEnter);
             // 
             // bnfDrpdCategoria
             // 
@@ -72,6 +74,7 @@
             this.bnfDrpdCategoria.selectedIndex = -1;
             this.bnfDrpdCategoria.Size = new System.Drawing.Size(217, 35);
             this.bnfDrpdCategoria.TabIndex = 2;
+            this.bnfDrpdCategoria.MouseEnter += new System.EventHandler(this.bnfDrpdCategoria_MouseEnter);
             // 
             // bnfMtltxtPrecio
             // 
@@ -92,6 +95,7 @@
             this.bnfMtltxtPrecio.TabIndex = 3;
             this.bnfMtltxtPrecio.Text = "Precio";
             this.bnfMtltxtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bnfMtltxtPrecio.MouseEnter += new System.EventHandler(this.bnfMtltxtPrecio_MouseEnter);
             // 
             // bnfFLbtnAgregar
             // 
@@ -141,7 +145,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 17);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Categoria:";
+            this.label1.Text = "Categoría:";
             // 
             // bnftxtUnidadesDisponibles
             // 
@@ -162,11 +166,27 @@
             this.bnftxtUnidadesDisponibles.TabIndex = 6;
             this.bnftxtUnidadesDisponibles.Text = "Unidades disponibles";
             this.bnftxtUnidadesDisponibles.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bnftxtUnidadesDisponibles.MouseEnter += new System.EventHandler(this.bnftxtUnidadesDisponibles_MouseEnter);
+            // 
+            // lklblAgregarCategoria
+            // 
+            this.lklblAgregarCategoria.ActiveLinkColor = System.Drawing.Color.Goldenrod;
+            this.lklblAgregarCategoria.AutoSize = true;
+            this.lklblAgregarCategoria.LinkColor = System.Drawing.Color.DimGray;
+            this.lklblAgregarCategoria.Location = new System.Drawing.Point(200, 206);
+            this.lklblAgregarCategoria.Name = "lklblAgregarCategoria";
+            this.lklblAgregarCategoria.Size = new System.Drawing.Size(126, 13);
+            this.lklblAgregarCategoria.TabIndex = 7;
+            this.lklblAgregarCategoria.TabStop = true;
+            this.lklblAgregarCategoria.Text = "Agregar nueva categoría";
+            this.lklblAgregarCategoria.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lklblAgregarCategoria.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklblAgregarCategoria_LinkClicked);
             // 
             // AñadirNuevoProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lklblAgregarCategoria);
             this.Controls.Add(this.bnftxtUnidadesDisponibles);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bnfFLbtnAgregar);
@@ -188,5 +208,6 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bnftxtUnidadesDisponibles;
+        private System.Windows.Forms.LinkLabel lklblAgregarCategoria;
     }
 }

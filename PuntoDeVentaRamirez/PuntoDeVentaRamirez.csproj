@@ -83,6 +83,12 @@
     <Compile Include="Clases\ProductoVendido.cs" />
     <Compile Include="Clases\Vendedor.cs" />
     <Compile Include="Clases\Venta.cs" />
+    <Compile Include="Punto de venta\AgregarCategoria.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Punto de venta\AgregarCategoria.Designer.cs">
+      <DependentUpon>AgregarCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Punto de venta\AñadirNuevoProducto.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -150,6 +156,12 @@
     <Compile Include="Punto de venta\PantallaPuntoDeVenta.Designer.cs">
       <DependentUpon>PantallaPuntoDeVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Punto de venta\VentanaCobro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Punto de venta\VentanaCobro.Designer.cs">
+      <DependentUpon>VentanaCobro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\PantallaReportes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -181,6 +193,9 @@
     <Compile Include="Reportes\visorReportes.Designer.cs">
       <DependentUpon>visorReportes.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Punto de venta\AgregarCategoria.resx">
+      <DependentUpon>AgregarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Punto de venta\AñadirNuevoProducto.resx">
       <DependentUpon>AñadirNuevoProducto.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Punto de venta\PantallaPuntoDeVenta.resx">
       <DependentUpon>PantallaPuntoDeVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Punto de venta\VentanaCobro.resx">
+      <DependentUpon>VentanaCobro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\PantallaReportes.resx">
       <DependentUpon>PantallaReportes.cs</DependentUpon>

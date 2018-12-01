@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PuntoDeVentaRamirez.Clases
+namespace PuntoDeVentaRamirez
 {
-    class Paquete
+    public class Paquete
     {
         private int _intIdPaquete;
 

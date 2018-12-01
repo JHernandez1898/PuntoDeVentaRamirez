@@ -106,7 +106,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SubVentana";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.SubVentana_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bnfbtnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bnfBtnCerrar)).EndInit();
             this.ResumeLayout(false);

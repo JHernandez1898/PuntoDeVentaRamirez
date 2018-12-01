@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PuntoDeVentaRamirez
 {
-    public class Producto
+    public class Producto: IEquatable<Producto>
     {
         private int _intIdProducto;
 
@@ -45,6 +45,16 @@ namespace PuntoDeVentaRamirez
         {
             get { return _intUnidadesDisponibles; }
             set { _intUnidadesDisponibles = value; }
+        }
+
+        public override string ToString()
+        {
+            return ("Datos del producto\n" + Descripcion +"\n" +PrecioUnitario+ "\n" + UnidadesDisponibles );
+        }
+
+        public bool Equals(Producto other)
+        {
+            return this.IdProducto.Equals(other.IdProducto);
         }
     }
 }
