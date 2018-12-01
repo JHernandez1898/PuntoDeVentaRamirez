@@ -51,7 +51,7 @@ namespace PuntoDeVentaRamirez
             {   
                 ConexionesAVentas.AgregarVenta(VentaActual);
                 ConexionesAVentas.AgregarDetallesVenta(lstProductos);
-                MessageBox.Show("Venta realizada con exito ", "Venta exitosa");
+                MessageBox.Show("Venta realizada con éxito.", "Venta exitosa");
                 PanelVenta.LimpiarDatagrid();
                 PanelVenta.Pago = double.Parse(bnfPagoEnPesos.Text);
                 PanelVenta.Cambio = (double.Parse(bnfPagoEnPesos.Text) - double.Parse(bnfTotal.Text));

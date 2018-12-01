@@ -32,7 +32,7 @@ namespace PuntoDeVentaRamirez
             {
                 try
                 {
-                    SqlCommand comando = new SqlCommand("SELECT Descripcion FROM CATEGORIA", con);
+                    SqlCommand comando = new SqlCommand("SELECT Descripcion FROM CATEGORIA ORDER BY Descripcion", con);
                     SqlDataReader dterMostrar = comando.ExecuteReader();
                     while (dterMostrar.Read())
                     {
@@ -54,7 +54,7 @@ namespace PuntoDeVentaRamirez
             {
                 try
                 {
-                    SqlCommand comando = new SqlCommand("SELECT Descripcion FROM PRODUCTO", con);
+                    SqlCommand comando = new SqlCommand("SELECT Descripcion FROM PRODUCTO ORDER BY Descripcion", con);
                     SqlDataReader drMostrar = comando.ExecuteReader();
                     while (drMostrar.Read())
                     {
