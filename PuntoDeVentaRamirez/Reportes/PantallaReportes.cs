@@ -21,6 +21,10 @@ namespace PuntoDeVentaRamirez
         private void PantallaReportes_Load(object sender, EventArgs e)
         {
             CargarVentasMensualesDelAño();
+            bnfFechaVentasInferior.Value = DateTime.Now;
+            bnfFechaVentasSuperior.Value = DateTime.Now;
+            bnfFechaGastosInferior.Value = DateTime.Now;
+            bnfFechaGastosSuperior.Value = DateTime.Now;
         }
 
         private void bnfbtnGenerarVentas_Click(object sender, EventArgs e)
