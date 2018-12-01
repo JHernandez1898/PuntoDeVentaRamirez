@@ -22,17 +22,14 @@ namespace PuntoDeVentaRamirez
 
         private void bnfBtnCerrar_Click(object sender, EventArgs e)
         {
+            
             this.Close();
+
         }
 
         private void bnfbtnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void SubVentana_Load(object sender, EventArgs e)
-        {
-            
         }
     }
 }

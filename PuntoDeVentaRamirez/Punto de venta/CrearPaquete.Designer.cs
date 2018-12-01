@@ -39,21 +39,21 @@
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpCriterios = new System.Windows.Forms.GroupBox();
             this.bnfMtltxtDescripcion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bnfMtltxtCodigo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bnfCstgridPaquete = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bnfMtltxNombrePaquete = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bnfTlbtnEliminar = new Bunifu.Framework.UI.BunifuTileButton();
             this.bnfTlbtnAgregar = new Bunifu.Framework.UI.BunifuTileButton();
-            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bnfCrear = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bnflblTotalGigante = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bnfCstgrdArticulos)).BeginInit();
             this.grpCriterios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bnfCstgridPaquete)).BeginInit();
@@ -116,10 +116,9 @@
             // grpCriterios
             // 
             this.grpCriterios.Controls.Add(this.bnfMtltxtDescripcion);
-            this.grpCriterios.Controls.Add(this.bnfMtltxtCodigo);
-            this.grpCriterios.Location = new System.Drawing.Point(48, 24);
+            this.grpCriterios.Location = new System.Drawing.Point(48, 56);
             this.grpCriterios.Name = "grpCriterios";
-            this.grpCriterios.Size = new System.Drawing.Size(510, 100);
+            this.grpCriterios.Size = new System.Drawing.Size(510, 68);
             this.grpCriterios.TabIndex = 2;
             this.grpCriterios.TabStop = false;
             this.grpCriterios.Text = "Criterios de búsqueda";
@@ -136,33 +135,14 @@
             this.bnfMtltxtDescripcion.LineIdleColor = System.Drawing.Color.Gray;
             this.bnfMtltxtDescripcion.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.bnfMtltxtDescripcion.LineThickness = 3;
-            this.bnfMtltxtDescripcion.Location = new System.Drawing.Point(7, 55);
+            this.bnfMtltxtDescripcion.Location = new System.Drawing.Point(7, 20);
             this.bnfMtltxtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.bnfMtltxtDescripcion.Name = "bnfMtltxtDescripcion";
-            this.bnfMtltxtDescripcion.Size = new System.Drawing.Size(588, 33);
+            this.bnfMtltxtDescripcion.Size = new System.Drawing.Size(493, 33);
             this.bnfMtltxtDescripcion.TabIndex = 1;
             this.bnfMtltxtDescripcion.Text = "Descripción";
             this.bnfMtltxtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // bnfMtltxtCodigo
-            // 
-            this.bnfMtltxtCodigo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bnfMtltxtCodigo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bnfMtltxtCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bnfMtltxtCodigo.HintForeColor = System.Drawing.Color.Empty;
-            this.bnfMtltxtCodigo.HintText = "";
-            this.bnfMtltxtCodigo.isPassword = false;
-            this.bnfMtltxtCodigo.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bnfMtltxtCodigo.LineIdleColor = System.Drawing.Color.Gray;
-            this.bnfMtltxtCodigo.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bnfMtltxtCodigo.LineThickness = 3;
-            this.bnfMtltxtCodigo.Location = new System.Drawing.Point(7, 20);
-            this.bnfMtltxtCodigo.Margin = new System.Windows.Forms.Padding(4);
-            this.bnfMtltxtCodigo.Name = "bnfMtltxtCodigo";
-            this.bnfMtltxtCodigo.Size = new System.Drawing.Size(194, 33);
-            this.bnfMtltxtCodigo.TabIndex = 0;
-            this.bnfMtltxtCodigo.Text = "Código";
-            this.bnfMtltxtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bnfMtltxtDescripcion.OnValueChanged += new System.EventHandler(this.bnfMtltxtDescripcion_OnValueChanged);
             // 
             // bunifuElipse1
             // 
@@ -196,9 +176,9 @@
             this.bnfCstgridPaquete.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.bnfCstgridPaquete.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bnfCstgridPaquete.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
+            this.dataGridViewTextBoxColumn3,
+            this.cantidad});
             this.bnfCstgridPaquete.DoubleBuffered = true;
             this.bnfCstgridPaquete.EnableHeadersVisualStyles = false;
             this.bnfCstgridPaquete.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
@@ -210,26 +190,6 @@
             this.bnfCstgridPaquete.RowHeadersVisible = false;
             this.bnfCstgridPaquete.Size = new System.Drawing.Size(500, 500);
             this.bnfCstgridPaquete.TabIndex = 7;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Código";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Descripción";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 300;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Precio";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 99;
             // 
             // bnfMtltxNombrePaquete
             // 
@@ -269,6 +229,7 @@
             this.bnfTlbtnEliminar.Name = "bnfTlbtnEliminar";
             this.bnfTlbtnEliminar.Size = new System.Drawing.Size(121, 117);
             this.bnfTlbtnEliminar.TabIndex = 10;
+            this.bnfTlbtnEliminar.Click += new System.EventHandler(this.bnfTlbtnEliminar_Click);
             // 
             // bnfTlbtnAgregar
             // 
@@ -288,40 +249,42 @@
             this.bnfTlbtnAgregar.Name = "bnfTlbtnAgregar";
             this.bnfTlbtnAgregar.Size = new System.Drawing.Size(121, 119);
             this.bnfTlbtnAgregar.TabIndex = 9;
+            this.bnfTlbtnAgregar.Click += new System.EventHandler(this.bnfTlbtnAgregar_Click);
             // 
-            // bunifuFlatButton3
+            // bnfCrear
             // 
-            this.bunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(100)))), ((int)(((byte)(90)))));
-            this.bunifuFlatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton3.BorderRadius = 0;
-            this.bunifuFlatButton3.ButtonText = "Crear";
-            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.Iconimage = null;
-            this.bunifuFlatButton3.Iconimage_right = null;
-            this.bunifuFlatButton3.Iconimage_right_Selected = null;
-            this.bunifuFlatButton3.Iconimage_Selected = null;
-            this.bunifuFlatButton3.IconMarginLeft = 0;
-            this.bunifuFlatButton3.IconMarginRight = 0;
-            this.bunifuFlatButton3.IconRightVisible = true;
-            this.bunifuFlatButton3.IconRightZoom = 0D;
-            this.bunifuFlatButton3.IconVisible = true;
-            this.bunifuFlatButton3.IconZoom = 90D;
-            this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(1059, 636);
-            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
-            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            this.bunifuFlatButton3.OnHovercolor = System.Drawing.SystemColors.ControlDark;
-            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(126, 32);
-            this.bunifuFlatButton3.TabIndex = 6;
-            this.bunifuFlatButton3.Text = "Crear";
-            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnfCrear.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(100)))), ((int)(((byte)(90)))));
+            this.bnfCrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.bnfCrear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bnfCrear.BorderRadius = 0;
+            this.bnfCrear.ButtonText = "Crear";
+            this.bnfCrear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bnfCrear.DisabledColor = System.Drawing.Color.Gray;
+            this.bnfCrear.Iconcolor = System.Drawing.Color.Transparent;
+            this.bnfCrear.Iconimage = null;
+            this.bnfCrear.Iconimage_right = null;
+            this.bnfCrear.Iconimage_right_Selected = null;
+            this.bnfCrear.Iconimage_Selected = null;
+            this.bnfCrear.IconMarginLeft = 0;
+            this.bnfCrear.IconMarginRight = 0;
+            this.bnfCrear.IconRightVisible = true;
+            this.bnfCrear.IconRightZoom = 0D;
+            this.bnfCrear.IconVisible = true;
+            this.bnfCrear.IconZoom = 90D;
+            this.bnfCrear.IsTab = false;
+            this.bnfCrear.Location = new System.Drawing.Point(1059, 706);
+            this.bnfCrear.Name = "bnfCrear";
+            this.bnfCrear.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.bnfCrear.OnHovercolor = System.Drawing.SystemColors.ControlDark;
+            this.bnfCrear.OnHoverTextColor = System.Drawing.Color.White;
+            this.bnfCrear.selected = false;
+            this.bnfCrear.Size = new System.Drawing.Size(126, 32);
+            this.bnfCrear.TabIndex = 6;
+            this.bnfCrear.Text = "Crear";
+            this.bnfCrear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bnfCrear.Textcolor = System.Drawing.Color.White;
+            this.bnfCrear.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnfCrear.Click += new System.EventHandler(this.bnfCrear_Click);
             // 
             // bunifuElipse2
             // 
@@ -341,22 +304,54 @@
             // bunifuElipse5
             // 
             this.bunifuElipse5.ElipseRadius = 5;
-            this.bunifuElipse5.TargetControl = this.bunifuFlatButton3;
+            this.bunifuElipse5.TargetControl = this.bnfCrear;
+            // 
+            // bnflblTotalGigante
+            // 
+            this.bnflblTotalGigante.AutoSize = true;
+            this.bnflblTotalGigante.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnflblTotalGigante.Location = new System.Drawing.Point(1044, 633);
+            this.bnflblTotalGigante.Name = "bnflblTotalGigante";
+            this.bnflblTotalGigante.Size = new System.Drawing.Size(141, 46);
+            this.bnflblTotalGigante.TabIndex = 12;
+            this.bnflblTotalGigante.Text = "$00.00";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Descripción";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 300;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Precio";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 99;
+            // 
+            // cantidad
+            // 
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.Name = "cantidad";
+            this.cantidad.ReadOnly = true;
             // 
             // CrearPaquete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.bnflblTotalGigante);
             this.Controls.Add(this.bnfMtltxNombrePaquete);
             this.Controls.Add(this.bnfTlbtnEliminar);
             this.Controls.Add(this.bnfTlbtnAgregar);
             this.Controls.Add(this.bnfCstgridPaquete);
-            this.Controls.Add(this.bunifuFlatButton3);
+            this.Controls.Add(this.bnfCrear);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.grpCriterios);
             this.Controls.Add(this.bnfCstgrdArticulos);
             this.Name = "CrearPaquete";
             this.Size = new System.Drawing.Size(1258, 766);
+            this.Load += new System.EventHandler(this.CrearPaquete_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bnfCstgrdArticulos)).EndInit();
             this.grpCriterios.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bnfCstgridPaquete)).EndInit();
@@ -370,10 +365,9 @@
         private Bunifu.Framework.UI.BunifuCustomDataGrid bnfCstgrdArticulos;
         private System.Windows.Forms.GroupBox grpCriterios;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bnfMtltxtDescripcion;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bnfMtltxtCodigo;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
+        private Bunifu.Framework.UI.BunifuFlatButton bnfCrear;
         private Bunifu.Framework.UI.BunifuCustomDataGrid bnfCstgridPaquete;
         private Bunifu.Framework.UI.BunifuTileButton bnfTlbtnAgregar;
         private Bunifu.Framework.UI.BunifuTileButton bnfTlbtnEliminar;
@@ -382,11 +376,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripción;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse5;
+        private Bunifu.Framework.UI.BunifuCustomLabel bnflblTotalGigante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
     }
 }

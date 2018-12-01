@@ -33,16 +33,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grpDetalles = new System.Windows.Forms.GroupBox();
             this.bnfFltbtnCobrar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bnflblCambio = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bnflblPago = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bnflblTotal = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bnflblTotalGigante = new Bunifu.Framework.UI.BunifuCustomLabel();
+            bnflblCambio = new Bunifu.Framework.UI.BunifuCustomLabel();
+            bnflblPago = new Bunifu.Framework.UI.BunifuCustomLabel();
+            bnflblTotal = new Bunifu.Framework.UI.BunifuCustomLabel();
+            bnflblTotalGigante = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.grpVenta = new System.Windows.Forms.GroupBox();
             this.bnfCantidad = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.cmbDescripcion = new System.Windows.Forms.ComboBox();
             this.bnfImgbtnBorrar = new Bunifu.Framework.UI.BunifuImageButton();
             this.bnfImgbtnCarrito = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bnfDtgCuenta = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            bnfDtgCuenta = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,16 +57,16 @@
             this.grpVenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bnfImgbtnBorrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bnfImgbtnCarrito)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bnfDtgCuenta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(bnfDtgCuenta)).BeginInit();
             this.SuspendLayout();
             // 
             // grpDetalles
             // 
             this.grpDetalles.Controls.Add(this.bnfFltbtnCobrar);
-            this.grpDetalles.Controls.Add(this.bnflblCambio);
-            this.grpDetalles.Controls.Add(this.bnflblPago);
-            this.grpDetalles.Controls.Add(this.bnflblTotal);
-            this.grpDetalles.Controls.Add(this.bnflblTotalGigante);
+            this.grpDetalles.Controls.Add(bnflblCambio);
+            this.grpDetalles.Controls.Add(bnflblPago);
+            this.grpDetalles.Controls.Add(bnflblTotal);
+            this.grpDetalles.Controls.Add(bnflblTotalGigante);
             this.grpDetalles.Location = new System.Drawing.Point(71, 578);
             this.grpDetalles.Name = "grpDetalles";
             this.grpDetalles.Size = new System.Drawing.Size(1102, 94);
@@ -111,43 +111,43 @@
             // 
             // bnflblCambio
             // 
-            this.bnflblCambio.AutoSize = true;
-            this.bnflblCambio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bnflblCambio.Location = new System.Drawing.Point(417, 50);
-            this.bnflblCambio.Name = "bnflblCambio";
-            this.bnflblCambio.Size = new System.Drawing.Size(71, 17);
-            this.bnflblCambio.TabIndex = 7;
-            this.bnflblCambio.Text = "Cambio: ";
+            bnflblCambio.AutoSize = true;
+            bnflblCambio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            bnflblCambio.Location = new System.Drawing.Point(417, 50);
+            bnflblCambio.Name = "bnflblCambio";
+            bnflblCambio.Size = new System.Drawing.Size(71, 17);
+            bnflblCambio.TabIndex = 7;
+            bnflblCambio.Text = "Cambio: ";
             // 
             // bnflblPago
             // 
-            this.bnflblPago.AutoSize = true;
-            this.bnflblPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bnflblPago.Location = new System.Drawing.Point(220, 50);
-            this.bnflblPago.Name = "bnflblPago";
-            this.bnflblPago.Size = new System.Drawing.Size(86, 17);
-            this.bnflblPago.TabIndex = 6;
-            this.bnflblPago.Text = "Pago con: ";
+            bnflblPago.AutoSize = true;
+            bnflblPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            bnflblPago.Location = new System.Drawing.Point(220, 50);
+            bnflblPago.Name = "bnflblPago";
+            bnflblPago.Size = new System.Drawing.Size(86, 17);
+            bnflblPago.TabIndex = 6;
+            bnflblPago.Text = "Pago con: ";
             // 
             // bnflblTotal
             // 
-            this.bnflblTotal.AutoSize = true;
-            this.bnflblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bnflblTotal.Location = new System.Drawing.Point(34, 50);
-            this.bnflblTotal.Name = "bnflblTotal";
-            this.bnflblTotal.Size = new System.Drawing.Size(111, 17);
-            this.bnflblTotal.TabIndex = 5;
-            this.bnflblTotal.Text = "Total a pagar:";
+            bnflblTotal.AutoSize = true;
+            bnflblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            bnflblTotal.Location = new System.Drawing.Point(34, 50);
+            bnflblTotal.Name = "bnflblTotal";
+            bnflblTotal.Size = new System.Drawing.Size(111, 17);
+            bnflblTotal.TabIndex = 5;
+            bnflblTotal.Text = "Total a pagar:";
             // 
             // bnflblTotalGigante
             // 
-            this.bnflblTotalGigante.AutoSize = true;
-            this.bnflblTotalGigante.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bnflblTotalGigante.Location = new System.Drawing.Point(873, 26);
-            this.bnflblTotalGigante.Name = "bnflblTotalGigante";
-            this.bnflblTotalGigante.Size = new System.Drawing.Size(141, 46);
-            this.bnflblTotalGigante.TabIndex = 3;
-            this.bnflblTotalGigante.Text = "$00.00";
+            bnflblTotalGigante.AutoSize = true;
+            bnflblTotalGigante.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            bnflblTotalGigante.Location = new System.Drawing.Point(873, 26);
+            bnflblTotalGigante.Name = "bnflblTotalGigante";
+            bnflblTotalGigante.Size = new System.Drawing.Size(141, 46);
+            bnflblTotalGigante.TabIndex = 3;
+            bnflblTotalGigante.Text = "$00.00";
             // 
             // grpVenta
             // 
@@ -228,13 +228,13 @@
             // 
             // bnfDtgCuenta
             // 
-            this.bnfDtgCuenta.AllowUserToAddRows = false;
-            this.bnfDtgCuenta.AllowUserToDeleteRows = false;
+            bnfDtgCuenta.AllowUserToAddRows = false;
+            bnfDtgCuenta.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bnfDtgCuenta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bnfDtgCuenta.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.bnfDtgCuenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bnfDtgCuenta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            bnfDtgCuenta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            bnfDtgCuenta.BackgroundColor = System.Drawing.Color.Gainsboro;
+            bnfDtgCuenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            bnfDtgCuenta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -242,25 +242,25 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bnfDtgCuenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bnfDtgCuenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bnfDtgCuenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            bnfDtgCuenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            bnfDtgCuenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            bnfDtgCuenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigo,
             this.descripcion,
             this.precio,
             this.cantidad,
             this.importe});
-            this.bnfDtgCuenta.DoubleBuffered = true;
-            this.bnfDtgCuenta.EnableHeadersVisualStyles = false;
-            this.bnfDtgCuenta.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            this.bnfDtgCuenta.HeaderForeColor = System.Drawing.Color.Honeydew;
-            this.bnfDtgCuenta.Location = new System.Drawing.Point(71, 112);
-            this.bnfDtgCuenta.Name = "bnfDtgCuenta";
-            this.bnfDtgCuenta.ReadOnly = true;
-            this.bnfDtgCuenta.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bnfDtgCuenta.RowHeadersVisible = false;
-            this.bnfDtgCuenta.Size = new System.Drawing.Size(1100, 460);
-            this.bnfDtgCuenta.TabIndex = 2;
+            bnfDtgCuenta.DoubleBuffered = true;
+            bnfDtgCuenta.EnableHeadersVisualStyles = false;
+            bnfDtgCuenta.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            bnfDtgCuenta.HeaderForeColor = System.Drawing.Color.Honeydew;
+            bnfDtgCuenta.Location = new System.Drawing.Point(71, 112);
+            bnfDtgCuenta.Name = "bnfDtgCuenta";
+            bnfDtgCuenta.ReadOnly = true;
+            bnfDtgCuenta.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            bnfDtgCuenta.RowHeadersVisible = false;
+            bnfDtgCuenta.Size = new System.Drawing.Size(1100, 460);
+            bnfDtgCuenta.TabIndex = 2;
             // 
             // codigo
             // 
@@ -311,7 +311,7 @@
             // bunifuElipse2
             // 
             this.bunifuElipse2.ElipseRadius = 5;
-            this.bunifuElipse2.TargetControl = this.bnfDtgCuenta;
+            this.bunifuElipse2.TargetControl = bnfDtgCuenta;
             // 
             // bunifuElipse3
             // 
@@ -334,7 +334,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.grpDetalles);
             this.Controls.Add(this.grpVenta);
-            this.Controls.Add(this.bnfDtgCuenta);
+            this.Controls.Add(bnfDtgCuenta);
             this.Name = "PanelVenta";
             this.Size = new System.Drawing.Size(1258, 766);
             this.grpDetalles.ResumeLayout(false);
@@ -342,7 +342,7 @@
             this.grpVenta.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bnfImgbtnBorrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bnfImgbtnCarrito)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bnfDtgCuenta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(bnfDtgCuenta)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -351,14 +351,14 @@
 
         private System.Windows.Forms.GroupBox grpDetalles;
         private Bunifu.Framework.UI.BunifuFlatButton bnfFltbtnCobrar;
-        private Bunifu.Framework.UI.BunifuCustomLabel bnflblCambio;
-        private Bunifu.Framework.UI.BunifuCustomLabel bnflblPago;
-        private Bunifu.Framework.UI.BunifuCustomLabel bnflblTotal;
-        private Bunifu.Framework.UI.BunifuCustomLabel bnflblTotalGigante;
+        private static Bunifu.Framework.UI.BunifuCustomLabel bnflblCambio;
+        private static Bunifu.Framework.UI.BunifuCustomLabel bnflblPago;
+        private static Bunifu.Framework.UI.BunifuCustomLabel bnflblTotal;
+        private static Bunifu.Framework.UI.BunifuCustomLabel bnflblTotalGigante;
         private System.Windows.Forms.GroupBox grpVenta;
         private Bunifu.Framework.UI.BunifuImageButton bnfImgbtnBorrar;
         private Bunifu.Framework.UI.BunifuImageButton bnfImgbtnCarrito;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid bnfDtgCuenta;
+        private static Bunifu.Framework.UI.BunifuCustomDataGrid bnfDtgCuenta;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;

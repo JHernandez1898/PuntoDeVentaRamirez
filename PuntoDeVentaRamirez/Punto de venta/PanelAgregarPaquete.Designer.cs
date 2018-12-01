@@ -32,11 +32,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bnfCstgridPaquetes = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.bnfMtltxtDescripcion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.btnAgregarPaquete = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bnfMtltxtCodigo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bnfMtltxtDescripcion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.btnAgregarPaquete = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bnfCstgridPaquetes)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +73,20 @@
             this.bnfCstgridPaquetes.Size = new System.Drawing.Size(500, 194);
             this.bnfCstgridPaquetes.TabIndex = 0;
             // 
+            // codigo
+            // 
+            this.codigo.HeaderText = "Código";
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
+            this.codigo.Width = 150;
+            // 
+            // descripcion
+            // 
+            this.descripcion.HeaderText = "Descripción";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
+            this.descripcion.Width = 349;
+            // 
             // bnfMtltxtDescripcion
             // 
             this.bnfMtltxtDescripcion.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -86,13 +99,14 @@
             this.bnfMtltxtDescripcion.LineIdleColor = System.Drawing.Color.Gray;
             this.bnfMtltxtDescripcion.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.bnfMtltxtDescripcion.LineThickness = 3;
-            this.bnfMtltxtDescripcion.Location = new System.Drawing.Point(168, 11);
+            this.bnfMtltxtDescripcion.Location = new System.Drawing.Point(36, 11);
             this.bnfMtltxtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.bnfMtltxtDescripcion.Name = "bnfMtltxtDescripcion";
-            this.bnfMtltxtDescripcion.Size = new System.Drawing.Size(379, 33);
+            this.bnfMtltxtDescripcion.Size = new System.Drawing.Size(511, 33);
             this.bnfMtltxtDescripcion.TabIndex = 1;
             this.bnfMtltxtDescripcion.Text = "Descripción";
             this.bnfMtltxtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bnfMtltxtDescripcion.OnValueChanged += new System.EventHandler(this.bnfMtltxtDescripcion_OnValueChanged);
             // 
             // btnAgregarPaquete
             // 
@@ -127,40 +141,7 @@
             this.btnAgregarPaquete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAgregarPaquete.Textcolor = System.Drawing.Color.White;
             this.btnAgregarPaquete.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // bnfMtltxtCodigo
-            // 
-            this.bnfMtltxtCodigo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bnfMtltxtCodigo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bnfMtltxtCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bnfMtltxtCodigo.HintForeColor = System.Drawing.Color.Empty;
-            this.bnfMtltxtCodigo.HintText = "";
-            this.bnfMtltxtCodigo.isPassword = false;
-            this.bnfMtltxtCodigo.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bnfMtltxtCodigo.LineIdleColor = System.Drawing.Color.Gray;
-            this.bnfMtltxtCodigo.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bnfMtltxtCodigo.LineThickness = 3;
-            this.bnfMtltxtCodigo.Location = new System.Drawing.Point(36, 11);
-            this.bnfMtltxtCodigo.Margin = new System.Windows.Forms.Padding(4);
-            this.bnfMtltxtCodigo.Name = "bnfMtltxtCodigo";
-            this.bnfMtltxtCodigo.Size = new System.Drawing.Size(124, 33);
-            this.bnfMtltxtCodigo.TabIndex = 3;
-            this.bnfMtltxtCodigo.Text = "Código";
-            this.bnfMtltxtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // codigo
-            // 
-            this.codigo.HeaderText = "Código";
-            this.codigo.Name = "codigo";
-            this.codigo.ReadOnly = true;
-            this.codigo.Width = 150;
-            // 
-            // descripcion
-            // 
-            this.descripcion.HeaderText = "Descripción";
-            this.descripcion.Name = "descripcion";
-            this.descripcion.ReadOnly = true;
-            this.descripcion.Width = 349;
+            this.btnAgregarPaquete.Click += new System.EventHandler(this.btnAgregarPaquete_Click);
             // 
             // bunifuElipse1
             // 
@@ -171,12 +152,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.bnfMtltxtCodigo);
             this.Controls.Add(this.btnAgregarPaquete);
             this.Controls.Add(this.bnfMtltxtDescripcion);
             this.Controls.Add(this.bnfCstgridPaquetes);
             this.Name = "PanelAgregarPaquete";
             this.Size = new System.Drawing.Size(580, 280);
+            this.Load += new System.EventHandler(this.PanelAgregarPaquete_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bnfCstgridPaquetes)).EndInit();
             this.ResumeLayout(false);
 
@@ -187,7 +168,6 @@
         private Bunifu.Framework.UI.BunifuCustomDataGrid bnfCstgridPaquetes;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bnfMtltxtDescripcion;
         private Bunifu.Framework.UI.BunifuFlatButton btnAgregarPaquete;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bnfMtltxtCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;

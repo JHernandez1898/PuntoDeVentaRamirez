@@ -14,17 +14,26 @@ namespace PuntoDeVentaRamirez
     public partial class PanelVenta : UserControl
     {
         public static List<Producto> lstCompra =  new List<Producto>();
-        
-        public  void NuevaLista()
+        private static double _dblPago;
+
+        public static double Pago
         {
-            lstCompra = new List<Producto>();
-            CargarProductos();
-            ActualizarTotales();
+            get { return _dblPago; }
+            set { _dblPago = value; }
+        }
+        private static double _dblCambio;
+
+        public static double Cambio
+        {
+            get { return _dblCambio; }
+            set { _dblCambio = value; }
         }
         public PanelVenta()
         {
             InitializeComponent();
             CargarItems();
+            CargarProductos();
+            ActualizarTotales();
         }
         void CargarItems()
         {
@@ -47,7 +56,10 @@ namespace PuntoDeVentaRamirez
                     lstCompra.Add(nProducto);
                     CargarProductos();
                     ActualizarTotales();
-                }else
+                    cmbDescripcion.Text = "";
+                    bnfCantidad.Text = "cantidad";
+                }
+                else
                 {
                     MessageBox.Show("No se cuenta con los productos suficientes");
                 }
@@ -59,7 +71,7 @@ namespace PuntoDeVentaRamirez
             }
 
         }
-        private  void CargarProductos()
+        public static  void CargarProductos()
         {
             try
             {
@@ -73,7 +85,7 @@ namespace PuntoDeVentaRamirez
                 MessageBox.Show(ex.Message);
             }
         }
-        private double CalcularTotal()
+        private static double CalcularTotal()
         {
             double dblSuma = 0;
             foreach (Producto nProduct in lstCompra)
@@ -82,12 +94,13 @@ namespace PuntoDeVentaRamirez
             }
             return dblSuma;
         }
-        private void ActualizarTotales()
+        private static void ActualizarTotales()
         {
-            bnflblTotal.Text = CalcularTotal().ToString("C");
+            bnflblTotal.Text = "Total: "+CalcularTotal().ToString("C");
             bnflblTotalGigante.Text = CalcularTotal().ToString("C");
-            cmbDescripcion.Text = "";
-            bnfCantidad.Text = "cantidad";
+            bnflblPago.Text = "Pago: " + Pago.ToString("C");
+            bnflblCambio.Text = "Cambio: " + Cambio.ToString("C");
+         
         }
         private void bnfCantidad_MouseEnter(object sender, EventArgs e)
         {
@@ -105,9 +118,7 @@ namespace PuntoDeVentaRamirez
             vcNueva.VentaActual = nVenta;
             SubVentana svCobrar = new SubVentana(vcNueva, "Detalles de pago");
             svCobrar.ShowDialog();
-            lstCompra = new List<Producto>();
-            CargarProductos();
-            ActualizarTotales();
+          
         }
 
         private void bnfImgbtnBorrar_Click(object sender, EventArgs e)
@@ -130,6 +141,24 @@ namespace PuntoDeVentaRamirez
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        public static void LimpiarDatagrid()
+        {
+            lstCompra.Clear();
+            CargarProductos();
+            ActualizarTotales();
+          
+        }
+
+        public static void CargarPaquete(List<Producto> lstProducts) 
+        {
+            foreach(Producto nProducto in lstProducts)
+            {
+                lstCompra.Add(nProducto);
+            }
+            CargarProductos();
+            ActualizarTotales();
         }
     }
     

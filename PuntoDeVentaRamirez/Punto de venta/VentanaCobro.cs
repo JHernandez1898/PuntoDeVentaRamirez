@@ -10,8 +10,9 @@ using System.Windows.Forms;
 
 namespace PuntoDeVentaRamirez
 {
-    public partial class VentanaCobro : UserControl
+    public  partial class VentanaCobro : UserControl
     {
+       
         public VentanaCobro()
         {
             InitializeComponent();
@@ -50,11 +51,16 @@ namespace PuntoDeVentaRamirez
             {   
                 ConexionesAVentas.AgregarVenta(VentaActual);
                 ConexionesAVentas.AgregarDetallesVenta(lstProductos);
-                MessageBox.Show("Venta realizada con exito", "Venta exitosa");
-               
-              
+                MessageBox.Show("Venta realizada con exito ", "Venta exitosa");
+                PanelVenta.LimpiarDatagrid();
+                PanelVenta.Pago = double.Parse(bnfPagoEnPesos.Text);
+                PanelVenta.Cambio = (double.Parse(bnfPagoEnPesos.Text) - double.Parse(bnfTotal.Text));
                 SubVentana.ActiveForm.Close();
-            }catch(Exception ex)
+
+
+
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
