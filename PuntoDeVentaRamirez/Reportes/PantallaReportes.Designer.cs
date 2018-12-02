@@ -74,7 +74,7 @@
             this.bnfbtnGenerarVentas.ActiveFillColor = System.Drawing.Color.DarkGray;
             this.bnfbtnGenerarVentas.ActiveForecolor = System.Drawing.Color.White;
             this.bnfbtnGenerarVentas.ActiveLineColor = System.Drawing.Color.DarkGray;
-            this.bnfbtnGenerarVentas.BackColor = System.Drawing.SystemColors.Control;
+            this.bnfbtnGenerarVentas.BackColor = System.Drawing.Color.Transparent;
             this.bnfbtnGenerarVentas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bnfbtnGenerarVentas.BackgroundImage")));
             this.bnfbtnGenerarVentas.ButtonText = "Generar reporte de ventas";
             this.bnfbtnGenerarVentas.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -146,7 +146,7 @@
             this.btnGenerarReporteGastos.ActiveFillColor = System.Drawing.Color.DarkGray;
             this.btnGenerarReporteGastos.ActiveForecolor = System.Drawing.Color.White;
             this.btnGenerarReporteGastos.ActiveLineColor = System.Drawing.Color.DarkGray;
-            this.btnGenerarReporteGastos.BackColor = System.Drawing.SystemColors.Control;
+            this.btnGenerarReporteGastos.BackColor = System.Drawing.Color.Transparent;
             this.btnGenerarReporteGastos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGenerarReporteGastos.BackgroundImage")));
             this.btnGenerarReporteGastos.ButtonText = "Generar reporte de gastos comunes";
             this.btnGenerarReporteGastos.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -171,7 +171,7 @@
             this.btnGenerarReportePedidos.ActiveFillColor = System.Drawing.Color.DarkGray;
             this.btnGenerarReportePedidos.ActiveForecolor = System.Drawing.Color.White;
             this.btnGenerarReportePedidos.ActiveLineColor = System.Drawing.Color.DarkGray;
-            this.btnGenerarReportePedidos.BackColor = System.Drawing.SystemColors.Control;
+            this.btnGenerarReportePedidos.BackColor = System.Drawing.Color.Transparent;
             this.btnGenerarReportePedidos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGenerarReportePedidos.BackgroundImage")));
             this.btnGenerarReportePedidos.ButtonText = "Generar reporte de pedidos";
             this.btnGenerarReportePedidos.Cursor = System.Windows.Forms.Cursors.Hand;

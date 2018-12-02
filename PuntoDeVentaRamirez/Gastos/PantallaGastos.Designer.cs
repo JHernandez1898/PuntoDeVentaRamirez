@@ -38,7 +38,7 @@
             this.bnfMtltxtCantidad = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bnfMtltxtDescripcion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bnfDtmpkFecha = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.bnfCstgrDetalles = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            bnfCstgrDetalles = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bnfEDtg = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -47,8 +47,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.bnfbtnRegistrarPago = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bnfPanelNotificaciones = new System.Windows.Forms.Panel();
-            this.bnfgridPedidos = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            bnfPanelNotificaciones = new System.Windows.Forms.Panel();
+            bnfgridPedidos = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,10 +67,10 @@
             this.bnftxtSubtotal = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuCards1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bnfCstgrDetalles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(bnfCstgrDetalles)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bnfgridPedidos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(bnfgridPedidos)).BeginInit();
             this.bunifuCards2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -182,13 +182,13 @@
             // 
             // bnfCstgrDetalles
             // 
-            this.bnfCstgrDetalles.AllowUserToAddRows = false;
-            this.bnfCstgrDetalles.AllowUserToDeleteRows = false;
+            bnfCstgrDetalles.AllowUserToAddRows = false;
+            bnfCstgrDetalles.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bnfCstgrDetalles.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bnfCstgrDetalles.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.bnfCstgrDetalles.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bnfCstgrDetalles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            bnfCstgrDetalles.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            bnfCstgrDetalles.BackgroundColor = System.Drawing.Color.Gainsboro;
+            bnfCstgrDetalles.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            bnfCstgrDetalles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -196,22 +196,22 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bnfCstgrDetalles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bnfCstgrDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bnfCstgrDetalles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            bnfCstgrDetalles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            bnfCstgrDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            bnfCstgrDetalles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.descripcion,
             this.cantidad});
-            this.bnfCstgrDetalles.DoubleBuffered = true;
-            this.bnfCstgrDetalles.EnableHeadersVisualStyles = false;
-            this.bnfCstgrDetalles.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            this.bnfCstgrDetalles.HeaderForeColor = System.Drawing.Color.Honeydew;
-            this.bnfCstgrDetalles.Location = new System.Drawing.Point(478, 34);
-            this.bnfCstgrDetalles.Name = "bnfCstgrDetalles";
-            this.bnfCstgrDetalles.ReadOnly = true;
-            this.bnfCstgrDetalles.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bnfCstgrDetalles.RowHeadersVisible = false;
-            this.bnfCstgrDetalles.Size = new System.Drawing.Size(805, 164);
-            this.bnfCstgrDetalles.TabIndex = 1;
+            bnfCstgrDetalles.DoubleBuffered = true;
+            bnfCstgrDetalles.EnableHeadersVisualStyles = false;
+            bnfCstgrDetalles.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            bnfCstgrDetalles.HeaderForeColor = System.Drawing.Color.Honeydew;
+            bnfCstgrDetalles.Location = new System.Drawing.Point(478, 34);
+            bnfCstgrDetalles.Name = "bnfCstgrDetalles";
+            bnfCstgrDetalles.ReadOnly = true;
+            bnfCstgrDetalles.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            bnfCstgrDetalles.RowHeadersVisible = false;
+            bnfCstgrDetalles.Size = new System.Drawing.Size(805, 164);
+            bnfCstgrDetalles.TabIndex = 1;
             // 
             // descripcion
             // 
@@ -230,7 +230,7 @@
             // bnfEDtg
             // 
             this.bnfEDtg.ElipseRadius = 5;
-            this.bnfEDtg.TargetControl = this.bnfCstgrDetalles;
+            this.bnfEDtg.TargetControl = bnfCstgrDetalles;
             // 
             // bunifuElipse2
             // 
@@ -244,7 +244,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.bnfCstgrDetalles);
+            this.groupBox1.Controls.Add(bnfCstgrDetalles);
             this.groupBox1.Controls.Add(this.bunifuCards1);
             this.groupBox1.Location = new System.Drawing.Point(37, 452);
             this.groupBox1.Name = "groupBox1";
@@ -255,9 +255,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.bnfbtnRegistrarPago);
-            this.groupBox2.Controls.Add(this.bnfPanelNotificaciones);
-            this.groupBox2.Controls.Add(this.bnfgridPedidos);
+            this.groupBox2.Controls.Add(bnfbtnRegistrarPago);
+            this.groupBox2.Controls.Add(bnfPanelNotificaciones);
+            this.groupBox2.Controls.Add(bnfgridPedidos);
             this.groupBox2.Controls.Add(this.bunifuCards2);
             this.groupBox2.Location = new System.Drawing.Point(37, 18);
             this.groupBox2.Name = "groupBox2";
@@ -303,21 +303,21 @@
             // 
             // bnfPanelNotificaciones
             // 
-            this.bnfPanelNotificaciones.BackColor = System.Drawing.Color.Gray;
-            this.bnfPanelNotificaciones.Location = new System.Drawing.Point(1011, 19);
-            this.bnfPanelNotificaciones.Name = "bnfPanelNotificaciones";
-            this.bnfPanelNotificaciones.Size = new System.Drawing.Size(272, 353);
-            this.bnfPanelNotificaciones.TabIndex = 2;
+            bnfPanelNotificaciones.BackColor = System.Drawing.Color.Gray;
+            bnfPanelNotificaciones.Location = new System.Drawing.Point(1011, 19);
+            bnfPanelNotificaciones.Name = "bnfPanelNotificaciones";
+            bnfPanelNotificaciones.Size = new System.Drawing.Size(272, 353);
+            bnfPanelNotificaciones.TabIndex = 2;
             // 
             // bnfgridPedidos
             // 
-            this.bnfgridPedidos.AllowUserToAddRows = false;
-            this.bnfgridPedidos.AllowUserToDeleteRows = false;
+            bnfgridPedidos.AllowUserToAddRows = false;
+            bnfgridPedidos.AllowUserToDeleteRows = false;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bnfgridPedidos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.bnfgridPedidos.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.bnfgridPedidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bnfgridPedidos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            bnfgridPedidos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            bnfgridPedidos.BackgroundColor = System.Drawing.Color.Gainsboro;
+            bnfgridPedidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            bnfgridPedidos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -325,25 +325,25 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bnfgridPedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.bnfgridPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bnfgridPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            bnfgridPedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            bnfgridPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            bnfgridPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Fecha,
             this.Proveedor,
             this.Subtotal,
             this.IVA,
             this.Total});
-            this.bnfgridPedidos.DoubleBuffered = true;
-            this.bnfgridPedidos.EnableHeadersVisualStyles = false;
-            this.bnfgridPedidos.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            this.bnfgridPedidos.HeaderForeColor = System.Drawing.Color.Honeydew;
-            this.bnfgridPedidos.Location = new System.Drawing.Point(373, 19);
-            this.bnfgridPedidos.Name = "bnfgridPedidos";
-            this.bnfgridPedidos.ReadOnly = true;
-            this.bnfgridPedidos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bnfgridPedidos.RowHeadersVisible = false;
-            this.bnfgridPedidos.Size = new System.Drawing.Size(620, 390);
-            this.bnfgridPedidos.TabIndex = 1;
+            bnfgridPedidos.DoubleBuffered = true;
+            bnfgridPedidos.EnableHeadersVisualStyles = false;
+            bnfgridPedidos.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            bnfgridPedidos.HeaderForeColor = System.Drawing.Color.Honeydew;
+            bnfgridPedidos.Location = new System.Drawing.Point(373, 19);
+            bnfgridPedidos.Name = "bnfgridPedidos";
+            bnfgridPedidos.ReadOnly = true;
+            bnfgridPedidos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            bnfgridPedidos.RowHeadersVisible = false;
+            bnfgridPedidos.Size = new System.Drawing.Size(620, 390);
+            bnfgridPedidos.TabIndex = 1;
             // 
             // Fecha
             // 
@@ -588,7 +588,7 @@
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this.bnfgridPedidos;
+            this.bunifuElipse1.TargetControl = bnfgridPedidos;
             // 
             // PantallaGastos
             // 
@@ -600,10 +600,10 @@
             this.Size = new System.Drawing.Size(1350, 689);
             this.Load += new System.EventHandler(this.PantallaGastos_Load);
             this.bunifuCards1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bnfCstgrDetalles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(bnfCstgrDetalles)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bnfgridPedidos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(bnfgridPedidos)).EndInit();
             this.bunifuCards2.ResumeLayout(false);
             this.bunifuCards2.PerformLayout();
             this.ResumeLayout(false);
@@ -642,8 +642,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn IVA;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid bnfCstgrDetalles;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid bnfgridPedidos;
-        private System.Windows.Forms.Panel bnfPanelNotificaciones;
+        private static Bunifu.Framework.UI.BunifuCustomDataGrid bnfCstgrDetalles;
+        private static Bunifu.Framework.UI.BunifuCustomDataGrid bnfgridPedidos;
+        private static System.Windows.Forms.Panel bnfPanelNotificaciones;
     }
 }

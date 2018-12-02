@@ -124,9 +124,7 @@ namespace PuntoDeVentaRamirez
                 bnfPanelNotificaciones.Controls.Add(tnNotificacion);
                 y += 70;
             }
-
-           
-           
+            
         }
         
     }
