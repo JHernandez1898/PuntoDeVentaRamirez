@@ -36,6 +36,8 @@
             this.crvVisorReportes = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.lblFechaInicial = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblFechaFinal = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.btnGenerarReporteGastos = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnGenerarReportePedidos = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panelReporte.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,7 +74,7 @@
             this.bnfbtnGenerarVentas.ActiveFillColor = System.Drawing.Color.DarkGray;
             this.bnfbtnGenerarVentas.ActiveForecolor = System.Drawing.Color.White;
             this.bnfbtnGenerarVentas.ActiveLineColor = System.Drawing.Color.DarkGray;
-            this.bnfbtnGenerarVentas.BackColor = System.Drawing.Color.Transparent;
+            this.bnfbtnGenerarVentas.BackColor = System.Drawing.SystemColors.Control;
             this.bnfbtnGenerarVentas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bnfbtnGenerarVentas.BackgroundImage")));
             this.bnfbtnGenerarVentas.ButtonText = "Generar reporte de ventas";
             this.bnfbtnGenerarVentas.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -83,10 +85,10 @@
             this.bnfbtnGenerarVentas.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
             this.bnfbtnGenerarVentas.IdleForecolor = System.Drawing.Color.Honeydew;
             this.bnfbtnGenerarVentas.IdleLineColor = System.Drawing.Color.Transparent;
-            this.bnfbtnGenerarVentas.Location = new System.Drawing.Point(37, 220);
+            this.bnfbtnGenerarVentas.Location = new System.Drawing.Point(37, 234);
             this.bnfbtnGenerarVentas.Margin = new System.Windows.Forms.Padding(5);
             this.bnfbtnGenerarVentas.Name = "bnfbtnGenerarVentas";
-            this.bnfbtnGenerarVentas.Size = new System.Drawing.Size(341, 65);
+            this.bnfbtnGenerarVentas.Size = new System.Drawing.Size(340, 90);
             this.bnfbtnGenerarVentas.TabIndex = 9;
             this.bnfbtnGenerarVentas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bnfbtnGenerarVentas.Click += new System.EventHandler(this.bnfbtnGenerarVentas_Click);
@@ -137,10 +139,62 @@
             this.lblFechaFinal.TabIndex = 17;
             this.lblFechaFinal.Text = "Fecha final";
             // 
+            // btnGenerarReporteGastos
+            // 
+            this.btnGenerarReporteGastos.ActiveBorderThickness = 1;
+            this.btnGenerarReporteGastos.ActiveCornerRadius = 20;
+            this.btnGenerarReporteGastos.ActiveFillColor = System.Drawing.Color.DarkGray;
+            this.btnGenerarReporteGastos.ActiveForecolor = System.Drawing.Color.White;
+            this.btnGenerarReporteGastos.ActiveLineColor = System.Drawing.Color.DarkGray;
+            this.btnGenerarReporteGastos.BackColor = System.Drawing.SystemColors.Control;
+            this.btnGenerarReporteGastos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGenerarReporteGastos.BackgroundImage")));
+            this.btnGenerarReporteGastos.ButtonText = "Generar reporte de gastos comunes";
+            this.btnGenerarReporteGastos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGenerarReporteGastos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarReporteGastos.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnGenerarReporteGastos.IdleBorderThickness = 1;
+            this.btnGenerarReporteGastos.IdleCornerRadius = 20;
+            this.btnGenerarReporteGastos.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.btnGenerarReporteGastos.IdleForecolor = System.Drawing.Color.Honeydew;
+            this.btnGenerarReporteGastos.IdleLineColor = System.Drawing.Color.Transparent;
+            this.btnGenerarReporteGastos.Location = new System.Drawing.Point(38, 434);
+            this.btnGenerarReporteGastos.Margin = new System.Windows.Forms.Padding(5);
+            this.btnGenerarReporteGastos.Name = "btnGenerarReporteGastos";
+            this.btnGenerarReporteGastos.Size = new System.Drawing.Size(340, 90);
+            this.btnGenerarReporteGastos.TabIndex = 18;
+            this.btnGenerarReporteGastos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnGenerarReportePedidos
+            // 
+            this.btnGenerarReportePedidos.ActiveBorderThickness = 1;
+            this.btnGenerarReportePedidos.ActiveCornerRadius = 20;
+            this.btnGenerarReportePedidos.ActiveFillColor = System.Drawing.Color.DarkGray;
+            this.btnGenerarReportePedidos.ActiveForecolor = System.Drawing.Color.White;
+            this.btnGenerarReportePedidos.ActiveLineColor = System.Drawing.Color.DarkGray;
+            this.btnGenerarReportePedidos.BackColor = System.Drawing.SystemColors.Control;
+            this.btnGenerarReportePedidos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGenerarReportePedidos.BackgroundImage")));
+            this.btnGenerarReportePedidos.ButtonText = "Generar reporte de pedidos";
+            this.btnGenerarReportePedidos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGenerarReportePedidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarReportePedidos.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnGenerarReportePedidos.IdleBorderThickness = 1;
+            this.btnGenerarReportePedidos.IdleCornerRadius = 20;
+            this.btnGenerarReportePedidos.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.btnGenerarReportePedidos.IdleForecolor = System.Drawing.Color.Honeydew;
+            this.btnGenerarReportePedidos.IdleLineColor = System.Drawing.Color.Transparent;
+            this.btnGenerarReportePedidos.Location = new System.Drawing.Point(38, 334);
+            this.btnGenerarReportePedidos.Margin = new System.Windows.Forms.Padding(5);
+            this.btnGenerarReportePedidos.Name = "btnGenerarReportePedidos";
+            this.btnGenerarReportePedidos.Size = new System.Drawing.Size(340, 90);
+            this.btnGenerarReportePedidos.TabIndex = 19;
+            this.btnGenerarReportePedidos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // PantallaReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnGenerarReportePedidos);
+            this.Controls.Add(this.btnGenerarReporteGastos);
             this.Controls.Add(this.lblFechaFinal);
             this.Controls.Add(this.lblFechaInicial);
             this.Controls.Add(this.bnfbtnGenerarVentas);
@@ -164,5 +218,7 @@
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crvVisorReportes;
         private Bunifu.Framework.UI.BunifuCustomLabel lblFechaInicial;
         private Bunifu.Framework.UI.BunifuCustomLabel lblFechaFinal;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnGenerarReporteGastos;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnGenerarReportePedidos;
     }
 }
