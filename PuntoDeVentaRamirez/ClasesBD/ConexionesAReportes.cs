@@ -24,6 +24,30 @@ namespace PuntoDeVentaRamirez.ClasesBD
             return datosVentas.Tables[0];
         }
 
-        
+        public static DataTable ConsultarPedidosPagadosPorFechas(DateTime fechaInicial, DateTime fechaFinal)
+        {
+            DatosPedidos datosPedidos = new DatosPedidos();
+            using (SqlConnection con = ConexionBD.ObtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand(string.Format("exec Reporte_Pedidos_Pagados '{0}','{1}'", fechaInicial.ToString("yyyy-MM-dd"), fechaFinal.ToString("yyyy-MM-dd")), con);
+                SqlDataAdapter adaptador = new SqlDataAdapter();
+                adaptador.SelectCommand = comando;
+                adaptador.Fill(datosPedidos);
+            }
+            return datosPedidos.Tables[0];
+        }
+
+        public static DataTable ConsultarGastosPorFechas(DateTime fechaInicial, DateTime fechaFinal)
+        {
+            DatosGastos datosGastos = new DatosGastos();
+            using (SqlConnection con = ConexionBD.ObtenerConexion())
+            {
+                SqlCommand comando = new SqlCommand(string.Format("exec Reporte_Gastos  '{0}','{1}'", fechaInicial.ToString("yyyy-MM-dd"), fechaFinal.ToString("yyyy-MM-dd")), con);
+                SqlDataAdapter adaptador = new SqlDataAdapter();
+                adaptador.SelectCommand = comando;
+                adaptador.Fill(datosGastos);
+            }
+            return datosGastos.Tables[0];
+        }
     }
 }

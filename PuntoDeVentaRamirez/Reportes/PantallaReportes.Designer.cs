@@ -163,6 +163,7 @@
             this.btnGenerarReporteGastos.Size = new System.Drawing.Size(340, 90);
             this.btnGenerarReporteGastos.TabIndex = 18;
             this.btnGenerarReporteGastos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnGenerarReporteGastos.Click += new System.EventHandler(this.btnGenerarReporteGastos_Click);
             // 
             // btnGenerarReportePedidos
             // 
@@ -188,6 +189,7 @@
             this.btnGenerarReportePedidos.Size = new System.Drawing.Size(340, 90);
             this.btnGenerarReportePedidos.TabIndex = 19;
             this.btnGenerarReportePedidos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnGenerarReportePedidos.Click += new System.EventHandler(this.btnGenerarReportePedidos_Click);
             // 
             // PantallaReportes
             // 

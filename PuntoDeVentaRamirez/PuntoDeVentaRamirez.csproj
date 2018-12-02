@@ -176,6 +176,22 @@
     <Compile Include="Punto de venta\VentanaCobro.Designer.cs">
       <DependentUpon>VentanaCobro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\DatosGastos.cs">
+      <DependentUpon>DatosGastos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\DatosGastos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosGastos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\DatosPedidos.cs">
+      <DependentUpon>DatosPedidos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\DatosPedidos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosPedidos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\PantallaReportes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -194,6 +210,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DatosVentas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteGastos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteGastos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReportePedidos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportePedidos.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reportes\ReporteVentas.cs">
       <AutoGen>True</AutoGen>
@@ -262,6 +290,14 @@
     <EmbeddedResource Include="General\SubVentana.resx">
       <DependentUpon>SubVentana.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteGastos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteGastos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReportePedidos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportePedidos.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteVentas.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteVentas.cs</LastGenOutput>
@@ -278,6 +314,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Reportes\DatosGastos.xsc">
+      <DependentUpon>DatosGastos.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DatosGastos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosGastos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DatosGastos.xss">
+      <DependentUpon>DatosGastos.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DatosPedidos.xsc">
+      <DependentUpon>DatosPedidos.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DatosPedidos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosPedidos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DatosPedidos.xss">
+      <DependentUpon>DatosPedidos.xsd</DependentUpon>
+    </None>
     <None Include="Reportes\DatosVentas.xsc">
       <DependentUpon>DatosVentas.xsd</DependentUpon>
     </None>

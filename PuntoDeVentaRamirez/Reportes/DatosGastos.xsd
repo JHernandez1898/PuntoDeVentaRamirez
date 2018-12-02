@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DatosGastos" targetNamespace="http://tempuri.org/DatosGastos.xsd" xmlns:mstns="http://tempuri.org/DatosGastos.xsd" xmlns="http://tempuri.org/DatosGastos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DatosGastos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DatosGastos" msprop:Generator_UserDSName="DatosGastos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Datos_x0020_Gastos" msprop:Generator_TableClassName="Datos_GastosDataTable" msprop:Generator_TableVarName="tableDatos_Gastos" msprop:Generator_TablePropName="Datos_Gastos" msprop:Generator_RowDeletingName="Datos_GastosRowDeleting" msprop:Generator_RowChangingName="Datos_GastosRowChanging" msprop:Generator_RowEvHandlerName="Datos_GastosRowChangeEventHandler" msprop:Generator_RowDeletedName="Datos_GastosRowDeleted" msprop:Generator_UserTableName="Datos Gastos" msprop:Generator_RowChangedName="Datos_GastosRowChanged" msprop:Generator_RowEvArgName="Datos_GastosRowChangeEvent" msprop:Generator_RowClassName="Datos_GastosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Gasto" msprop:Generator_ColumnVarNameInTable="columnGasto" msprop:Generator_ColumnPropNameInRow="Gasto" msprop:Generator_ColumnPropNameInTable="GastoColumn" msprop:Generator_UserColumnName="Gasto" type="xs:int" minOccurs="0" />
+              <xs:element name="Descripcion" msprop:Generator_ColumnVarNameInTable="columnDescripcion" msprop:Generator_ColumnPropNameInRow="Descripcion" msprop:Generator_ColumnPropNameInTable="DescripcionColumn" msprop:Generator_UserColumnName="Descripcion" type="xs:string" minOccurs="0" />
+              <xs:element name="Monto" msprop:Generator_ColumnVarNameInTable="columnMonto" msprop:Generator_ColumnPropNameInRow="Monto" msprop:Generator_ColumnPropNameInTable="MontoColumn" msprop:Generator_UserColumnName="Monto" type="xs:double" minOccurs="0" />
+              <xs:element name="Fecha_x0020_de_x0020_gasto" msprop:Generator_ColumnVarNameInTable="columnFecha_de_gasto" msprop:Generator_ColumnPropNameInRow="Fecha_de_gasto" msprop:Generator_ColumnPropNameInTable="Fecha_de_gastoColumn" msprop:Generator_UserColumnName="Fecha de gasto" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

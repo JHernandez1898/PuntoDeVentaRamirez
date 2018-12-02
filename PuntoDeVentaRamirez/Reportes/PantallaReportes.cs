@@ -50,5 +50,23 @@ namespace PuntoDeVentaRamirez
             nuevoReporte.SetParameterValue("Fecha Final", fechaFinal);
             crvVisorReportes.ReportSource = nuevoReporte;
         }
+
+        private void btnGenerarReportePedidos_Click(object sender, EventArgs e)
+        {
+            Reportes.ReportePedidos nuevoReporte = new Reportes.ReportePedidos();
+            nuevoReporte.SetDataSource(ClasesBD.ConexionesAReportes.ConsultarPedidosPagadosPorFechas(bnfFechaInferior.Value, bnfFechaSuperior.Value));
+            nuevoReporte.SetParameterValue("Fecha Inicial", bnfFechaInferior.Value);
+            nuevoReporte.SetParameterValue("Fecha Final", bnfFechaSuperior.Value);
+            crvVisorReportes.ReportSource = nuevoReporte;
+        }
+
+        private void btnGenerarReporteGastos_Click(object sender, EventArgs e)
+        {
+            Reportes.ReporteGastos nuevoReporte = new Reportes.ReporteGastos();
+            nuevoReporte.SetDataSource(ClasesBD.ConexionesAReportes.ConsultarGastosPorFechas(bnfFechaInferior.Value, bnfFechaSuperior.Value));
+            nuevoReporte.SetParameterValue("Fecha Inicial", bnfFechaInferior.Value);
+            nuevoReporte.SetParameterValue("Fecha Final", bnfFechaSuperior.Value);
+            crvVisorReportes.ReportSource = nuevoReporte;
+        }
     }
 }
