@@ -28,46 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.bnfFLbtnAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bnfFLbtnModificar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bnfMtltxtPrecio = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bnfDrpdCategoria = new Bunifu.Framework.UI.BunifuDropdown();
             this.bnfMtltxtDescripcion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bnfMtltxtCodigo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.bnfmtxtUnidadesDisponibles = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.SuspendLayout();
             // 
-            // bnfFLbtnAgregar
+            // bnfFLbtnModificar
             // 
-            this.bnfFLbtnAgregar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            this.bnfFLbtnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            this.bnfFLbtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bnfFLbtnAgregar.BorderRadius = 0;
-            this.bnfFLbtnAgregar.ButtonText = "Modificar";
-            this.bnfFLbtnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bnfFLbtnAgregar.DisabledColor = System.Drawing.Color.Gray;
-            this.bnfFLbtnAgregar.Iconcolor = System.Drawing.Color.Transparent;
-            this.bnfFLbtnAgregar.Iconimage = null;
-            this.bnfFLbtnAgregar.Iconimage_right = null;
-            this.bnfFLbtnAgregar.Iconimage_right_Selected = null;
-            this.bnfFLbtnAgregar.Iconimage_Selected = null;
-            this.bnfFLbtnAgregar.IconMarginLeft = 0;
-            this.bnfFLbtnAgregar.IconMarginRight = 0;
-            this.bnfFLbtnAgregar.IconRightVisible = true;
-            this.bnfFLbtnAgregar.IconRightZoom = 0D;
-            this.bnfFLbtnAgregar.IconVisible = true;
-            this.bnfFLbtnAgregar.IconZoom = 90D;
-            this.bnfFLbtnAgregar.IsTab = false;
-            this.bnfFLbtnAgregar.Location = new System.Drawing.Point(447, 183);
-            this.bnfFLbtnAgregar.Name = "bnfFLbtnAgregar";
-            this.bnfFLbtnAgregar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            this.bnfFLbtnAgregar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(90)))));
-            this.bnfFLbtnAgregar.OnHoverTextColor = System.Drawing.Color.White;
-            this.bnfFLbtnAgregar.selected = false;
-            this.bnfFLbtnAgregar.Size = new System.Drawing.Size(106, 35);
-            this.bnfFLbtnAgregar.TabIndex = 9;
-            this.bnfFLbtnAgregar.Text = "Modificar";
-            this.bnfFLbtnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bnfFLbtnAgregar.Textcolor = System.Drawing.Color.White;
-            this.bnfFLbtnAgregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnfFLbtnModificar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.bnfFLbtnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.bnfFLbtnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bnfFLbtnModificar.BorderRadius = 0;
+            this.bnfFLbtnModificar.ButtonText = "Modificar";
+            this.bnfFLbtnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bnfFLbtnModificar.DisabledColor = System.Drawing.Color.Gray;
+            this.bnfFLbtnModificar.Iconcolor = System.Drawing.Color.Transparent;
+            this.bnfFLbtnModificar.Iconimage = null;
+            this.bnfFLbtnModificar.Iconimage_right = null;
+            this.bnfFLbtnModificar.Iconimage_right_Selected = null;
+            this.bnfFLbtnModificar.Iconimage_Selected = null;
+            this.bnfFLbtnModificar.IconMarginLeft = 0;
+            this.bnfFLbtnModificar.IconMarginRight = 0;
+            this.bnfFLbtnModificar.IconRightVisible = true;
+            this.bnfFLbtnModificar.IconRightZoom = 0D;
+            this.bnfFLbtnModificar.IconVisible = true;
+            this.bnfFLbtnModificar.IconZoom = 90D;
+            this.bnfFLbtnModificar.IsTab = false;
+            this.bnfFLbtnModificar.Location = new System.Drawing.Point(447, 183);
+            this.bnfFLbtnModificar.Name = "bnfFLbtnModificar";
+            this.bnfFLbtnModificar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            this.bnfFLbtnModificar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(90)))));
+            this.bnfFLbtnModificar.OnHoverTextColor = System.Drawing.Color.White;
+            this.bnfFLbtnModificar.selected = false;
+            this.bnfFLbtnModificar.Size = new System.Drawing.Size(106, 35);
+            this.bnfFLbtnModificar.TabIndex = 9;
+            this.bnfFLbtnModificar.Text = "Modificar";
+            this.bnfFLbtnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bnfFLbtnModificar.Textcolor = System.Drawing.Color.White;
+            this.bnfFLbtnModificar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnfFLbtnModificar.Click += new System.EventHandler(this.bnfFLbtnModificar_Click);
             // 
             // bnfMtltxtPrecio
             // 
@@ -81,7 +83,7 @@
             this.bnfMtltxtPrecio.LineIdleColor = System.Drawing.Color.Gray;
             this.bnfMtltxtPrecio.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.bnfMtltxtPrecio.LineThickness = 3;
-            this.bnfMtltxtPrecio.Location = new System.Drawing.Point(410, 50);
+            this.bnfMtltxtPrecio.Location = new System.Drawing.Point(248, 50);
             this.bnfMtltxtPrecio.Margin = new System.Windows.Forms.Padding(4);
             this.bnfMtltxtPrecio.Name = "bnfMtltxtPrecio";
             this.bnfMtltxtPrecio.Size = new System.Drawing.Size(143, 33);
@@ -139,16 +141,37 @@
             this.bnfMtltxtCodigo.Location = new System.Drawing.Point(23, 50);
             this.bnfMtltxtCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.bnfMtltxtCodigo.Name = "bnfMtltxtCodigo";
-            this.bnfMtltxtCodigo.Size = new System.Drawing.Size(379, 33);
+            this.bnfMtltxtCodigo.Size = new System.Drawing.Size(217, 33);
             this.bnfMtltxtCodigo.TabIndex = 5;
             this.bnfMtltxtCodigo.Text = "Código";
             this.bnfMtltxtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // bnfmtxtUnidadesDisponibles
+            // 
+            this.bnfmtxtUnidadesDisponibles.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bnfmtxtUnidadesDisponibles.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bnfmtxtUnidadesDisponibles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bnfmtxtUnidadesDisponibles.HintForeColor = System.Drawing.Color.Empty;
+            this.bnfmtxtUnidadesDisponibles.HintText = "";
+            this.bnfmtxtUnidadesDisponibles.isPassword = false;
+            this.bnfmtxtUnidadesDisponibles.LineFocusedColor = System.Drawing.Color.Blue;
+            this.bnfmtxtUnidadesDisponibles.LineIdleColor = System.Drawing.Color.Gray;
+            this.bnfmtxtUnidadesDisponibles.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.bnfmtxtUnidadesDisponibles.LineThickness = 3;
+            this.bnfmtxtUnidadesDisponibles.Location = new System.Drawing.Point(399, 50);
+            this.bnfmtxtUnidadesDisponibles.Margin = new System.Windows.Forms.Padding(4);
+            this.bnfmtxtUnidadesDisponibles.Name = "bnfmtxtUnidadesDisponibles";
+            this.bnfmtxtUnidadesDisponibles.Size = new System.Drawing.Size(154, 33);
+            this.bnfmtxtUnidadesDisponibles.TabIndex = 10;
+            this.bnfmtxtUnidadesDisponibles.Text = "Unidades disponibles";
+            this.bnfmtxtUnidadesDisponibles.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // PanelModificarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.bnfFLbtnAgregar);
+            this.Controls.Add(this.bnfmtxtUnidadesDisponibles);
+            this.Controls.Add(this.bnfFLbtnModificar);
             this.Controls.Add(this.bnfMtltxtPrecio);
             this.Controls.Add(this.bnfDrpdCategoria);
             this.Controls.Add(this.bnfMtltxtDescripcion);
@@ -161,10 +184,11 @@
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuFlatButton bnfFLbtnAgregar;
+        private Bunifu.Framework.UI.BunifuFlatButton bnfFLbtnModificar;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bnfMtltxtPrecio;
         private Bunifu.Framework.UI.BunifuDropdown bnfDrpdCategoria;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bnfMtltxtDescripcion;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bnfMtltxtCodigo;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox bnfmtxtUnidadesDisponibles;
     }
 }

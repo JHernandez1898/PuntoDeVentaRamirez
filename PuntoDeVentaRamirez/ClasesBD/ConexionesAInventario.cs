@@ -37,5 +37,37 @@ namespace PuntoDeVentaRamirez.ClasesBD
             }
             return lstProductos;
         }
+
+        public static void ModificarProducto(Producto nProducto)
+        {
+            using (SqlConnection con = ConexionBD.ObtenerConexion())
+            {
+                try
+                {                    
+                    SqlCommand comando = new SqlCommand("exec Actualizar_Producto " + nProducto.IdProducto+",'"+ nProducto.Descripcion+"', "+nProducto.PrecioUnitario+", "+nProducto.UnidadesDisponibles+", '"+nProducto.Categoria+"'", con);
+                    comando.ExecuteNonQuery();
+                }
+                catch (SqlException e)
+                {
+                    throw new Exception(e.Message);
+                }
+            }
+        }
+
+        public static void EliminarProducto(Producto nProducto)
+        {
+            using (SqlConnection con = ConexionBD.ObtenerConexion())
+            {
+                try
+                {
+                    SqlCommand comando = new SqlCommand("DELETE FROM PRODUCTO WHERE CodigoProducto = "+nProducto.IdProducto, con);
+                    comando.ExecuteNonQuery();
+                }
+                catch (SqlException e)
+                {
+                    throw new Exception("No puede eliminarse este producto debido a que ya forma parte del registro de ventas.");
+                }
+            }
+        }
     }
 }

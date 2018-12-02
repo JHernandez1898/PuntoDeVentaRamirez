@@ -60,8 +60,24 @@ namespace PuntoDeVentaRamirez
 
         private void btnMtlModificarProducto_Click(object sender, EventArgs e)
         {
-            SubVentana nVentana = new SubVentana(new PanelModificarProducto(), "Modificar Producto");
-            nVentana.Show();
+            try
+            {
+                Producto nProducto = new Producto();
+                DataGridViewRow RenglonSeleccionado = bnfCstgrInventario.CurrentRow;
+                if (RenglonSeleccionado == null)
+                    MessageBox.Show("Seleccione un renglón de la tabla.");
+                else
+                {
+                    nProducto.IdProducto = int.Parse(RenglonSeleccionado.Cells[0].Value.ToString());                    
+                    nProducto.Descripcion = RenglonSeleccionado.Cells[2].Value.ToString();                                        
+                    SubVentana nVentana = new SubVentana(new PanelModificarProducto(nProducto), "Modificar Producto");
+                    nVentana.Show();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }            
         }
 
         private void chkCodigoProducto_OnChange(object sender, EventArgs e)
@@ -114,6 +130,48 @@ namespace PuntoDeVentaRamirez
                     }
                 }
             }
+        }
+
+        private void btnMtlEliminarProducto_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Producto nProducto = new Producto();
+                DataGridViewRow RenglonSeleccionado = bnfCstgrInventario.CurrentRow;          
+                if (RenglonSeleccionado == null)
+                    MessageBox.Show("Seleccione un renglón de la tabla.");
+                else
+                {
+                    nProducto.IdProducto = int.Parse(RenglonSeleccionado.Cells[0].Value.ToString());                    
+                    nProducto.Categoria = RenglonSeleccionado.Cells[1].Value.ToString();
+                    nProducto.Descripcion = RenglonSeleccionado.Cells[2].Value.ToString();
+                    nProducto.PrecioUnitario = double.Parse(RenglonSeleccionado.Cells[3].Value.ToString().Substring(1));
+                    nProducto.UnidadesDisponibles = int.Parse(RenglonSeleccionado.Cells[4].Value.ToString());
+
+                    DialogResult dlConfirmación = MessageBox.Show(nProducto.ToString(), "¿Desea eliminar este producto?", MessageBoxButtons.OKCancel);
+                    if (dlConfirmación == DialogResult.OK)
+                    {
+                        ClasesBD.ConexionesAInventario.EliminarProducto(nProducto);
+                        MessageBox.Show("El producto fue eliminado con exito", "Eliminación exitosa", MessageBoxButtons.OK);                        
+                    }
+                    CargarProductos();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void PantallaInventario_Enter(object sender, EventArgs e)
+        {
+            CargarProductos();
+        }
+
+        private void PantallaInventario_Click(object sender, EventArgs e)
+        {
+            CargarProductos();
         }
     }
 }
