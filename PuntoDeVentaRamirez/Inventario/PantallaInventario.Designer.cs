@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlOpciones = new System.Windows.Forms.Panel();
             this.btnMtlModificarProducto = new Bunifu.Framework.UI.BunifuTileButton();
             this.btnMtlEliminarProducto = new Bunifu.Framework.UI.BunifuTileButton();
@@ -42,15 +42,15 @@
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpBusqueda = new System.Windows.Forms.GroupBox();
+            this.chkUnidades = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.chkCategoria = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.chkDescripcion = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.chkCodigoProducto = new Bunifu.Framework.UI.BunifuCheckbox();
             this.bnftxtUnidadesDisponibles = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bnftxtCategoria = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bnftxtDescripcion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bnftxtCodigo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.chkCodigoProducto = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.chkDescripcion = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.chkCategoria = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.chkUnidades = new Bunifu.Framework.UI.BunifuCheckbox();
             this.pnlOpciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bnfCstgrInventario)).BeginInit();
             this.grpBusqueda.SuspendLayout();
@@ -80,7 +80,7 @@
             this.btnMtlModificarProducto.ImageZoom = 50;
             this.btnMtlModificarProducto.LabelPosition = 50;
             this.btnMtlModificarProducto.LabelText = "Modificar Producto";
-            this.btnMtlModificarProducto.Location = new System.Drawing.Point(0, 293);
+            this.btnMtlModificarProducto.Location = new System.Drawing.Point(0, 140);
             this.btnMtlModificarProducto.Margin = new System.Windows.Forms.Padding(6);
             this.btnMtlModificarProducto.Name = "btnMtlModificarProducto";
             this.btnMtlModificarProducto.Size = new System.Drawing.Size(125, 128);
@@ -100,11 +100,12 @@
             this.btnMtlEliminarProducto.ImageZoom = 50;
             this.btnMtlEliminarProducto.LabelPosition = 50;
             this.btnMtlEliminarProducto.LabelText = "Eliminar Producto";
-            this.btnMtlEliminarProducto.Location = new System.Drawing.Point(0, 140);
+            this.btnMtlEliminarProducto.Location = new System.Drawing.Point(0, 293);
             this.btnMtlEliminarProducto.Margin = new System.Windows.Forms.Padding(6);
             this.btnMtlEliminarProducto.Name = "btnMtlEliminarProducto";
             this.btnMtlEliminarProducto.Size = new System.Drawing.Size(125, 128);
             this.btnMtlEliminarProducto.TabIndex = 1;
+            this.btnMtlEliminarProducto.Click += new System.EventHandler(this.btnMtlEliminarProducto_Click);
             // 
             // btnMtlAgregarProducto
             // 
@@ -130,19 +131,19 @@
             // 
             this.bnfCstgrInventario.AllowUserToAddRows = false;
             this.bnfCstgrInventario.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bnfCstgrInventario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bnfCstgrInventario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.bnfCstgrInventario.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.bnfCstgrInventario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bnfCstgrInventario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bnfCstgrInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bnfCstgrInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.bnfCstgrInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bnfCstgrInventario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigo,
@@ -213,6 +214,58 @@
             this.grpBusqueda.TabIndex = 5;
             this.grpBusqueda.TabStop = false;
             this.grpBusqueda.Text = "Criterios de búsqueda";
+            // 
+            // chkUnidades
+            // 
+            this.chkUnidades.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chkUnidades.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chkUnidades.Checked = false;
+            this.chkUnidades.CheckedOnColor = System.Drawing.Color.MediumPurple;
+            this.chkUnidades.ForeColor = System.Drawing.Color.White;
+            this.chkUnidades.Location = new System.Drawing.Point(190, 70);
+            this.chkUnidades.Name = "chkUnidades";
+            this.chkUnidades.Size = new System.Drawing.Size(20, 20);
+            this.chkUnidades.TabIndex = 7;
+            this.chkUnidades.OnChange += new System.EventHandler(this.chkUnidades_OnChange);
+            // 
+            // chkCategoria
+            // 
+            this.chkCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chkCategoria.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chkCategoria.Checked = false;
+            this.chkCategoria.CheckedOnColor = System.Drawing.Color.MediumPurple;
+            this.chkCategoria.ForeColor = System.Drawing.Color.White;
+            this.chkCategoria.Location = new System.Drawing.Point(1053, 28);
+            this.chkCategoria.Name = "chkCategoria";
+            this.chkCategoria.Size = new System.Drawing.Size(20, 20);
+            this.chkCategoria.TabIndex = 6;
+            this.chkCategoria.OnChange += new System.EventHandler(this.chkCategoria_OnChange);
+            // 
+            // chkDescripcion
+            // 
+            this.chkDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chkDescripcion.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chkDescripcion.Checked = false;
+            this.chkDescripcion.CheckedOnColor = System.Drawing.Color.MediumPurple;
+            this.chkDescripcion.ForeColor = System.Drawing.Color.White;
+            this.chkDescripcion.Location = new System.Drawing.Point(732, 28);
+            this.chkDescripcion.Name = "chkDescripcion";
+            this.chkDescripcion.Size = new System.Drawing.Size(20, 20);
+            this.chkDescripcion.TabIndex = 5;
+            this.chkDescripcion.OnChange += new System.EventHandler(this.chkDescripcion_OnChange);
+            // 
+            // chkCodigoProducto
+            // 
+            this.chkCodigoProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chkCodigoProducto.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chkCodigoProducto.Checked = false;
+            this.chkCodigoProducto.CheckedOnColor = System.Drawing.Color.MediumPurple;
+            this.chkCodigoProducto.ForeColor = System.Drawing.Color.White;
+            this.chkCodigoProducto.Location = new System.Drawing.Point(313, 28);
+            this.chkCodigoProducto.Name = "chkCodigoProducto";
+            this.chkCodigoProducto.Size = new System.Drawing.Size(20, 20);
+            this.chkCodigoProducto.TabIndex = 4;
+            this.chkCodigoProducto.OnChange += new System.EventHandler(this.chkCodigoProducto_OnChange);
             // 
             // bnftxtUnidadesDisponibles
             // 
@@ -299,58 +352,6 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this.bnfCstgrInventario;
             // 
-            // chkCodigoProducto
-            // 
-            this.chkCodigoProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chkCodigoProducto.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chkCodigoProducto.Checked = false;
-            this.chkCodigoProducto.CheckedOnColor = System.Drawing.Color.MediumPurple;
-            this.chkCodigoProducto.ForeColor = System.Drawing.Color.White;
-            this.chkCodigoProducto.Location = new System.Drawing.Point(313, 28);
-            this.chkCodigoProducto.Name = "chkCodigoProducto";
-            this.chkCodigoProducto.Size = new System.Drawing.Size(20, 20);
-            this.chkCodigoProducto.TabIndex = 4;
-            this.chkCodigoProducto.OnChange += new System.EventHandler(this.chkCodigoProducto_OnChange);
-            // 
-            // chkDescripcion
-            // 
-            this.chkDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chkDescripcion.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chkDescripcion.Checked = false;
-            this.chkDescripcion.CheckedOnColor = System.Drawing.Color.MediumPurple;
-            this.chkDescripcion.ForeColor = System.Drawing.Color.White;
-            this.chkDescripcion.Location = new System.Drawing.Point(732, 28);
-            this.chkDescripcion.Name = "chkDescripcion";
-            this.chkDescripcion.Size = new System.Drawing.Size(20, 20);
-            this.chkDescripcion.TabIndex = 5;
-            this.chkDescripcion.OnChange += new System.EventHandler(this.chkDescripcion_OnChange);
-            // 
-            // chkCategoria
-            // 
-            this.chkCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chkCategoria.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chkCategoria.Checked = false;
-            this.chkCategoria.CheckedOnColor = System.Drawing.Color.MediumPurple;
-            this.chkCategoria.ForeColor = System.Drawing.Color.White;
-            this.chkCategoria.Location = new System.Drawing.Point(1053, 28);
-            this.chkCategoria.Name = "chkCategoria";
-            this.chkCategoria.Size = new System.Drawing.Size(20, 20);
-            this.chkCategoria.TabIndex = 6;
-            this.chkCategoria.OnChange += new System.EventHandler(this.chkCategoria_OnChange);
-            // 
-            // chkUnidades
-            // 
-            this.chkUnidades.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chkUnidades.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chkUnidades.Checked = false;
-            this.chkUnidades.CheckedOnColor = System.Drawing.Color.MediumPurple;
-            this.chkUnidades.ForeColor = System.Drawing.Color.White;
-            this.chkUnidades.Location = new System.Drawing.Point(190, 70);
-            this.chkUnidades.Name = "chkUnidades";
-            this.chkUnidades.Size = new System.Drawing.Size(20, 20);
-            this.chkUnidades.TabIndex = 7;
-            this.chkUnidades.OnChange += new System.EventHandler(this.chkUnidades_OnChange);
-            // 
             // PantallaInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -360,6 +361,8 @@
             this.Controls.Add(this.pnlOpciones);
             this.Name = "PantallaInventario";
             this.Size = new System.Drawing.Size(1396, 750);
+            this.Click += new System.EventHandler(this.PantallaInventario_Click);
+            this.Enter += new System.EventHandler(this.PantallaInventario_Enter);
             this.pnlOpciones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bnfCstgrInventario)).EndInit();
             this.grpBusqueda.ResumeLayout(false);
