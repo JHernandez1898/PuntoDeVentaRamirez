@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlOpciones = new System.Windows.Forms.Panel();
             this.btnMtlModificarProducto = new Bunifu.Framework.UI.BunifuTileButton();
             this.btnMtlEliminarProducto = new Bunifu.Framework.UI.BunifuTileButton();
@@ -131,19 +131,19 @@
             // 
             this.bnfCstgrInventario.AllowUserToAddRows = false;
             this.bnfCstgrInventario.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bnfCstgrInventario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bnfCstgrInventario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.bnfCstgrInventario.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.bnfCstgrInventario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bnfCstgrInventario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bnfCstgrInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(87)))), ((int)(((byte)(101)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bnfCstgrInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.bnfCstgrInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bnfCstgrInventario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigo,
@@ -286,6 +286,7 @@
             this.bnftxtUnidadesDisponibles.TabIndex = 3;
             this.bnftxtUnidadesDisponibles.Text = "Unidades disponibles";
             this.bnftxtUnidadesDisponibles.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bnftxtUnidadesDisponibles.OnValueChanged += new System.EventHandler(this.bnftxtUnidadesDisponibles_OnValueChanged);
             // 
             // bnftxtCategoria
             // 
@@ -306,6 +307,7 @@
             this.bnftxtCategoria.TabIndex = 2;
             this.bnftxtCategoria.Text = "Categoría";
             this.bnftxtCategoria.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bnftxtCategoria.OnValueChanged += new System.EventHandler(this.bnftxtCategoria_OnValueChanged);
             // 
             // bnftxtDescripcion
             // 
@@ -326,6 +328,7 @@
             this.bnftxtDescripcion.TabIndex = 1;
             this.bnftxtDescripcion.Text = "Descripción";
             this.bnftxtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bnftxtDescripcion.OnValueChanged += new System.EventHandler(this.bnftxtDescripcion_OnValueChanged);
             // 
             // bnftxtCodigo
             // 
@@ -346,6 +349,7 @@
             this.bnftxtCodigo.TabIndex = 0;
             this.bnftxtCodigo.Text = "Código de producto";
             this.bnftxtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bnftxtCodigo.OnValueChanged += new System.EventHandler(this.bnftxtCodigo_OnValueChanged);
             // 
             // bunifuElipse1
             // 

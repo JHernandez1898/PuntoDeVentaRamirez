@@ -21,17 +21,31 @@ namespace PuntoDeVentaRamirez
         public string Filtrar()
         {
             string strFiltro = "";
-            if(chkCategoria.Checked || chkCodigoProducto.Checked || chkDescripcion.Checked || chkUnidades.Checked)
+            if (chkCategoria.Checked || chkCodigoProducto.Checked || chkDescripcion.Checked || chkUnidades.Checked)
             {
                 strFiltro += " WHERE ";
-                if(chkCategoria.Checked)                
+                if (chkCategoria.Checked)
+                {
                     strFiltro += " CATEGORIA.Descripcion LIKE '%" + bnftxtCategoria.Text + "%'";
+                }
                 if (chkCodigoProducto.Checked)
+                {
+                    if (chkCategoria.Checked)                    
+                        strFiltro += " AND ";                    
                     strFiltro += " CodigoProducto = " + int.Parse(bnftxtCodigo.Text);
+                }
                 if (chkDescripcion.Checked)
+                {
+                    if (chkCategoria.Checked || chkCodigoProducto.Checked)                    
+                        strFiltro += " AND ";                    
                     strFiltro += " PRODUCTO.Descripcion LIKE '%" + bnftxtDescripcion.Text + "%'";
+                }
                 if (chkUnidades.Checked)
+                {
+                    if (chkCategoria.Checked || chkCodigoProducto.Checked || chkDescripcion.Checked)                    
+                        strFiltro += " AND ";
                     strFiltro += " UnidadesDisponibles >= " + short.Parse(bnftxtUnidadesDisponibles.Text);
+                } 
             }
             return strFiltro;
         }
@@ -48,7 +62,7 @@ namespace PuntoDeVentaRamirez
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
             }
         }
 
@@ -82,54 +96,29 @@ namespace PuntoDeVentaRamirez
 
         private void chkCodigoProducto_OnChange(object sender, EventArgs e)
         {
-            PrepararFiltro(chkCodigoProducto);
+            PrepararFiltro(chkCodigoProducto, bnftxtCodigo, "Código de producto");
         }
 
         private void chkDescripcion_OnChange(object sender, EventArgs e)
         {
-            PrepararFiltro(chkDescripcion);
+            PrepararFiltro(chkDescripcion, bnftxtDescripcion, "Descripción");
         }
 
         private void chkCategoria_OnChange(object sender, EventArgs e)
         {
-            PrepararFiltro(chkCategoria);
+            PrepararFiltro(chkCategoria, bnftxtCategoria, "Categoría");
         }
 
         private void chkUnidades_OnChange(object sender, EventArgs e)
         {
-            PrepararFiltro(chkUnidades);
+            PrepararFiltro(chkUnidades, bnftxtUnidadesDisponibles, "Unidades disponibles");
         }
 
-        private void PrepararFiltro(Bunifu.Framework.UI.BunifuCheckbox unCheckbox)
+        private void PrepararFiltro(Bunifu.Framework.UI.BunifuCheckbox unCheckbox, Bunifu.Framework.UI.BunifuMaterialTextbox unTextBox, string strMensaje)
         {
-            if (unCheckbox.Checked)            
-                DesactivarResto(unCheckbox);            
-            else            
-                RestaurarTextos();            
+            if (!unCheckbox.Checked)
+                unTextBox.Text = strMensaje;
             CargarProductos();
-        }
-
-        private void RestaurarTextos()
-        {
-            bnftxtCodigo.Text = "Código de producto";
-            bnftxtUnidadesDisponibles.Text = "Unidades disponibles";
-            bnftxtDescripcion.Text = "Descripción";
-            bnftxtCategoria.Text = "Categoría";
-        }
-
-        private void DesactivarResto(Bunifu.Framework.UI.BunifuCheckbox unCheckbox)
-        {
-            foreach (Control unControl in grpBusqueda.Controls)
-            {
-                if (unControl is Bunifu.Framework.UI.BunifuCheckbox)
-                {
-                    if (unControl.Name != unCheckbox.Name)
-                    {
-                        Bunifu.Framework.UI.BunifuCheckbox previoCheckBox = (Bunifu.Framework.UI.BunifuCheckbox) unControl;
-                        previoCheckBox.Checked = false;
-                    }
-                }
-            }
         }
 
         private void btnMtlEliminarProducto_Click(object sender, EventArgs e)
@@ -172,6 +161,30 @@ namespace PuntoDeVentaRamirez
         private void PantallaInventario_Click(object sender, EventArgs e)
         {
             CargarProductos();
+        }
+
+        private void bnftxtCodigo_OnValueChanged(object sender, EventArgs e)
+        {
+            if (chkCodigoProducto.Checked)            
+                CargarProductos();            
+        }
+
+        private void bnftxtDescripcion_OnValueChanged(object sender, EventArgs e)
+        {
+            if (chkDescripcion.Checked)
+                CargarProductos();
+        }
+
+        private void bnftxtCategoria_OnValueChanged(object sender, EventArgs e)
+        {
+            if (chkCategoria.Checked)
+                CargarProductos();
+        }
+
+        private void bnftxtUnidadesDisponibles_OnValueChanged(object sender, EventArgs e)
+        {
+            if (chkUnidades.Checked)
+                CargarProductos();
         }
     }
 }
