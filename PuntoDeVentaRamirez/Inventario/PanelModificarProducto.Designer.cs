@@ -34,6 +34,7 @@
             this.bnfMtltxtDescripcion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bnfMtltxtCodigo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bnfmtxtUnidadesDisponibles = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.lblVerifique = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // bnfFLbtnModificar
@@ -105,6 +106,7 @@
             this.bnfDrpdCategoria.selectedIndex = -1;
             this.bnfDrpdCategoria.Size = new System.Drawing.Size(217, 35);
             this.bnfDrpdCategoria.TabIndex = 7;
+            this.bnfDrpdCategoria.onItemSelected += new System.EventHandler(this.bnfDrpdCategoria_onItemSelected);
             // 
             // bnfMtltxtDescripcion
             // 
@@ -166,10 +168,22 @@
             this.bnfmtxtUnidadesDisponibles.Text = "Unidades disponibles";
             this.bnfmtxtUnidadesDisponibles.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // lblVerifique
+            // 
+            this.lblVerifique.AutoSize = true;
+            this.lblVerifique.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.lblVerifique.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.lblVerifique.Location = new System.Drawing.Point(25, 221);
+            this.lblVerifique.Name = "lblVerifique";
+            this.lblVerifique.Size = new System.Drawing.Size(369, 16);
+            this.lblVerifique.TabIndex = 11;
+            this.lblVerifique.Text = "Verifique que la categoría sea la correcta antes de modificar.";
+            // 
             // PanelModificarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblVerifique);
             this.Controls.Add(this.bnfmtxtUnidadesDisponibles);
             this.Controls.Add(this.bnfFLbtnModificar);
             this.Controls.Add(this.bnfMtltxtPrecio);
@@ -178,7 +192,9 @@
             this.Controls.Add(this.bnfMtltxtCodigo);
             this.Name = "PanelModificarProducto";
             this.Size = new System.Drawing.Size(580, 280);
+            this.Load += new System.EventHandler(this.PanelModificarProducto_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -190,5 +206,6 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox bnfMtltxtDescripcion;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bnfMtltxtCodigo;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bnfmtxtUnidadesDisponibles;
+        private System.Windows.Forms.Label lblVerifique;
     }
 }

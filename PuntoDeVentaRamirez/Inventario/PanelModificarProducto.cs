@@ -60,5 +60,16 @@ namespace PuntoDeVentaRamirez
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void PanelModificarProducto_Load(object sender, EventArgs e)
+        {
+            bnfDrpdCategoria.selectedIndex = 0;            
+        }
+
+        private void bnfDrpdCategoria_onItemSelected(object sender, EventArgs e)
+        {
+            if (bnfDrpdCategoria.selectedIndex != 0)            
+                lblVerifique.Text = "";
+        }
     }
 }

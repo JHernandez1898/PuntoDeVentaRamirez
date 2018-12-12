@@ -48,10 +48,13 @@ namespace PuntoDeVentaRamirez
                 List<string> lstCategorias = new List<string>();
                 lstCategorias = ConexionesAVentas.MostrarCategorias();
                 foreach (string strCategoria in lstCategorias)
-                    bnfDrpdCategoria.AddItem(strCategoria);
-            }catch(Exception e)
+                bnfDrpdCategoria.AddItem(strCategoria);
+                bnfDrpdCategoria.selectedIndex = 0;
+            }
+            catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                if (e.Message != "Out of index") // Intenté arreglar esta excepción en relación a seleccionar el index en caso de vacío de otras formas y no se dejaba.
+                    MessageBox.Show(e.Message);
             }
         }
         void LimpiarCampos()
