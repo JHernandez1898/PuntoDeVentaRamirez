@@ -53,20 +53,42 @@ namespace PuntoDeVentaRamirez
 
         private void btnGenerarReportePedidos_Click(object sender, EventArgs e)
         {
-            Reportes.ReportePedidos nuevoReporte = new Reportes.ReportePedidos();
-            nuevoReporte.SetDataSource(ClasesBD.ConexionesAReportes.ConsultarPedidosPagadosPorFechas(bnfFechaInferior.Value, bnfFechaSuperior.Value));
-            nuevoReporte.SetParameterValue("Fecha Inicial", bnfFechaInferior.Value);
-            nuevoReporte.SetParameterValue("Fecha Final", bnfFechaSuperior.Value);
-            crvVisorReportes.ReportSource = nuevoReporte;
+            try
+            {
+                Reportes.ReportePedidos nuevoReporte = new Reportes.ReportePedidos();
+                nuevoReporte.SetDataSource(ClasesBD.ConexionesAReportes.ConsultarPedidosPagadosPorFechas(bnfFechaInferior.Value, bnfFechaSuperior.Value));
+                nuevoReporte.SetParameterValue("Fecha Inicial", bnfFechaInferior.Value);
+                nuevoReporte.SetParameterValue("Fecha Final", bnfFechaSuperior.Value);
+                crvVisorReportes.ReportSource = nuevoReporte;
+            }
+            catch (System.Data.SqlClient.SqlException ex)
+            {
+                MessageBox.Show(ex.Message, "Fallo en la creación del reporte.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error no esperado.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnGenerarReporteGastos_Click(object sender, EventArgs e)
         {
-            Reportes.ReporteGastos nuevoReporte = new Reportes.ReporteGastos();
-            nuevoReporte.SetDataSource(ClasesBD.ConexionesAReportes.ConsultarGastosPorFechas(bnfFechaInferior.Value, bnfFechaSuperior.Value));
-            nuevoReporte.SetParameterValue("Fecha Inicial", bnfFechaInferior.Value);
-            nuevoReporte.SetParameterValue("Fecha Final", bnfFechaSuperior.Value);
-            crvVisorReportes.ReportSource = nuevoReporte;
+            try
+            {
+                Reportes.ReporteGastos nuevoReporte = new Reportes.ReporteGastos();
+                nuevoReporte.SetDataSource(ClasesBD.ConexionesAReportes.ConsultarGastosPorFechas(bnfFechaInferior.Value, bnfFechaSuperior.Value));
+                nuevoReporte.SetParameterValue("Fecha Inicial", bnfFechaInferior.Value);
+                nuevoReporte.SetParameterValue("Fecha Final", bnfFechaSuperior.Value);
+                crvVisorReportes.ReportSource = nuevoReporte;
+            }
+            catch (System.Data.SqlClient.SqlException ex)
+            {
+                MessageBox.Show(ex.Message, "Fallo en la creación del reporte.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error no esperado.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }            
         }
     }
 }
