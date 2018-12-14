@@ -345,5 +345,51 @@ namespace PuntoDeVentaRamirez
 
 
         }
+        public static int RecuperarIDVendedor()
+        {
+            int id = 0;
+            using (SqlConnection con = ConexionBD.ObtenerConexion())
+            {
+                
+                try
+                {
+                    SqlCommand comando = new SqlCommand(string.Format("SELECT VendedorID FROM VENDEDOR WHERE UserName = '{0}'",ConexionBD.Usuario), con);
+                    SqlDataReader dterMostrar = comando.ExecuteReader();
+                    while (dterMostrar.Read())
+                    {
+                        id = int.Parse(dterMostrar.GetValue(0).ToString());
+                    }
+
+                }
+                catch (SqlException e)
+                {
+                    throw new Exception(e.Message);
+                }
+            }
+            return id;
+        }
+        public static string RecuperarNombreVendedor()
+        {
+            string strNombre = "";
+            using (SqlConnection con = ConexionBD.ObtenerConexion())
+            {
+
+                try
+                {
+                    SqlCommand comando = new SqlCommand(string.Format("SELECT Nombre FROM VENDEDOR WHERE UserName = '{0}'", ConexionBD.Usuario), con);
+                    SqlDataReader dterMostrar = comando.ExecuteReader();
+                    while (dterMostrar.Read())
+                    {
+                        strNombre = dterMostrar.GetString(0);
+                    }
+
+                }
+                catch (SqlException e)
+                {
+                    throw new Exception(e.Message);
+                }
+            }
+            return strNombre;
+        }
     }
 }

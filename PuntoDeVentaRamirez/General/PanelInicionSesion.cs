@@ -19,8 +19,23 @@ namespace PuntoDeVentaRamirez
 
         private void bnfFlBtnEntrar_Click(object sender, EventArgs e)
         {
-            Form1.LimpiarPanel();
-            Form1.CrearPanelOpciones(); 
+            try
+            {
+                ConexionBD.Usuario = bnfMtxtUser.Text;
+                ConexionBD.Contraseña = bnfMtxtPassword.Text;
+                if (ConexionBD.ComprobarConexion())
+                {
+                    Form1.LimpiarPanel();
+                    Form1.CrearPanelOpciones();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo conectar, error en el usuario o contraseña");
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
                  
         }
     }

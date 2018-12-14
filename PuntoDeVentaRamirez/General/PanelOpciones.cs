@@ -20,6 +20,7 @@ namespace PuntoDeVentaRamirez
         private void PanelOpciones_Load(object sender, EventArgs e)
         {
             pnlPantallas.Controls.Clear();
+            label1.Text = ConexionesAVentas.RecuperarNombreVendedor();
             PantallaPuntoDeVenta pVenta = new PantallaPuntoDeVenta();
             pnlPantallas.Controls.Add(pVenta);
             pVenta.Location = new Point(0, 0);

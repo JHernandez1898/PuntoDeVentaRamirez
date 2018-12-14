@@ -52,7 +52,7 @@
             this.bnfFechaInferior.Name = "bnfFechaInferior";
             this.bnfFechaInferior.Size = new System.Drawing.Size(341, 36);
             this.bnfFechaInferior.TabIndex = 5;
-            this.bnfFechaInferior.Value = new System.DateTime(2018, 11, 12, 22, 7, 37, 565);
+            this.bnfFechaInferior.Value = new System.DateTime(2018, 12, 2, 0, 0, 0, 0);
             // 
             // bnfFechaSuperior
             // 
@@ -65,7 +65,7 @@
             this.bnfFechaSuperior.Name = "bnfFechaSuperior";
             this.bnfFechaSuperior.Size = new System.Drawing.Size(341, 36);
             this.bnfFechaSuperior.TabIndex = 6;
-            this.bnfFechaSuperior.Value = new System.DateTime(2018, 11, 12, 22, 7, 37, 565);
+            this.bnfFechaSuperior.Value = new System.DateTime(2018, 12, 4, 0, 0, 0, 0);
             // 
             // bnfbtnGenerarVentas
             // 
@@ -74,7 +74,7 @@
             this.bnfbtnGenerarVentas.ActiveFillColor = System.Drawing.Color.DarkGray;
             this.bnfbtnGenerarVentas.ActiveForecolor = System.Drawing.Color.White;
             this.bnfbtnGenerarVentas.ActiveLineColor = System.Drawing.Color.DarkGray;
-            this.bnfbtnGenerarVentas.BackColor = System.Drawing.Color.Transparent;
+            this.bnfbtnGenerarVentas.BackColor = System.Drawing.SystemColors.Control;
             this.bnfbtnGenerarVentas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bnfbtnGenerarVentas.BackgroundImage")));
             this.bnfbtnGenerarVentas.ButtonText = "Generar reporte de ventas";
             this.bnfbtnGenerarVentas.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -125,7 +125,7 @@
             this.lblFechaInicial.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblFechaInicial.Location = new System.Drawing.Point(33, 45);
             this.lblFechaInicial.Name = "lblFechaInicial";
-            this.lblFechaInicial.Size = new System.Drawing.Size(109, 19);
+            this.lblFechaInicial.Size = new System.Drawing.Size(106, 21);
             this.lblFechaInicial.TabIndex = 16;
             this.lblFechaInicial.Text = "Fecha inicial";
             // 
@@ -135,7 +135,7 @@
             this.lblFechaFinal.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblFechaFinal.Location = new System.Drawing.Point(33, 127);
             this.lblFechaFinal.Name = "lblFechaFinal";
-            this.lblFechaFinal.Size = new System.Drawing.Size(97, 19);
+            this.lblFechaFinal.Size = new System.Drawing.Size(95, 21);
             this.lblFechaFinal.TabIndex = 17;
             this.lblFechaFinal.Text = "Fecha final";
             // 
@@ -146,7 +146,7 @@
             this.btnGenerarReporteGastos.ActiveFillColor = System.Drawing.Color.DarkGray;
             this.btnGenerarReporteGastos.ActiveForecolor = System.Drawing.Color.White;
             this.btnGenerarReporteGastos.ActiveLineColor = System.Drawing.Color.DarkGray;
-            this.btnGenerarReporteGastos.BackColor = System.Drawing.Color.Transparent;
+            this.btnGenerarReporteGastos.BackColor = System.Drawing.SystemColors.Control;
             this.btnGenerarReporteGastos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGenerarReporteGastos.BackgroundImage")));
             this.btnGenerarReporteGastos.ButtonText = "Generar reporte de gastos comunes";
             this.btnGenerarReporteGastos.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -172,7 +172,7 @@
             this.btnGenerarReportePedidos.ActiveFillColor = System.Drawing.Color.DarkGray;
             this.btnGenerarReportePedidos.ActiveForecolor = System.Drawing.Color.White;
             this.btnGenerarReportePedidos.ActiveLineColor = System.Drawing.Color.DarkGray;
-            this.btnGenerarReportePedidos.BackColor = System.Drawing.Color.Transparent;
+            this.btnGenerarReportePedidos.BackColor = System.Drawing.SystemColors.Control;
             this.btnGenerarReportePedidos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGenerarReportePedidos.BackgroundImage")));
             this.btnGenerarReportePedidos.ButtonText = "Generar reporte de pedidos";
             this.btnGenerarReportePedidos.Cursor = System.Windows.Forms.Cursors.Hand;

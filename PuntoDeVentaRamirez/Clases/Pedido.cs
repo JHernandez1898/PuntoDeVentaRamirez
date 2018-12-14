@@ -42,7 +42,12 @@ namespace PuntoDeVentaRamirez
         public double Subtotal  
         {
             get { return _dblSubtotal; }
-            set { _dblSubtotal = value; }
+            set { _dblSubtotal = value;
+                if (value <= 0)
+                {
+                    throw new Exception("El monto del gasto no puede ser igual o menor a cero");
+                }
+            }
         }
         private int _intIva;
 
@@ -57,7 +62,12 @@ namespace PuntoDeVentaRamirez
         public double Total
         {
             get { return _dblTotal; }
-            set { _dblTotal = value; }
+            set { _dblTotal = value;
+                if (value <= 0)
+                {
+                    throw new Exception("El monto del gasto no puede ser igual o menor a cero");
+                }
+            }
         }
         private DateTime _dtmFechaLimite;
 

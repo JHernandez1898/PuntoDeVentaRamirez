@@ -20,7 +20,12 @@ namespace PuntoDeVentaRamirez
         public double Monto
         {
             get { return _dblMonto; }
-            set { _dblMonto = value; }
+            set { _dblMonto = value;
+                if(value <= 0)
+                {
+                    throw new Exception("El monto del gasto no puede ser igual o menor a cero");
+                }
+            }
         }
         private DateTime _dtmFechaRegistro;
 

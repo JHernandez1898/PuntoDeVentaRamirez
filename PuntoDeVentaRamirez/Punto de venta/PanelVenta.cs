@@ -118,15 +118,21 @@ namespace PuntoDeVentaRamirez
 
         private void bnfFltbtnCobrar_Click(object sender, EventArgs e)
         {
-            Venta nVenta = new Venta();
-            nVenta.VendedorId = 1;
-            nVenta.FechaRegistro = DateTime.Now;
-            VentanaCobro vcNueva = new VentanaCobro();
-            vcNueva.TotalAPagar = CalcularTotal();
-            vcNueva.CargarLista(lstCompra);
-            vcNueva.VentaActual = nVenta;
-            SubVentana svCobrar = new SubVentana(vcNueva, "Detalles de pago");
-            svCobrar.ShowDialog();
+            try
+            {
+                Venta nVenta = new Venta();
+                nVenta.VendedorId = ConexionesAVentas.RecuperarIDVendedor();
+                nVenta.FechaRegistro = DateTime.Now;
+                VentanaCobro vcNueva = new VentanaCobro();
+                vcNueva.TotalAPagar = CalcularTotal();
+                vcNueva.CargarLista(lstCompra);
+                vcNueva.VentaActual = nVenta;
+                SubVentana svCobrar = new SubVentana(vcNueva, "Detalles de pago");
+                svCobrar.ShowDialog();
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
           
         }
 
