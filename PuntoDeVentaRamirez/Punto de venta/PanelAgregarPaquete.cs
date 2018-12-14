@@ -39,7 +39,7 @@ namespace PuntoDeVentaRamirez
                 CargarPaquetes(bnfMtltxtDescripcion.Text);
             }catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -50,7 +50,7 @@ namespace PuntoDeVentaRamirez
             {
                 DataGridViewRow RenglonSeleccionado = bnfCstgridPaquetes.CurrentRow;
                 if (RenglonSeleccionado == null)
-                    MessageBox.Show("Seleccione un renglón del dataGridView");
+                    MessageBox.Show("Seleccione un renglón de la tabla.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
                     int iDProducto = int.Parse(RenglonSeleccionado.Cells[0].Value.ToString());
@@ -60,7 +60,7 @@ namespace PuntoDeVentaRamirez
                 }
             }catch(Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.Source);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

@@ -29,11 +29,11 @@ namespace PuntoDeVentaRamirez
                 nGasto.Descripcion = bnfMtltxtDescripcion.Text;
                 nGasto.FechaRegistro = bnfDtmpkFecha.Value;
                 ConexionesAGastos.AgregarGasto(nGasto);
-                MessageBox.Show("Gasto agregado con exito", "Operación exitosa");
+                MessageBox.Show("Gasto agregado con éxito.", "Operación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CargarGastosComunes();
             }catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 
             }
         }
@@ -70,11 +70,11 @@ namespace PuntoDeVentaRamirez
                 nPedido.Total = double.Parse(bnftxtTotal.Text);
                 nPedido.FechaLimite = bnfdtmLimitePago.Value;
                 ConexionesAGastos.AgregarPedido(nPedido);
-                MessageBox.Show("Pedido agregado con exito");
+                MessageBox.Show("Pedido agregado con éxito.", "Pedido agregado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CargarPedidos();
             }catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -87,7 +87,7 @@ namespace PuntoDeVentaRamirez
                 CargarNotificaciones();
             }catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -96,7 +96,7 @@ namespace PuntoDeVentaRamirez
             Pedido nPed = new Pedido();
             DataGridViewRow RenglonSeleccionado = bnfgridPedidos.CurrentRow;
             if (RenglonSeleccionado == null)
-                MessageBox.Show("Seleccione un renglón del dataGridView");
+                MessageBox.Show("Seleccione un renglón de la tabla.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
                 nPed.NumeroFactura = int.Parse(RenglonSeleccionado.Cells[0].Value.ToString());

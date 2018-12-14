@@ -84,7 +84,7 @@ namespace PuntoDeVentaRamirez
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -96,7 +96,7 @@ namespace PuntoDeVentaRamirez
                 Producto nProducto = new Producto();
                 DataGridViewRow RenglonSeleccionado = bnfCstgridPaquete.CurrentRow;
                 if (RenglonSeleccionado == null)
-                    MessageBox.Show("Seleccione un renglón del dataGridView");
+                    MessageBox.Show("Seleccione un renglón de la tabla.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
                     nProducto.Descripcion = RenglonSeleccionado.Cells[0].Value.ToString();
@@ -107,19 +107,16 @@ namespace PuntoDeVentaRamirez
                         if(nProducto.UnidadesDisponibles == 1)
                         {
                             lstPaquete.Remove(nProducto);
-                        }else
+                        }
+                        else
                         {
                             lstPaquete.Remove(nProducto);
                             nProducto.UnidadesDisponibles -= 1;
                             lstPaquete.Add(nProducto);
-                        }
-                        
-                    }
-                   
+                        }                        
+                    }                   
                     CargarArticulosPaquete(lstPaquete);
                 }
-            
-
             }
             catch (Exception ex)
             {
@@ -146,12 +143,12 @@ namespace PuntoDeVentaRamirez
                 nPaquete.Fecha = DateTime.Now;
                 ConexionesAVentas.AgregarPaquete(nPaquete);
                 ConexionesAVentas.AgregarDetallesPaquete(lstPaquete);
-                MessageBox.Show("El paquete se agrego correctamente");
+                MessageBox.Show("El paquete se agregó correctamente.", "Paquete agregado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 lstPaquete.Clear();
                 CargarArticulosPaquete(lstPaquete);
             }catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

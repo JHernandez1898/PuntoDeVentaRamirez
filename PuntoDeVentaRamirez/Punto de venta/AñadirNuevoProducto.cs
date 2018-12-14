@@ -27,17 +27,17 @@ namespace PuntoDeVentaRamirez
                 nProducto.Descripcion = bnfMtltxtDescripcion.Text;
                 nProducto.PrecioUnitario = double.Parse(bnfMtltxtPrecio.Text);
                 nProducto.UnidadesDisponibles = int.Parse(bnftxtUnidadesDisponibles.Text);
-                DialogResult dlConfirmación = MessageBox.Show(nProducto.ToString(), "Datos del producto a agregar",MessageBoxButtons.OKCancel);
+                DialogResult dlConfirmación = MessageBox.Show(nProducto.ToString(), "Datos del producto a agregar",MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 if(dlConfirmación == DialogResult.OK)
                 {
                     ConexionesAVentas.AgregarProducto(nProducto);
-                    MessageBox.Show("El producto fue agregado con exito", "Registro Exitoso",MessageBoxButtons.OK);
+                    MessageBox.Show("El producto fue agregado con éxito.", "Registro exitoso",MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LimpiarCampos();
                 }
                 
             }catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         void CargarCategorias()
@@ -54,7 +54,7 @@ namespace PuntoDeVentaRamirez
             catch (Exception e)
             {
                 if (e.Message != "Out of index") // Intenté arreglar esta excepción en relación a seleccionar el index en caso de vacío de otras formas y no se dejaba.
-                    MessageBox.Show(e.Message);
+                    MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         void LimpiarCampos()
@@ -79,7 +79,7 @@ namespace PuntoDeVentaRamirez
 
         private void lklblAgregarCategoria_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            SubVentana nCategoria = new SubVentana(new AgregarCategoria(),"Agregar categoria");  
+            SubVentana nCategoria = new SubVentana(new AgregarCategoria(),"Agregar categoría");  
             nCategoria.Show();
 
         }

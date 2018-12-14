@@ -66,17 +66,17 @@ namespace PuntoDeVentaRamirez
                 }
                 else
                 {
-                    MessageBox.Show("No se cuenta con los productos suficientes.");
+                    MessageBox.Show("No se cuenta con los productos suficientes.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
             catch (FormatException)
             {
-                MessageBox.Show("Especifique una cantidad de productos a agregar.");
+                MessageBox.Show("Especifique una cantidad de productos a agregar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -91,7 +91,7 @@ namespace PuntoDeVentaRamirez
                 }
             }catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private static double CalcularTotal()
@@ -137,7 +137,7 @@ namespace PuntoDeVentaRamirez
                 Producto nProducto = new Producto();
                 DataGridViewRow RenglonSeleccionado = bnfDtgCuenta.CurrentRow;
                 if (RenglonSeleccionado == null)
-                    MessageBox.Show("Seleccione un renglón de la tabla.");
+                    MessageBox.Show("Seleccione un renglón de la tabla.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
                     nProducto.IdProducto = int.Parse(RenglonSeleccionado.Cells[0].Value.ToString());
@@ -148,7 +148,7 @@ namespace PuntoDeVentaRamirez
             
             }catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
