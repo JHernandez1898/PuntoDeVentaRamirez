@@ -314,36 +314,6 @@ namespace PuntoDeVentaRamirez
                 }
                 return nListaProducto;
             }
-            //public static void AgregarVenta(Venta nVenta)
-            //{
-
-            //    using (SqlConnection con = ConexionBD.ObtenerConexion())
-            //    {
-            //        try
-            //        {
-
-            //        }
-            //        catch (SqlException ex)
-            //        {
-            //            throw new Exception(ex.Message);
-            //        }
-            //    }
-
-            //}
-
-            //public static bool VerificarExistencia(string strDescripcion)
-            //{
-            //    bool blnExistencia = false;
-            //    using (SqlConnection con = ConexionBD.ObtenerConexion())
-            //    {
-
-            //    }
-            //    return blnExistencia;
-            //}
-
-
-
-
         }
         public static int RecuperarIDVendedor()
         {

@@ -51,18 +51,15 @@ namespace PuntoDeVentaRamirez
             {   
                 ConexionesAVentas.AgregarVenta(VentaActual);
                 ConexionesAVentas.AgregarDetallesVenta(lstProductos);
-                MessageBox.Show("Venta realizada con éxito.", "Venta exitosa");
+                MessageBox.Show("Venta realizada con éxito.", "Venta exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 PanelVenta.LimpiarDatagrid();
                 PanelVenta.Pago = double.Parse(bnfPagoEnPesos.Text);
                 PanelVenta.Cambio = (double.Parse(bnfPagoEnPesos.Text) - double.Parse(bnfTotal.Text));
                 SubVentana.ActiveForm.Close();
-
-
-
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -106,20 +103,19 @@ namespace PuntoDeVentaRamirez
         private void bnfPagoEnPesos_OnValueChanged(object sender, EventArgs e)
         {
             try
+            { 
+             if (bnfPagoEnPesos.Text != "")
+             {
+                lblCambio.Text = "Cambio del cliente: " + (double.Parse(bnfPagoEnPesos.Text) - double.Parse(bnfTotal.Text)).ToString();
+             }
+             else
+             {
+                lblCambio.Text = "Cambio del cliente: ";
+             }                
+            }
+            catch (Exception ex)
             {
- 
-                    if (bnfPagoEnPesos.Text != "")
-                    {
-                        lblCambio.Text = "Cambio del cliente: " + (double.Parse(bnfPagoEnPesos.Text) - double.Parse(bnfTotal.Text)).ToString();
-                    }
-                    else
-                    {
-                        lblCambio.Text = "Cambio del cliente: ";
-                    }
-                
-            }catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -138,13 +134,11 @@ namespace PuntoDeVentaRamirez
                 if (bnfTipoDeCambio.Text != "" && bnfPagoDolares.Text != "")
                     bnfPagoEnPesos.Text = (double.Parse(bnfPagoDolares.Text) * double.Parse(bnfTipoDeCambio.Text)).ToString();
                 else
-                    bnfPagoEnPesos.Text = "";
-
-                
+                    bnfPagoEnPesos.Text = "";                
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

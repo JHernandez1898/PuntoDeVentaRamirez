@@ -79,7 +79,7 @@ namespace PuntoDeVentaRamirez
                 Producto nProducto = new Producto();
                 DataGridViewRow RenglonSeleccionado = bnfCstgrInventario.CurrentRow;
                 if (RenglonSeleccionado == null)
-                    MessageBox.Show("Seleccione un renglón de la tabla.");
+                    MessageBox.Show("Seleccione un renglón de la tabla.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
                     nProducto.IdProducto = int.Parse(RenglonSeleccionado.Cells[0].Value.ToString());                    
@@ -90,7 +90,7 @@ namespace PuntoDeVentaRamirez
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }            
         }
 
@@ -128,7 +128,7 @@ namespace PuntoDeVentaRamirez
                 Producto nProducto = new Producto();
                 DataGridViewRow RenglonSeleccionado = bnfCstgrInventario.CurrentRow;          
                 if (RenglonSeleccionado == null)
-                    MessageBox.Show("Seleccione un renglón de la tabla.");
+                    MessageBox.Show("Seleccione un renglón de la tabla.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
                     nProducto.IdProducto = int.Parse(RenglonSeleccionado.Cells[0].Value.ToString());                    
@@ -137,11 +137,11 @@ namespace PuntoDeVentaRamirez
                     nProducto.PrecioUnitario = double.Parse(RenglonSeleccionado.Cells[3].Value.ToString().Substring(1));
                     nProducto.UnidadesDisponibles = int.Parse(RenglonSeleccionado.Cells[4].Value.ToString());
 
-                    DialogResult dlConfirmación = MessageBox.Show(nProducto.ToString(), "¿Desea eliminar este producto?", MessageBoxButtons.OKCancel);
+                    DialogResult dlConfirmación = MessageBox.Show(nProducto.ToString(), "¿Desea eliminar este producto?", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                     if (dlConfirmación == DialogResult.OK)
                     {
                         ClasesBD.ConexionesAInventario.EliminarProducto(nProducto);
-                        MessageBox.Show("El producto fue eliminado con exito", "Eliminación exitosa", MessageBoxButtons.OK);                        
+                        MessageBox.Show("El producto fue eliminado con exito", "Eliminación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);                        
                     }
                     CargarProductos();
                 }
@@ -149,7 +149,7 @@ namespace PuntoDeVentaRamirez
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

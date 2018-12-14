@@ -33,7 +33,7 @@ namespace PuntoDeVentaRamirez
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -47,17 +47,17 @@ namespace PuntoDeVentaRamirez
                 nProducto.Descripcion = bnfMtltxtDescripcion.Text;
                 nProducto.PrecioUnitario = double.Parse(bnfMtltxtPrecio.Text);
                 nProducto.UnidadesDisponibles = int.Parse(bnfmtxtUnidadesDisponibles.Text);
-                DialogResult dlConfirmación = MessageBox.Show(nProducto.ToString(), "Datos del producto a modificar", MessageBoxButtons.OKCancel);
+                DialogResult dlConfirmación = MessageBox.Show(nProducto.ToString(), "Datos del producto a modificar", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 if (dlConfirmación == DialogResult.OK)
                 {
                     ClasesBD.ConexionesAInventario.ModificarProducto(nProducto);
-                    MessageBox.Show("El producto fue modificado con exito", "Modificación exitosa", MessageBoxButtons.OK);     
+                    MessageBox.Show("El producto fue modificado con exito", "Modificación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);     
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

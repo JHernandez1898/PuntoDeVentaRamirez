@@ -34,11 +34,11 @@ namespace PuntoDeVentaRamirez
                 PantallaGastos.CargarGastosComunes();
                 PantallaGastos.CargarPedidos();
                 PantallaGastos.CargarNotificaciones();
-                MessageBox.Show("Registro de pago con exito");
+                MessageBox.Show("Pago registrado exitosamente.", "Pago registrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 SubVentana.ActiveForm.Close();
             }catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

@@ -22,11 +22,11 @@ namespace PuntoDeVentaRamirez
             try
             {
                 ConexionesAVentas.AgregarCategoria(bnftxtCategoria.Text);
-                MessageBox.Show("Se agrego correctamente la categoria");
+                MessageBox.Show("Se agregó correctamente la categoría.", "Categoría agregada", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
